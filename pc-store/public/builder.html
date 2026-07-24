@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конструктор сборки — NODE.PC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container bar">
+    <a href="/" class="logo"><span class="dot"></span>NODE.PC</a>
+    <nav class="nav">
+      <a href="/">Каталог</a>
+      <a href="/builder.html" class="active">Конструктор сборки</a>
+    </nav>
+    <a href="/cart.html" class="cart-link">
+      Корзина <span id="cart-count" class="cart-badge" style="display:none">0</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:32px">
+  <div class="container">
+    <div class="eyebrow">// конструктор сборки</div>
+    <h1 style="font-size:32px">Выберите компоненты — совместимость проверяем автоматически</h1>
+    <p>Откройте каждый раздел и выберите один вариант. Если что-то не подходит по сокету, типу памяти, форм-фактору или мощности блока питания — увидите предупреждение сразу.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="builder-layout">
+      <div id="slots"></div>
+
+      <aside class="summary notched">
+        <h3>Ваша сборка</h3>
+        <div id="issues"></div>
+        <div class="total-row">
+          <span>Итого</span>
+          <span id="total">0 ₽</span>
+        </div>
+        <button class="btn btn-primary btn-block notched" id="add-build-to-cart" disabled>Добавить сборку в корзину</button>
+        <p style="font-size:12px;color:var(--text-dim);margin-top:10px">
+          Кнопка активна, когда выбраны все обязательные компоненты и нет ошибок совместимости.
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">NODE.PC — демонстрационный проект интернет-магазина. Все цены и наличие условны.</div>
+</footer>
+
+<script src="js/api.js"></script>
+<script>
+const SLOTS = [
+  { key: "cpu", label: "Процессор", required: true },
+  { key: "motherboard", label: "Материнская плата", required: true },
+  { key: "ram", label: "Оперативная память", required: true },
+  { key: "gpu", label: "Видеокарта", required: false },
+  { key: "storage", label: "Накопитель", required: true },
+  { key: "psu", label: "Блок питания", required: true },
+  { key: "case", label: "Корпус", required: true },
+];
+
+function specLine(category, specs) {
+  switch (category) {
+    case "cpu": return `${specs.socket} · ${specs.cores} ядер · TDP ${specs.tdp}Вт`;
+    case "motherboard": return `${specs.socket} · ${specs.ramType} · ${specs.formFactor}`;
+    case "ram": return `${specs.type} · ${specs.capacityGB}ГБ · ${specs.speed}`;
+    case "gpu": return `${specs.vramGB}ГБ VRAM · TDP ${specs.tdp}Вт · ${specs.lengthMM}мм`;
+    case "storage": return `${specs.type} · ${specs.capacityGB}ГБ`;
+    case "psu": return `${specs.wattage}Вт · ${specs.certification}`;
+    case "case": return `${specs.formFactors.join("/")} · до ${specs.maxGpuLengthMM}мм видеокарты`;
+    default: return "";
+  }
+}
+
+const state = {}; // key -> productId | null
+const productsByCategory = {};
+
+function renderSlots() {
+  const container = document.getElementById("slots");
+  container.innerHTML = SLOTS.map((slot) => {
+    const options = productsByCategory[slot.key] || [];
+    const selectedId = state[slot.key];
+    const selected = options.find((o) => o.id === selectedId);
+    return `
+      <div class="slot notched" data-slot="${slot.key}">
+        <div class="slot-head" data-toggle="${slot.key}">
+          <div>
+            <div class="label">${slot.label}${slot.required ? "" : " (опционально)"}</div>
+            <div class="selected-name">${selected ? selected.name : "Не выбрано"}</div>
+          </div>
+          <span class="chevron">▾</span>
+        </div>
+        <div class="slot-body">
+          ${!slot.required ? `<div class="option-row ${!selectedId ? "selected" : ""}" data-pick="${slot.key}" data-id=""><div class="meta"><div class="opt-name">Не устанавливать</div></div></div>` : ""}
+          ${options.map((o) => `
+            <div class="option-row ${o.id === selectedId ? "selected" : ""}" data-pick="${slot.key}" data-id="${o.id}">
+              <div class="meta">
+                <div class="opt-name">${o.brand} ${o.name}</div>
+                <div class="opt-specs">${specLine(slot.key, o.specs)}</div>
+              </div>
+              <div class="opt-price">${money(o.price)}</div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  container.querySelectorAll("[data-toggle]").forEach((head) => {
+    head.addEventListener("click", () => {
+      const slotEl = head.closest(".slot");
+      const wasOpen = slotEl.classList.contains("open");
+      container.querySelectorAll(".slot").forEach((s) => s.classList.remove("open"));
+      if (!wasOpen) slotEl.classList.add("open");
+    });
+  });
+
+  container.querySelectorAll("[data-pick]").forEach((row) => {
+    row.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const key = row.dataset.pick;
+      state[key] = row.dataset.id || null;
+      renderSlots();
+      updateSummary();
+    });
+  });
+}
+
+async function updateSummary() {
+  const ids = {};
+  SLOTS.forEach((s) => { if (state[s.key]) ids[s.key] = state[s.key]; });
+
+  const result = await API.checkBuild(ids);
+  const issuesEl = document.getElementById("issues");
+
+  if (!result.issues || result.issues.length === 0) {
+    issuesEl.innerHTML = `<div class="issue ok">✓ Пока выбрано мало компонентов для проверки, но конфликтов нет.</div>`;
+  } else {
+    issuesEl.innerHTML = result.issues.map((i) => `
+      <div class="issue ${i.level}">${i.level === "error" ? "✕" : "⚠"} ${i.message}</div>
+    `).join("");
+  }
+
+  document.getElementById("total").textContent = money(result.total || 0);
+
+  const requiredFilled = SLOTS.filter((s) => s.required).every((s) => state[s.key]);
+  document.getElementById("add-build-to-cart").disabled = !(requiredFilled && result.ok);
+}
+
+document.getElementById("add-build-to-cart").addEventListener("click", async () => {
+  const btn = document.getElementById("add-build-to-cart");
+  btn.disabled = true;
+  btn.textContent = "Добавляем…";
+  const picks = Object.values(state).filter(Boolean);
+  for (const id of picks) {
+    await API.addToCart(id, 1);
+  }
+  await refreshCartBadge();
+  btn.textContent = "Добавлено ✓ — перейти в корзину";
+  btn.onclick = () => (window.location.href = "/cart.html");
+  btn.disabled = false;
+});
+
+(async function init() {
+  for (const slot of SLOTS) {
+    productsByCategory[slot.key] = await API.getProducts(slot.key);
+  }
+  renderSlots();
+  updateSummary();
+  document.querySelector(".slot")?.classList.add("open");
+})();
+</script>
+</body>
+</html>

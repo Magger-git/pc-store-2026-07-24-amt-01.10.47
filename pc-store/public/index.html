@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NODE.PC — компьютеры и комплектующие</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container bar">
+    <a href="/" class="logo"><span class="dot"></span>NODE.PC</a>
+    <nav class="nav">
+      <a href="/" class="active">Каталог</a>
+      <a href="/builder.html">Конструктор сборки</a>
+    </nav>
+    <a href="/cart.html" class="cart-link">
+      Корзина <span id="cart-count" class="cart-badge" style="display:none">0</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">// каталог комплектующих</div>
+    <h1>Собери компьютер, который не будет узким местом.</h1>
+    <p>Процессоры, платы, память и видеокарты — в наличии. Не уверены, что совместимо между собой? Соберите систему в конструкторе — он сам проверит сокет, тип памяти и мощность БП.</p>
+    <div class="hero-actions">
+      <a href="/builder.html" class="btn btn-primary notched">Открыть конструктор</a>
+      <a href="#catalog" class="btn btn-ghost">Смотреть каталог</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="catalog">
+  <div class="container">
+    <div class="section-head">
+      <h2>Все товары</h2>
+      <span class="count" id="result-count"></span>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">NODE.PC — демонстрационный проект интернет-магазина. Все цены и наличие условны.</div>
+</footer>
+
+<script src="js/api.js"></script>
+<script>
+const CATEGORY_LABELS = {
+  cpu: "Процессоры", motherboard: "Материнские платы", ram: "Оперативная память",
+  gpu: "Видеокарты", storage: "Накопители", psu: "Блоки питания", case: "Корпуса",
+};
+
+let allProducts = [];
+let activeCategory = "all";
+
+function renderChips() {
+  const chips = document.getElementById("chips");
+  const cats = ["all", ...new Set(allProducts.map((p) => p.category))];
+  chips.innerHTML = cats.map((c) => `
+    <button class="chip ${c === activeCategory ? "active" : ""}" data-cat="${c}">
+      ${c === "all" ? "Все" : CATEGORY_LABELS[c] || c}
+    </button>
+  `).join("");
+  chips.querySelectorAll(".chip").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      activeCategory = btn.dataset.cat;
+      renderChips();
+      renderGrid();
+    });
+  });
+}
+
+function renderGrid() {
+  const grid = document.getElementById("grid");
+  const list = activeCategory === "all" ? allProducts : allProducts.filter((p) => p.category === activeCategory);
+  document.getElementById("result-count").textContent = `${list.length} позиций`;
+
+  grid.innerHTML = list.map((p) => `
+    <div class="card notched">
+      <div class="thumb"><img src="img/${p.image}" alt="${p.name}" width="72" height="72"></div>
+      <div class="brand">${p.brand}</div>
+      <div class="name">${p.name}</div>
+      <div class="desc">${p.description}</div>
+      <div class="price-row">
+        <span class="price">${money(p.price)}</span>
+        <span class="stock ${p.stock < 5 ? "low" : ""}">${p.stock < 5 ? `Осталось ${p.stock}` : "В наличии"}</span>
+      </div>
+      <button class="btn btn-primary btn-block btn-sm" data-add="${p.id}">В корзину</button>
+    </div>
+  `).join("");
+
+  grid.querySelectorAll("[data-add]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      btn.textContent = "Добавлено ✓";
+      await API.addToCart(btn.dataset.add, 1);
+      await refreshCartBadge();
+      setTimeout(() => (btn.textContent = "В корзину"), 1200);
+    });
+  });
+}
+
+(async function init() {
+  allProducts = await API.getProducts();
+  renderChips();
+  renderGrid();
+})();
+</script>
+</body>
+</html>
