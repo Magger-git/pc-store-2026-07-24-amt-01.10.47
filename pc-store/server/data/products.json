@@ -823,7 +823,7 @@
   {
     "id": "gpu-rtx3060",
     "name": "GeForce RTX 3060 12GB",
-    "price": 24990,
+    "price": 27990,
     "stock": 14,
     "specs": {
       "vramGB": 12,
@@ -839,7 +839,7 @@
   {
     "id": "gpu-rtx3060ti",
     "name": "GeForce RTX 3060 Ti 8GB",
-    "price": 27990,
+    "price": 31990,
     "stock": 11,
     "specs": {
       "vramGB": 8,
@@ -855,7 +855,7 @@
   {
     "id": "gpu-rtx3070",
     "name": "GeForce RTX 3070 8GB",
-    "price": 32990,
+    "price": 36990,
     "stock": 8,
     "specs": {
       "vramGB": 8,
@@ -871,7 +871,7 @@
   {
     "id": "gpu-rtx3070ti",
     "name": "GeForce RTX 3070 Ti 8GB",
-    "price": 35990,
+    "price": 39990,
     "stock": 6,
     "specs": {
       "vramGB": 8,
@@ -887,7 +887,7 @@
   {
     "id": "gpu-rtx3080",
     "name": "GeForce RTX 3080 10GB",
-    "price": 44990,
+    "price": 49990,
     "stock": 5,
     "specs": {
       "vramGB": 10,
@@ -903,7 +903,7 @@
   {
     "id": "gpu-rtx4060",
     "name": "GeForce RTX 4060 8GB",
-    "price": 27990,
+    "price": 30990,
     "stock": 16,
     "specs": {
       "vramGB": 8,
@@ -935,7 +935,7 @@
   {
     "id": "gpu-rtx4070",
     "name": "GeForce RTX 4070 12GB",
-    "price": 42990,
+    "price": 46990,
     "stock": 10,
     "specs": {
       "vramGB": 12,
@@ -951,7 +951,7 @@
   {
     "id": "gpu-rtx4070super",
     "name": "GeForce RTX 4070 Super 12GB",
-    "price": 52990,
+    "price": 57990,
     "stock": 9,
     "specs": {
       "vramGB": 12,
@@ -967,7 +967,7 @@
   {
     "id": "gpu-rtx4070tisuper",
     "name": "GeForce RTX 4070 Ti Super 16GB",
-    "price": 68990,
+    "price": 76990,
     "stock": 7,
     "specs": {
       "vramGB": 16,
@@ -983,7 +983,7 @@
   {
     "id": "gpu-rtx4080super",
     "name": "GeForce RTX 4080 Super 16GB",
-    "price": 89990,
+    "price": 99990,
     "stock": 5,
     "specs": {
       "vramGB": 16,
@@ -999,7 +999,7 @@
   {
     "id": "gpu-rtx4090",
     "name": "GeForce RTX 4090 24GB",
-    "price": 149990,
+    "price": 179990,
     "stock": 3,
     "specs": {
       "vramGB": 24,
@@ -1015,7 +1015,7 @@
   {
     "id": "gpu-rtx5050",
     "name": "GeForce RTX 5050 8GB",
-    "price": 24990,
+    "price": 26990,
     "stock": 15,
     "specs": {
       "vramGB": 8,
@@ -1031,7 +1031,7 @@
   {
     "id": "gpu-rtx5060",
     "name": "GeForce RTX 5060 8GB",
-    "price": 31990,
+    "price": 34990,
     "stock": 18,
     "specs": {
       "vramGB": 8,
@@ -1047,7 +1047,7 @@
   {
     "id": "gpu-rtx5060ti",
     "name": "GeForce RTX 5060 Ti 16GB",
-    "price": 46990,
+    "price": 52990,
     "stock": 13,
     "specs": {
       "vramGB": 16,
@@ -1063,7 +1063,7 @@
   {
     "id": "gpu-rtx5070",
     "name": "GeForce RTX 5070 12GB",
-    "price": 58990,
+    "price": 66990,
     "stock": 11,
     "specs": {
       "vramGB": 12,
@@ -1079,7 +1079,7 @@
   {
     "id": "gpu-rtx5070ti",
     "name": "GeForce RTX 5070 Ti 16GB",
-    "price": 79990,
+    "price": 94990,
     "stock": 8,
     "specs": {
       "vramGB": 16,
@@ -1095,7 +1095,7 @@
   {
     "id": "gpu-rtx5080",
     "name": "GeForce RTX 5080 16GB",
-    "price": 109990,
+    "price": 139990,
     "stock": 6,
     "specs": {
       "vramGB": 16,
@@ -1111,7 +1111,7 @@
   {
     "id": "gpu-rtx5090",
     "name": "GeForce RTX 5090 32GB",
-    "price": 219990,
+    "price": 379990,
     "stock": 3,
     "specs": {
       "vramGB": 32,
@@ -1127,7 +1127,7 @@
   {
     "id": "gpu-rx6600",
     "name": "Radeon RX 6600 8GB",
-    "price": 19990,
+    "price": 21990,
     "stock": 14,
     "specs": {
       "vramGB": 8,
@@ -1143,7 +1143,7 @@
   {
     "id": "gpu-rx6750xt",
     "name": "Radeon RX 6750 XT 12GB",
-    "price": 29990,
+    "price": 32990,
     "stock": 9,
     "specs": {
       "vramGB": 12,
@@ -1159,7 +1159,7 @@
   {
     "id": "gpu-rx7600",
     "name": "Radeon RX 7600 8GB",
-    "price": 24990,
+    "price": 26990,
     "stock": 16,
     "specs": {
       "vramGB": 8,
@@ -1175,7 +1175,7 @@
   {
     "id": "gpu-rx7700xt",
     "name": "Radeon RX 7700 XT 12GB",
-    "price": 38990,
+    "price": 42990,
     "stock": 10,
     "specs": {
       "vramGB": 12,
@@ -1191,7 +1191,7 @@
   {
     "id": "gpu-rx7800xt",
     "name": "Radeon RX 7800 XT 16GB",
-    "price": 46990,
+    "price": 51990,
     "stock": 8,
     "specs": {
       "vramGB": 16,
@@ -1207,7 +1207,7 @@
   {
     "id": "gpu-rx7900xtx",
     "name": "Radeon RX 7900 XTX 24GB",
-    "price": 89990,
+    "price": 99990,
     "stock": 4,
     "specs": {
       "vramGB": 24,
@@ -1223,7 +1223,7 @@
   {
     "id": "gpu-rx9060xt",
     "name": "Radeon RX 9060 XT 16GB",
-    "price": 39990,
+    "price": 43990,
     "stock": 12,
     "specs": {
       "vramGB": 16,
@@ -1239,7 +1239,7 @@
   {
     "id": "gpu-rx9070",
     "name": "Radeon RX 9070 16GB",
-    "price": 54990,
+    "price": 59990,
     "stock": 9,
     "specs": {
       "vramGB": 16,
@@ -1255,7 +1255,7 @@
   {
     "id": "gpu-rx9070xt",
     "name": "Radeon RX 9070 XT 16GB",
-    "price": 64990,
+    "price": 71990,
     "stock": 7,
     "specs": {
       "vramGB": 16,

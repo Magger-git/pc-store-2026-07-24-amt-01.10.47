@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NODE.PC — компьютеры и комплектующие</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,12 +24,16 @@
 </header>
 
 <section class="hero">
+<img class="decor mug" src="img/decor/mug.svg" alt="">
+<img class="decor laptop" src="img/decor/laptop.svg" alt="">
+<img class="decor headphones" src="img/decor/headphones.svg" alt="">
+
   <div class="container">
     <div class="eyebrow">// каталог комплектующих</div>
     <h1>Собери компьютер, который не будет узким местом.</h1>
     <p>Процессоры, платы, память и видеокарты — в наличии. Не уверены, что совместимо между собой? Соберите систему в конструкторе — он сам проверит сокет, тип памяти и мощность БП.</p>
     <div class="hero-actions">
-      <a href="/builder.html" class="btn btn-primary notched">Открыть конструктор</a>
+      <a href="/builder.html" class="btn btn-primary">Открыть конструктор</a>
       <a href="#catalog" class="btn btn-ghost">Смотреть каталог</a>
     </div>
   </div>
@@ -47,6 +51,9 @@
 </section>
 
 <footer class="footer">
+<img class="decor cable" src="img/decor/cable.svg" alt="">
+<img class="decor mouse" src="img/decor/mouse.svg" alt="">
+
   <div class="container">NODE.PC — демонстрационный проект интернет-магазина. Все цены и наличие условны.</div>
 </footer>
 
@@ -83,7 +90,7 @@ function renderGrid() {
   document.getElementById("result-count").textContent = `${list.length} позиций`;
 
   grid.innerHTML = list.map((p) => `
-    <div class="card notched">
+    <div class="card">
       <div class="thumb"><img src="img/${p.image}" alt="${p.name}" width="72" height="72"></div>
       <div class="brand">${p.brand}</div>
       <div class="name">${p.name}</div>
