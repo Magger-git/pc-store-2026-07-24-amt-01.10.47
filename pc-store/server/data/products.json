@@ -1,10 +1,10 @@
 [
   {
-    "id": "cpu-r5-3600",
+    "id": "cpu-r5-5500",
     "brand": "AMD",
-    "name": "Ryzen 5 3600",
-    "price": 9990,
-    "stock": 16,
+    "name": "Ryzen 5 5500",
+    "price": 8990,
+    "stock": 18,
     "specs": {
       "socket": "AM4",
       "cores": 6,
@@ -12,7 +12,7 @@
       "tdp": 65,
       "boostClock": "4.2 GHz"
     },
-    "description": "Легендарный бюджетный CPU поколения Zen 2 — до сих пор отличный выбор для 1080p.",
+    "description": "Доступный вход в платформу AM4 — хороший выбор для бюджетной сборки.",
     "category": "cpu",
     "image": "cpu.svg"
   },
@@ -20,7 +20,7 @@
     "id": "cpu-r5-5600",
     "brand": "AMD",
     "name": "Ryzen 5 5600",
-    "price": 10990,
+    "price": 10999,
     "stock": 20,
     "specs": {
       "socket": "AM4",
@@ -37,7 +37,7 @@
     "id": "cpu-r5-5600x",
     "brand": "AMD",
     "name": "Ryzen 5 5600X",
-    "price": 12990,
+    "price": 12799,
     "stock": 17,
     "specs": {
       "socket": "AM4",
@@ -68,10 +68,27 @@
     "image": "cpu.svg"
   },
   {
+    "id": "cpu-r5-7500f",
+    "brand": "AMD",
+    "name": "Ryzen 5 7500F",
+    "price": 11299,
+    "stock": 22,
+    "specs": {
+      "socket": "AM5",
+      "cores": 6,
+      "threads": 12,
+      "tdp": 65,
+      "boostClock": "5.0 GHz"
+    },
+    "description": "Бюджетный вход в AM5 без встроенной графики.",
+    "category": "cpu",
+    "image": "cpu.svg"
+  },
+  {
     "id": "cpu-r5-7600",
     "brand": "AMD",
     "name": "Ryzen 5 7600",
-    "price": 19990,
+    "price": 17999,
     "stock": 18,
     "specs": {
       "socket": "AM5",
@@ -88,7 +105,7 @@
     "id": "cpu-r5-9600x",
     "brand": "AMD",
     "name": "Ryzen 5 9600X",
-    "price": 22990,
+    "price": 18999,
     "stock": 15,
     "specs": {
       "socket": "AM5",
@@ -98,6 +115,23 @@
       "boostClock": "5.4 GHz"
     },
     "description": "Свежий Zen 5 в бюджетном сегменте: выше однопоточная производительность, чем у 7600.",
+    "category": "cpu",
+    "image": "cpu.svg"
+  },
+  {
+    "id": "cpu-r5-9600",
+    "brand": "AMD",
+    "name": "Ryzen 5 9600",
+    "price": 21199,
+    "stock": 12,
+    "specs": {
+      "socket": "AM5",
+      "cores": 6,
+      "threads": 12,
+      "tdp": 65,
+      "boostClock": "5.4 GHz"
+    },
+    "description": "Версия 9600X без разблокированного множителя, но с более высоким базовым TDP-запасом.",
     "category": "cpu",
     "image": "cpu.svg"
   },
@@ -139,7 +173,7 @@
     "id": "cpu-r7-7800x3d",
     "brand": "AMD",
     "name": "Ryzen 7 7800X3D",
-    "price": 34990,
+    "price": 37990,
     "stock": 10,
     "specs": {
       "socket": "AM5",
@@ -156,8 +190,8 @@
     "id": "cpu-r7-9800x3d",
     "brand": "AMD",
     "name": "Ryzen 7 9800X3D",
-    "price": 39990,
-    "stock": 9,
+    "price": 47990,
+    "stock": 8,
     "specs": {
       "socket": "AM5",
       "cores": 8,
@@ -173,7 +207,7 @@
     "id": "cpu-r9-9900x",
     "brand": "AMD",
     "name": "Ryzen 9 9900X",
-    "price": 37990,
+    "price": 42990,
     "stock": 8,
     "specs": {
       "socket": "AM5",
@@ -190,7 +224,7 @@
     "id": "cpu-r9-9950x",
     "brand": "AMD",
     "name": "Ryzen 9 9950X",
-    "price": 47990,
+    "price": 54990,
     "stock": 6,
     "specs": {
       "socket": "AM5",
@@ -207,7 +241,7 @@
     "id": "cpu-r9-9950x3d",
     "brand": "AMD",
     "name": "Ryzen 9 9950X3D",
-    "price": 54990,
+    "price": 64990,
     "stock": 5,
     "specs": {
       "socket": "AM5",
@@ -221,16 +255,33 @@
     "image": "cpu.svg"
   },
   {
+    "id": "cpu-i5-12400f",
+    "brand": "Intel",
+    "name": "Core i5-12400F",
+    "price": 12499,
+    "stock": 24,
+    "specs": {
+      "socket": "LGA1700",
+      "cores": 6,
+      "threads": 12,
+      "tdp": 117,
+      "boostClock": "4.4 GHz"
+    },
+    "description": "Один из самых популярных бюджетных CPU в магазинах ДНС — 6 ядер без встроенной графики.",
+    "category": "cpu",
+    "image": "cpu.svg"
+  },
+  {
     "id": "cpu-i5-14400f",
     "brand": "Intel",
     "name": "Core i5-14400F",
-    "price": 15990,
-    "stock": 22,
+    "price": 15699,
+    "stock": 20,
     "specs": {
       "socket": "LGA1700",
       "cores": 10,
       "threads": 16,
-      "tdp": 65,
+      "tdp": 148,
       "boostClock": "4.7 GHz"
     },
     "description": "10 ядер за разумные деньги, встроенной графики нет — нужна дискретная видеокарта.",
@@ -238,16 +289,33 @@
     "image": "cpu.svg"
   },
   {
+    "id": "cpu-i5-14600kf",
+    "brand": "Intel",
+    "name": "Core i5-14600KF",
+    "price": 21599,
+    "stock": 16,
+    "specs": {
+      "socket": "LGA1700",
+      "cores": 14,
+      "threads": 20,
+      "tdp": 181,
+      "boostClock": "5.3 GHz"
+    },
+    "description": "14 ядер с разблокированным множителем для разгона.",
+    "category": "cpu",
+    "image": "cpu.svg"
+  },
+  {
     "id": "cpu-i7-14700kf",
     "brand": "Intel",
     "name": "Core i7-14700KF",
-    "price": 32990,
+    "price": 31299,
     "stock": 7,
     "specs": {
       "socket": "LGA1700",
       "cores": 20,
       "threads": 28,
-      "tdp": 125,
+      "tdp": 253,
       "boostClock": "5.6 GHz"
     },
     "description": "20 ядер для стриминга, рендера и требовательных игр одновременно.",
@@ -258,13 +326,13 @@
     "id": "cpu-i9-14900kf",
     "brand": "Intel",
     "name": "Core i9-14900KF",
-    "price": 44990,
+    "price": 46990,
     "stock": 4,
     "specs": {
       "socket": "LGA1700",
       "cores": 24,
       "threads": 32,
-      "tdp": 125,
+      "tdp": 253,
       "boostClock": "6.0 GHz"
     },
     "description": "Флагман прошлого поколения Intel — всё ещё один из самых быстрых CPU для игр.",
@@ -272,44 +340,10 @@
     "image": "cpu.svg"
   },
   {
-    "id": "cpu-ultra5-245k",
-    "brand": "Intel",
-    "name": "Core Ultra 5 245K",
-    "price": 24990,
-    "stock": 11,
-    "specs": {
-      "socket": "LGA1851",
-      "cores": 14,
-      "threads": 14,
-      "tdp": 125,
-      "boostClock": "5.2 GHz"
-    },
-    "description": "Новая архитектура Arrow Lake, ниже энергопотребление при сравнимой производительности.",
-    "category": "cpu",
-    "image": "cpu.svg"
-  },
-  {
-    "id": "cpu-ultra5-250kplus",
-    "brand": "Intel",
-    "name": "Core Ultra 5 250K Plus",
-    "price": 21990,
-    "stock": 13,
-    "specs": {
-      "socket": "LGA1851",
-      "cores": 18,
-      "threads": 18,
-      "tdp": 125,
-      "boostClock": "5.3 GHz"
-    },
-    "description": "Обновлённая версия 245K с дополнительными E-ядрами и поддержкой DDR5-7200.",
-    "category": "cpu",
-    "image": "cpu.svg"
-  },
-  {
     "id": "cpu-ultra7-265k",
     "brand": "Intel",
     "name": "Core Ultra 7 265K",
-    "price": 34990,
+    "price": 37990,
     "stock": 9,
     "specs": {
       "socket": "LGA1851",
@@ -323,80 +357,46 @@
     "image": "cpu.svg"
   },
   {
-    "id": "cpu-ultra7-270kplus",
-    "brand": "Intel",
-    "name": "Core Ultra 7 270K Plus",
-    "price": 31990,
-    "stock": 10,
-    "specs": {
-      "socket": "LGA1851",
-      "cores": 24,
-      "threads": 24,
-      "tdp": 125,
-      "boostClock": "5.6 GHz"
-    },
-    "description": "24 ядра — почти как у Ultra 9 285K, но по более доступной цене.",
-    "category": "cpu",
-    "image": "cpu.svg"
-  },
-  {
-    "id": "cpu-ultra9-285k",
-    "brand": "Intel",
-    "name": "Core Ultra 9 285K",
-    "price": 54990,
-    "stock": 5,
-    "specs": {
-      "socket": "LGA1851",
-      "cores": 24,
-      "threads": 24,
-      "tdp": 125,
-      "boostClock": "5.7 GHz"
-    },
-    "description": "Флагман Intel на архитектуре Arrow Lake для самых требовательных задач.",
-    "category": "cpu",
-    "image": "cpu.svg"
-  },
-  {
-    "id": "mb-a520m",
+    "id": "mb-a520m-pro4",
     "brand": "ASRock",
-    "name": "A520M-HDV",
-    "price": 5990,
+    "name": "A520M Pro4",
+    "price": 9399,
     "stock": 20,
-    "specs": {
-      "socket": "AM4",
-      "ramType": "DDR4",
-      "ramSlots": 2,
-      "maxRamGB": 64,
-      "formFactor": "mATX",
-      "pcieVersion": "3.0"
-    },
-    "description": "Самая доступная плата для сборки на Ryzen 5000 без разгона.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b550m-pro",
-    "brand": "MSI",
-    "name": "PRO B550M-VC WiFi",
-    "price": 8490,
-    "stock": 16,
     "specs": {
       "socket": "AM4",
       "ramType": "DDR4",
       "ramSlots": 4,
       "maxRamGB": 128,
       "formFactor": "mATX",
-      "pcieVersion": "4.0"
+      "pcieVersion": "3.0"
     },
-    "description": "Популярный выбор для Ryzen 5 5600X/5700X с поддержкой PCIe 4.0 и WiFi.",
+    "description": "Доступная плата для сборки на Ryzen 5000 без разгона.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
-    "id": "mb-x570-tuf",
-    "brand": "ASUS",
-    "name": "TUF Gaming X570-Plus",
-    "price": 14990,
+    "id": "mb-b550-a-pro",
+    "brand": "MSI",
+    "name": "B550-A PRO",
+    "price": 11499,
+    "stock": 16,
+    "specs": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "ramSlots": 4,
+      "maxRamGB": 128,
+      "formFactor": "ATX",
+      "pcieVersion": "4.0"
+    },
+    "description": "Полноразмерная плата для Ryzen 5000 с поддержкой PCIe 4.0.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-x570-pro4",
+    "brand": "ASRock",
+    "name": "X570 Pro4",
+    "price": 13999,
     "stock": 8,
     "specs": {
       "socket": "AM4",
@@ -411,99 +411,99 @@
     "image": "mb.svg"
   },
   {
-    "id": "mb-a620m",
-    "brand": "ASRock",
-    "name": "A620M-HDV",
-    "price": 8490,
+    "id": "mb-b650-eagle",
+    "brand": "GIGABYTE",
+    "name": "B650 EAGLE",
+    "price": 12999,
     "stock": 18,
     "specs": {
       "socket": "AM5",
       "ramType": "DDR5",
-      "ramSlots": 2,
-      "maxRamGB": 64,
-      "formFactor": "mATX",
+      "ramSlots": 4,
+      "maxRamGB": 128,
+      "formFactor": "ATX",
       "pcieVersion": "4.0"
     },
-    "description": "Бюджетная плата для сборок на AM5 без разгона.",
+    "description": "Доступная полноразмерная плата для AM5 без переплаты за лишние функции.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
-    "id": "mb-b650-pro",
+    "id": "mb-b650-a-wifi",
     "brand": "MSI",
-    "name": "PRO B650-P WiFi",
-    "price": 13990,
+    "name": "PRO B650-A WIFI",
+    "price": 14999,
     "stock": 14,
     "specs": {
       "socket": "AM5",
       "ramType": "DDR5",
       "ramSlots": 4,
-      "maxRamGB": 128,
+      "maxRamGB": 256,
       "formFactor": "ATX",
       "pcieVersion": "4.0"
     },
-    "description": "Доступная полноразмерная плата с WiFi 6 и хорошим набором портов.",
+    "description": "Мощная система питания, поддержка Ryzen 9 и разгона памяти EXPO.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
-    "id": "mb-b650-tuf",
-    "brand": "ASUS",
-    "name": "TUF Gaming B650-Plus",
-    "price": 15990,
+    "id": "mb-b850-pro-a-wifi",
+    "brand": "ASRock",
+    "name": "B850 Pro-A WiFi",
+    "price": 17499,
     "stock": 12,
     "specs": {
       "socket": "AM5",
       "ramType": "DDR5",
       "ramSlots": 4,
-      "maxRamGB": 128,
+      "maxRamGB": 256,
       "formFactor": "ATX",
       "pcieVersion": "4.0"
     },
-    "description": "Военная сертификация компонентов и усиленная VRM-секция серии TUF.",
+    "description": "Новый чипсет B850 с поддержкой DDR5-7200 и Wi-Fi из коробки.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
-    "id": "mb-b650-tomahawk",
-    "brand": "MSI",
-    "name": "MAG B650 Tomahawk WiFi",
-    "price": 17990,
+    "id": "mb-b850m-aorus-elite",
+    "brand": "GIGABYTE",
+    "name": "B850M AORUS ELITE WIFI6E ICE",
+    "price": 16799,
     "stock": 10,
     "specs": {
       "socket": "AM5",
       "ramType": "DDR5",
       "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "ATX",
+      "maxRamGB": 256,
+      "formFactor": "mATX",
       "pcieVersion": "4.0"
     },
-    "description": "Прочная VRM-секция, WiFi 6E, поддержка PCIe 4.0 NVMe.",
+    "description": "Компактная плата на B850 с Wi-Fi 6E для среднего ценового сегмента.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
-    "id": "mb-x670-aorus",
-    "brand": "Gigabyte",
-    "name": "X670 Aorus Elite AX",
+    "id": "mb-x870-gaming-plus-wifi",
+    "brand": "MSI",
+    "name": "X870 GAMING PLUS WIFI",
     "price": 24990,
     "stock": 8,
     "specs": {
       "socket": "AM5",
       "ramType": "DDR5",
       "ramSlots": 4,
-      "maxRamGB": 128,
+      "maxRamGB": 256,
       "formFactor": "ATX",
       "pcieVersion": "5.0"
     },
-    "description": "Чипсет X670 с PCIe 5.0 для накопителей и видеокарты, хорош для разгона памяти.",
+    "description": "Чипсет X870 с PCIe 5.0 для накопителей и видеокарты.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
-    "id": "mb-x670e-taichi",
+    "id": "mb-x870e-nova-wifi",
     "brand": "ASRock",
-    "name": "X670E Taichi Lite",
+    "name": "Phantom Gaming X870E NOVA WIFI",
     "price": 34990,
     "stock": 4,
     "specs": {
@@ -514,57 +514,75 @@
       "formFactor": "ATX",
       "pcieVersion": "5.0"
     },
-    "description": "Топовая плата для мощных процессоров Ryzen 9 и максимального разгона.",
+    "description": "Топовая плата для мощных процессоров Ryzen 9 и максимального разгона DDR5.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
-    "id": "mb-b760m-ds3h",
-    "brand": "Gigabyte",
-    "name": "B760M DS3H (DDR4)",
-    "price": 9990,
-    "stock": 15,
-    "specs": {
-      "socket": "LGA1700",
-      "ramType": "DDR4",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "mATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Доступная плата под Intel 12/13/14 поколения с поддержкой DDR4.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b760m-msi-ddr4",
+    "id": "mb-b760m-bomber",
     "brand": "MSI",
-    "name": "PRO B760M-A (DDR4)",
-    "price": 11990,
-    "stock": 13,
+    "name": "B760M BOMBER",
+    "price": 9990,
+    "stock": 18,
     "specs": {
       "socket": "LGA1700",
-      "ramType": "DDR4",
-      "ramSlots": 4,
-      "maxRamGB": 128,
+      "ramType": "DDR5",
+      "ramSlots": 2,
+      "maxRamGB": 96,
       "formFactor": "mATX",
       "pcieVersion": "4.0"
     },
-    "description": "Компактная плата для апгрейда старого ПК на DDR4 без переплаты за DDR5.",
+    "description": "Компактная и доступная плата под Intel 12/13/14 поколения.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
-    "id": "mb-z790-aorus",
-    "brand": "Gigabyte",
-    "name": "Z790 Aorus Elite AX (DDR5)",
-    "price": 26990,
-    "stock": 7,
+    "id": "mb-prime-b760-plus",
+    "brand": "ASUS",
+    "name": "PRIME B760-PLUS",
+    "price": 13990,
+    "stock": 15,
     "specs": {
       "socket": "LGA1700",
       "ramType": "DDR5",
       "ramSlots": 4,
-      "maxRamGB": 128,
+      "maxRamGB": 192,
+      "formFactor": "ATX",
+      "pcieVersion": "4.0"
+    },
+    "description": "Сбалансированная плата ASUS для сборок среднего уровня на Intel.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-b760-gaming-plus-wifi",
+    "brand": "MSI",
+    "name": "B760 GAMING PLUS WIFI",
+    "price": 15699,
+    "stock": 12,
+    "specs": {
+      "socket": "LGA1700",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 192,
+      "formFactor": "ATX",
+      "pcieVersion": "4.0"
+    },
+    "description": "Полноразмерная плата с Wi-Fi для Core i5/i7 без разгона.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-z790-gaming-plus-wifi",
+    "brand": "MSI",
+    "name": "Z790 GAMING PLUS WIFI",
+    "price": 15699,
+    "stock": 9,
+    "specs": {
+      "socket": "LGA1700",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 256,
       "formFactor": "ATX",
       "pcieVersion": "5.0"
     },
@@ -573,35 +591,35 @@
     "image": "mb.svg"
   },
   {
-    "id": "mb-z790-strix",
-    "brand": "ASUS",
-    "name": "ROG Strix Z790-E Gaming (DDR5)",
-    "price": 39990,
-    "stock": 4,
+    "id": "mb-z790-aorus-elite-ax",
+    "brand": "GIGABYTE",
+    "name": "Z790 AORUS ELITE AX",
+    "price": 20699,
+    "stock": 7,
     "specs": {
       "socket": "LGA1700",
       "ramType": "DDR5",
       "ramSlots": 4,
-      "maxRamGB": 192,
+      "maxRamGB": 256,
       "formFactor": "ATX",
       "pcieVersion": "5.0"
     },
-    "description": "Флагманская плата ROG для самых мощных сборок на 14-м поколении Intel.",
+    "description": "Флагманский чипсет для разгона Core i9 14-го поколения.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
-    "id": "mb-b860-pro",
+    "id": "mb-b860m-gaming-plus-wifi",
     "brand": "MSI",
-    "name": "PRO B860-P WiFi",
+    "name": "B860M GAMING PLUS WIFI",
     "price": 15990,
     "stock": 9,
     "specs": {
       "socket": "LGA1851",
       "ramType": "DDR5",
       "ramSlots": 4,
-      "maxRamGB": 192,
-      "formFactor": "ATX",
+      "maxRamGB": 256,
+      "formFactor": "mATX",
       "pcieVersion": "4.0"
     },
     "description": "Доступный вход в новую платформу Intel Core Ultra 200 серии.",
@@ -609,28 +627,10 @@
     "image": "mb.svg"
   },
   {
-    "id": "mb-b860-tuf",
-    "brand": "ASUS",
-    "name": "TUF Gaming B860-Plus WiFi",
-    "price": 18990,
-    "stock": 8,
-    "specs": {
-      "socket": "LGA1851",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 192,
-      "formFactor": "ATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Усиленное питание и хорошее охлаждение VRM для Core Ultra 7/9.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-z890-tomahawk",
+    "id": "mb-mag-b760-tomahawk-wifi",
     "brand": "MSI",
-    "name": "MAG Z890 Tomahawk WiFi",
-    "price": 28990,
+    "name": "MAG B760 TOMAHAWK WIFI",
+    "price": 19299,
     "stock": 6,
     "specs": {
       "socket": "LGA1851",
@@ -640,15 +640,15 @@
       "formFactor": "ATX",
       "pcieVersion": "5.0"
     },
-    "description": "Чипсет Z890 с разгоном и поддержкой DDR5-7200+ для Core Ultra 200S Plus.",
+    "description": "Усиленная VRM-секция серии Tomahawk для процессоров Core Ultra 7/9.",
     "category": "motherboard",
     "image": "mb.svg"
   },
   {
     "id": "ram-ddr5-16-5600",
-    "brand": "Crucial",
-    "name": "16GB (2x8) DDR5-5600",
-    "price": 6490,
+    "brand": "Kingston",
+    "name": "FURY Beast Black 16GB (2x8) DDR5-5600",
+    "price": 8990,
     "stock": 30,
     "specs": {
       "type": "DDR5",
@@ -656,32 +656,64 @@
       "speed": "5600MHz",
       "modules": 2
     },
-    "description": "Стартовый комплект памяти для современных платформ.",
+    "description": "Стартовый комплект памяти для современных платформ AM5/LGA1700.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr5-32-5600",
+    "brand": "G.Skill",
+    "name": "Aegis 5 32GB (2x16) DDR5-5600",
+    "price": 41799,
+    "stock": 20,
+    "specs": {
+      "type": "DDR5",
+      "capacityGB": 32,
+      "speed": "5600MHz",
+      "modules": 2
+    },
+    "description": "Оптимальный объём для игровых и рабочих сборок на DDR5.",
     "category": "ram",
     "image": "ram.svg"
   },
   {
     "id": "ram-ddr5-32-6000",
     "brand": "Kingston",
-    "name": "Fury Beast 32GB (2x16) DDR5-6000",
-    "price": 11990,
-    "stock": 25,
+    "name": "FURY Beast Black 32GB (2x16) DDR5-6000",
+    "price": 44999,
+    "stock": 18,
     "specs": {
       "type": "DDR5",
       "capacityGB": 32,
       "speed": "6000MHz",
       "modules": 2
     },
-    "description": "Оптимальная частота для платформы AM5, комплект из двух модулей.",
+    "description": "Частота 6000 МГц — «сладкая точка» для платформы AM5.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr5-32-6000-rgb",
+    "brand": "Kingston",
+    "name": "FURY Beast Black RGB 32GB (2x16) DDR5-6000",
+    "price": 49499,
+    "stock": 14,
+    "specs": {
+      "type": "DDR5",
+      "capacityGB": 32,
+      "speed": "6000MHz",
+      "modules": 2
+    },
+    "description": "Та же память с RGB-подсветкой для эффектных сборок.",
     "category": "ram",
     "image": "ram.svg"
   },
   {
     "id": "ram-ddr5-32-6400",
     "brand": "Corsair",
-    "name": "Dominator Platinum 32GB (2x16) DDR5-6400",
-    "price": 15990,
-    "stock": 14,
+    "name": "DOMINATOR Platinum RGB 32GB (2x16) DDR5-6400",
+    "price": 56299,
+    "stock": 9,
     "specs": {
       "type": "DDR5",
       "capacityGB": 32,
@@ -694,25 +726,25 @@
   },
   {
     "id": "ram-ddr5-64-6000",
-    "brand": "G.Skill",
-    "name": "Trident Z5 64GB (2x32) DDR5-6000",
-    "price": 27990,
-    "stock": 9,
+    "brand": "Kingston",
+    "name": "FURY Beast Black 64GB (2x32) DDR5-6000",
+    "price": 84990,
+    "stock": 7,
     "specs": {
       "type": "DDR5",
       "capacityGB": 64,
       "speed": "6000MHz",
       "modules": 2
     },
-    "description": "Большой объём для монтажа видео, рендера и тяжёлой многозадачности.",
+    "description": "Для тяжёлого рендера, монтажа и многозадачности.",
     "category": "ram",
     "image": "ram.svg"
   },
   {
     "id": "ram-ddr4-8-2666",
-    "brand": "Crucial",
-    "name": "8GB (1x8) DDR4-2666",
-    "price": 2490,
+    "brand": "Kingston",
+    "name": "ValueRAM 8GB (1x8) DDR4-2666",
+    "price": 1990,
     "stock": 40,
     "specs": {
       "type": "DDR4",
@@ -720,15 +752,15 @@
       "speed": "2666MHz",
       "modules": 1
     },
-    "description": "Самый доступный вариант для офисных и бюджетных сборок на DDR4.",
+    "description": "Базовый модуль для офисных и бюджетных сборок на AM4/LGA1700.",
     "category": "ram",
     "image": "ram.svg"
   },
   {
     "id": "ram-ddr4-16-3200",
     "brand": "Kingston",
-    "name": "Fury Beast 16GB (2x8) DDR4-3200",
-    "price": 4490,
+    "name": "FURY Beast 16GB (2x8) DDR4-3200",
+    "price": 3990,
     "stock": 32,
     "specs": {
       "type": "DDR4",
@@ -736,23 +768,7 @@
       "speed": "3200MHz",
       "modules": 2
     },
-    "description": "Популярный выбор для бюджетных и средних игровых сборок.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr4-16-3200-adata",
-    "brand": "ADATA",
-    "name": "XPG Gammix D10 16GB (2x8) DDR4-3200",
-    "price": 4290,
-    "stock": 28,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 16,
-      "speed": "3200MHz",
-      "modules": 2
-    },
-    "description": "Доступный комплект с алюминиевым радиатором для стабильного охлаждения.",
+    "description": "Самый популярный комплект DDR4 для сборок на AM4.",
     "category": "ram",
     "image": "ram.svg"
   },
@@ -761,14 +777,14 @@
     "brand": "Corsair",
     "name": "Vengeance LPX 32GB (2x16) DDR4-3200",
     "price": 7990,
-    "stock": 24,
+    "stock": 20,
     "specs": {
       "type": "DDR4",
       "capacityGB": 32,
       "speed": "3200MHz",
       "modules": 2
     },
-    "description": "Низкопрофильный радиатор — впишется в любой корпус и кулер.",
+    "description": "Комфортный объём для многозадачности на бюджетной платформе.",
     "category": "ram",
     "image": "ram.svg"
   },
@@ -776,391 +792,248 @@
     "id": "ram-ddr4-32-3600",
     "brand": "G.Skill",
     "name": "Ripjaws V 32GB (2x16) DDR4-3600",
-    "price": 8490,
-    "stock": 20,
+    "price": 8990,
+    "stock": 15,
     "specs": {
       "type": "DDR4",
       "capacityGB": 32,
       "speed": "3600MHz",
       "modules": 2
     },
-    "description": "Проверенная память для плат на DDR4 с запасом по частоте.",
+    "description": "Повышенная частота для разгона памяти на AM4 (Zen 3).",
     "category": "ram",
     "image": "ram.svg"
   },
   {
-    "id": "ram-ddr4-64-3600",
-    "brand": "Kingston",
-    "name": "Fury Beast 64GB (2x32) DDR4-3600",
-    "price": 15990,
-    "stock": 10,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 64,
-      "speed": "3600MHz",
-      "modules": 2
-    },
-    "description": "Максимальный объём на DDR4 — для рендера, виртуальных машин и тяжёлых проектов.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "gpu-rtx2060",
-    "name": "GeForce RTX 2060 6GB",
-    "price": 16990,
-    "stock": 6,
+    "id": "gpu-rtx3050-6g",
+    "brand": "MSI",
+    "name": "GeForce RTX 3050 VENTUS 2X E OC 6GB",
+    "price": 20999,
+    "stock": 14,
     "specs": {
       "vramGB": 6,
-      "tdp": 160,
-      "lengthMM": 210,
-      "recommendedPSU": 500
+      "tdp": 70,
+      "lengthMM": 197,
+      "recommendedPSU": 450
     },
-    "description": "Легендарная бюджетная карта с трассировкой лучей первого поколения.",
+    "description": "Доступная видеокарта начального уровня для 1080p.",
     "category": "gpu",
-    "brand": "NVIDIA",
     "image": "gpu.svg"
   },
   {
-    "id": "gpu-rtx3060",
-    "name": "GeForce RTX 3060 12GB",
-    "price": 27990,
-    "stock": 14,
+    "id": "gpu-rtx3050-8g",
+    "brand": "MSI",
+    "name": "GeForce RTX 3050 VENTUS 2X XS OC 8GB",
+    "price": 22999,
+    "stock": 12,
+    "specs": {
+      "vramGB": 8,
+      "tdp": 130,
+      "lengthMM": 197,
+      "recommendedPSU": 450
+    },
+    "description": "Версия с 8 ГБ памяти для более комфортной игры в 1080p.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx3060-12g",
+    "brand": "MSI",
+    "name": "GeForce RTX 3060 VENTUS 2X OC 12GB",
+    "price": 39999,
+    "stock": 10,
     "specs": {
       "vramGB": 12,
       "tdp": 170,
       "lengthMM": 242,
       "recommendedPSU": 550
     },
-    "description": "Один из самых популярных выборов для 1080p благодаря большому объёму памяти.",
+    "description": "12 ГБ видеопамяти — хороший запас для 1080p/1440p.",
     "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx3060ti",
-    "name": "GeForce RTX 3060 Ti 8GB",
-    "price": 31990,
-    "stock": 11,
-    "specs": {
-      "vramGB": 8,
-      "tdp": 200,
-      "lengthMM": 242,
-      "recommendedPSU": 550
-    },
-    "description": "Заметно быстрее обычной 3060, отличный вариант 1080p/1440p.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx3070",
-    "name": "GeForce RTX 3070 8GB",
-    "price": 36990,
-    "stock": 8,
-    "specs": {
-      "vramGB": 8,
-      "tdp": 220,
-      "lengthMM": 242,
-      "recommendedPSU": 650
-    },
-    "description": "Уверенное 1440p с высокими настройками графики.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx3070ti",
-    "name": "GeForce RTX 3070 Ti 8GB",
-    "price": 39990,
-    "stock": 6,
-    "specs": {
-      "vramGB": 8,
-      "tdp": 290,
-      "lengthMM": 267,
-      "recommendedPSU": 650
-    },
-    "description": "Прирост производительности над RTX 3070 ценой более высокого TDP.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx3080",
-    "name": "GeForce RTX 3080 10GB",
-    "price": 49990,
-    "stock": 5,
-    "specs": {
-      "vramGB": 10,
-      "tdp": 320,
-      "lengthMM": 285,
-      "recommendedPSU": 750
-    },
-    "description": "Бывший флагман поколения Ampere — всё ещё мощная карта для 1440p/4K.",
-    "category": "gpu",
-    "brand": "NVIDIA",
     "image": "gpu.svg"
   },
   {
     "id": "gpu-rtx4060",
-    "name": "GeForce RTX 4060 8GB",
-    "price": 30990,
-    "stock": 16,
+    "brand": "MSI",
+    "name": "GeForce RTX 4060 GAMING X 8GB",
+    "price": 34990,
+    "stock": 13,
     "specs": {
       "vramGB": 8,
       "tdp": 115,
-      "lengthMM": 220,
+      "lengthMM": 270,
       "recommendedPSU": 550
     },
-    "description": "Уверенная работа в 1080p/1440p с DLSS 3, низкое энергопотребление.",
+    "description": "Популярная видеокарта для комфортного 1080p с трассировкой лучей.",
     "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx4060ti",
-    "name": "GeForce RTX 4060 Ti 8GB",
-    "price": 36990,
-    "stock": 12,
-    "specs": {
-      "vramGB": 8,
-      "tdp": 160,
-      "lengthMM": 245,
-      "recommendedPSU": 550
-    },
-    "description": "Более быстрая версия 4060 с заделом для 1440p-игр.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx4070",
-    "name": "GeForce RTX 4070 12GB",
-    "price": 46990,
-    "stock": 10,
-    "specs": {
-      "vramGB": 12,
-      "tdp": 200,
-      "lengthMM": 244,
-      "recommendedPSU": 650
-    },
-    "description": "Хороший баланс цены и производительности для 1440p с трассировкой лучей.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx4070super",
-    "name": "GeForce RTX 4070 Super 12GB",
-    "price": 57990,
-    "stock": 9,
-    "specs": {
-      "vramGB": 12,
-      "tdp": 220,
-      "lengthMM": 267,
-      "recommendedPSU": 650
-    },
-    "description": "Обновлённая версия 4070 с заметным приростом ядер CUDA.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx4070tisuper",
-    "name": "GeForce RTX 4070 Ti Super 16GB",
-    "price": 76990,
-    "stock": 7,
-    "specs": {
-      "vramGB": 16,
-      "tdp": 285,
-      "lengthMM": 300,
-      "recommendedPSU": 750
-    },
-    "description": "16 ГБ памяти и производительность для 1440p/4K с запасом на будущее.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx4080super",
-    "name": "GeForce RTX 4080 Super 16GB",
-    "price": 99990,
-    "stock": 5,
-    "specs": {
-      "vramGB": 16,
-      "tdp": 320,
-      "lengthMM": 310,
-      "recommendedPSU": 850
-    },
-    "description": "Флагманская производительность прошлого поколения по сниженной цене.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx4090",
-    "name": "GeForce RTX 4090 24GB",
-    "price": 179990,
-    "stock": 3,
-    "specs": {
-      "vramGB": 24,
-      "tdp": 450,
-      "lengthMM": 336,
-      "recommendedPSU": 1000
-    },
-    "description": "Экс-флагман NVIDIA — 24 ГБ памяти для 4K, рендера и AI-задач.",
-    "category": "gpu",
-    "brand": "NVIDIA",
     "image": "gpu.svg"
   },
   {
     "id": "gpu-rtx5050",
+    "brand": "MSI",
     "name": "GeForce RTX 5050 8GB",
-    "price": 26990,
-    "stock": 15,
+    "price": 29990,
+    "stock": 16,
     "specs": {
       "vramGB": 8,
       "tdp": 130,
       "lengthMM": 210,
       "recommendedPSU": 550
     },
-    "description": "Самая доступная карта на архитектуре Blackwell с поддержкой DLSS 4.",
+    "description": "Новая архитектура Blackwell в доступном сегменте.",
     "category": "gpu",
-    "brand": "NVIDIA",
     "image": "gpu.svg"
   },
   {
     "id": "gpu-rtx5060",
-    "name": "GeForce RTX 5060 8GB",
-    "price": 34990,
-    "stock": 18,
+    "brand": "MSI",
+    "name": "GeForce RTX 5060 VENTUS 2X OC 8GB",
+    "price": 36999,
+    "stock": 14,
     "specs": {
       "vramGB": 8,
       "tdp": 145,
-      "lengthMM": 220,
+      "lengthMM": 242,
       "recommendedPSU": 550
     },
-    "description": "Актуальная бюджетная карта нового поколения с DLSS 4 Multi-Frame Generation.",
+    "description": "Актуальная видеокарта начального уровня с поддержкой DLSS 4.",
     "category": "gpu",
-    "brand": "NVIDIA",
     "image": "gpu.svg"
   },
   {
     "id": "gpu-rtx5060ti",
-    "name": "GeForce RTX 5060 Ti 16GB",
-    "price": 52990,
-    "stock": 13,
+    "brand": "MSI",
+    "name": "GeForce RTX 5060 Ti VENTUS 3X OC 16GB",
+    "price": 54999,
+    "stock": 10,
     "specs": {
       "vramGB": 16,
       "tdp": 180,
-      "lengthMM": 242,
+      "lengthMM": 301,
       "recommendedPSU": 600
     },
-    "description": "16 ГБ GDDR7 — отличный запас памяти для 1440p на годы вперёд.",
+    "description": "16 ГБ видеопамяти — с запасом для 1440p и требовательных игр.",
     "category": "gpu",
-    "brand": "NVIDIA",
     "image": "gpu.svg"
   },
   {
     "id": "gpu-rtx5070",
-    "name": "GeForce RTX 5070 12GB",
-    "price": 66990,
-    "stock": 11,
-    "specs": {
-      "vramGB": 12,
-      "tdp": 250,
-      "lengthMM": 267,
-      "recommendedPSU": 650
-    },
-    "description": "Флагманская производительность для 1440p и 4K с DLSS 4.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx5070ti",
-    "name": "GeForce RTX 5070 Ti 16GB",
-    "price": 94990,
-    "stock": 8,
-    "specs": {
-      "vramGB": 16,
-      "tdp": 300,
-      "lengthMM": 300,
-      "recommendedPSU": 750
-    },
-    "description": "16 ГБ GDDR7 и мощь для уверенного 4K-гейминга.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx5080",
-    "name": "GeForce RTX 5080 16GB",
-    "price": 139990,
-    "stock": 6,
-    "specs": {
-      "vramGB": 16,
-      "tdp": 360,
-      "lengthMM": 310,
-      "recommendedPSU": 850
-    },
-    "description": "Один из топовых игровых ускорителей поколения Blackwell.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rtx5090",
-    "name": "GeForce RTX 5090 32GB",
-    "price": 379990,
-    "stock": 3,
-    "specs": {
-      "vramGB": 32,
-      "tdp": 575,
-      "lengthMM": 340,
-      "recommendedPSU": 1000
-    },
-    "description": "Абсолютный флагман NVIDIA: 32 ГБ GDDR7 для 4K/8K, рендера и AI.",
-    "category": "gpu",
-    "brand": "NVIDIA",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rx6600",
-    "name": "Radeon RX 6600 8GB",
-    "price": 21990,
-    "stock": 14,
-    "specs": {
-      "vramGB": 8,
-      "tdp": 132,
-      "lengthMM": 220,
-      "recommendedPSU": 500
-    },
-    "description": "Проверенная бюджетная карта для комфортного 1080p.",
-    "category": "gpu",
-    "brand": "AMD",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rx6750xt",
-    "name": "Radeon RX 6750 XT 12GB",
-    "price": 32990,
+    "brand": "MSI",
+    "name": "GeForce RTX 5070 VENTUS 3X OC 12GB",
+    "price": 60999,
     "stock": 9,
     "specs": {
       "vramGB": 12,
       "tdp": 250,
-      "lengthMM": 267,
+      "lengthMM": 301,
       "recommendedPSU": 650
     },
-    "description": "Мощная карта прошлого поколения с большим объёмом памяти за свою цену.",
+    "description": "Уверенная производительность в 1440p с трассировкой лучей.",
     "category": "gpu",
-    "brand": "AMD",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx5070-trio",
+    "brand": "MSI",
+    "name": "GeForce RTX 5070 GAMING TRIO OC 12GB",
+    "price": 66799,
+    "stock": 7,
+    "specs": {
+      "vramGB": 12,
+      "tdp": 250,
+      "lengthMM": 323,
+      "recommendedPSU": 650
+    },
+    "description": "Улучшенное охлаждение и заводской разгон для RTX 5070.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx5070ti",
+    "brand": "MSI",
+    "name": "GeForce RTX 5070 Ti VENTUS 3X OC 16GB",
+    "price": 94999,
+    "stock": 6,
+    "specs": {
+      "vramGB": 16,
+      "tdp": 300,
+      "lengthMM": 323,
+      "recommendedPSU": 750
+    },
+    "description": "16 ГБ памяти и высокая производительность для 1440p/4K.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx5080",
+    "brand": "MSI",
+    "name": "GeForce RTX 5080 GAMING TRIO OC 16GB",
+    "price": 144999,
+    "stock": 4,
+    "specs": {
+      "vramGB": 16,
+      "tdp": 360,
+      "lengthMM": 336,
+      "recommendedPSU": 850
+    },
+    "description": "Топовая видеокарта для 4K-гейминга с трассировкой лучей.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx5090",
+    "brand": "ASUS",
+    "name": "GeForce RTX 5090 32GB",
+    "price": 239999,
+    "stock": 2,
+    "specs": {
+      "vramGB": 32,
+      "tdp": 575,
+      "lengthMM": 357,
+      "recommendedPSU": 1000
+    },
+    "description": "Абсолютный флагман NVIDIA — максимум производительности для 4K и рендера.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rx6400",
+    "brand": "Sapphire",
+    "name": "AMD Radeon RX 6400 PULSE 4GB",
+    "price": 14999,
+    "stock": 10,
+    "specs": {
+      "vramGB": 4,
+      "tdp": 53,
+      "lengthMM": 153,
+      "recommendedPSU": 400
+    },
+    "description": "Компактная и экономичная видеокарта начального уровня.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rx6600",
+    "brand": "ASRock",
+    "name": "AMD Radeon RX 6600 Challenger D 8GB",
+    "price": 22990,
+    "stock": 12,
+    "specs": {
+      "vramGB": 8,
+      "tdp": 132,
+      "lengthMM": 205,
+      "recommendedPSU": 500
+    },
+    "description": "Хороший бюджетный выбор для 1080p.",
+    "category": "gpu",
     "image": "gpu.svg"
   },
   {
     "id": "gpu-rx7600",
-    "name": "Radeon RX 7600 8GB",
+    "brand": "Sapphire",
+    "name": "AMD Radeon RX 7600 PULSE 8GB",
     "price": 26990,
-    "stock": 16,
+    "stock": 11,
     "specs": {
       "vramGB": 8,
       "tdp": 165,
@@ -1169,78 +1042,78 @@
     },
     "description": "Доступная видеокарта нового поколения для комфортного 1080p.",
     "category": "gpu",
-    "brand": "AMD",
     "image": "gpu.svg"
   },
   {
-    "id": "gpu-rx7700xt",
-    "name": "Radeon RX 7700 XT 12GB",
-    "price": 42990,
-    "stock": 10,
+    "id": "gpu-rx7600xt",
+    "brand": "Sapphire",
+    "name": "AMD Radeon RX 7600 XT PULSE GAMING OC 16GB",
+    "price": 36999,
+    "stock": 8,
     "specs": {
-      "vramGB": 12,
-      "tdp": 245,
-      "lengthMM": 267,
-      "recommendedPSU": 650
+      "vramGB": 16,
+      "tdp": 190,
+      "lengthMM": 251,
+      "recommendedPSU": 600
     },
-    "description": "Хороший вариант для 1440p с большим запасом видеопамяти.",
+    "description": "16 ГБ видеопамяти по доступной цене для 1080p/1440p.",
     "category": "gpu",
-    "brand": "AMD",
     "image": "gpu.svg"
   },
   {
     "id": "gpu-rx7800xt",
-    "name": "Radeon RX 7800 XT 16GB",
-    "price": 51990,
-    "stock": 8,
+    "brand": "Sapphire",
+    "name": "AMD Radeon RX 7800 XT PULSE 16GB",
+    "price": 76999,
+    "stock": 7,
     "specs": {
       "vramGB": 16,
       "tdp": 263,
-      "lengthMM": 285,
+      "lengthMM": 320,
       "recommendedPSU": 700
     },
     "description": "16 ГБ памяти и уверенная производительность в 1440p с высокими настройками.",
     "category": "gpu",
-    "brand": "AMD",
     "image": "gpu.svg"
   },
   {
-    "id": "gpu-rx7900xtx",
-    "name": "Radeon RX 7900 XTX 24GB",
-    "price": 99990,
-    "stock": 4,
-    "specs": {
-      "vramGB": 24,
-      "tdp": 355,
-      "lengthMM": 287,
-      "recommendedPSU": 850
-    },
-    "description": "Флагман AMD прошлого поколения — 24 ГБ памяти для 4K-гейминга.",
-    "category": "gpu",
-    "brand": "AMD",
-    "image": "gpu.svg"
-  },
-  {
-    "id": "gpu-rx9060xt",
-    "name": "Radeon RX 9060 XT 16GB",
-    "price": 43990,
+    "id": "gpu-rx9060xt-8g",
+    "brand": "Sapphire",
+    "name": "AMD Radeon RX 9060 XT PULSE GAMING OC 8GB",
+    "price": 38999,
     "stock": 12,
+    "specs": {
+      "vramGB": 8,
+      "tdp": 150,
+      "lengthMM": 242,
+      "recommendedPSU": 550
+    },
+    "description": "Новая архитектура RDNA 4 с поддержкой FSR 4 в доступном сегменте.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rx9060xt-16g",
+    "brand": "Sapphire",
+    "name": "AMD Radeon RX 9060 XT PULSE 16GB",
+    "price": 44999,
+    "stock": 10,
     "specs": {
       "vramGB": 16,
       "tdp": 190,
       "lengthMM": 242,
       "recommendedPSU": 600
     },
-    "description": "Новая архитектура RDNA 4 с поддержкой FSR 4 в доступном сегменте.",
+    "description": "Версия с 16 ГБ памяти — больше запаса для 1440p.",
     "category": "gpu",
-    "brand": "AMD",
     "image": "gpu.svg"
   },
   {
     "id": "gpu-rx9070",
-    "name": "Radeon RX 9070 16GB",
+    "brand": "XFX",
+    "name": "AMD Radeon RX 9070 16GB",
     "price": 59990,
-    "stock": 9,
+    "stock": 8,
     "specs": {
       "vramGB": 16,
       "tdp": 220,
@@ -1249,30 +1122,157 @@
     },
     "description": "16 ГБ памяти и хорошая трассировка лучей для RDNA 4.",
     "category": "gpu",
-    "brand": "AMD",
     "image": "gpu.svg"
   },
   {
     "id": "gpu-rx9070xt",
-    "name": "Radeon RX 9070 XT 16GB",
-    "price": 71990,
-    "stock": 7,
+    "brand": "Sapphire",
+    "name": "AMD Radeon RX 9070 XT PURE GAMING OC 16GB",
+    "price": 76999,
+    "stock": 6,
     "specs": {
       "vramGB": 16,
       "tdp": 304,
-      "lengthMM": 287,
+      "lengthMM": 320,
       "recommendedPSU": 750
     },
-    "description": "Топовая карта RDNA 4 — конкурент RTX 5070 Ti по цене заметно ниже.",
+    "description": "Топовая карта RDNA 4 — конкурент RTX 5070 Ti.",
     "category": "gpu",
-    "brand": "AMD",
     "image": "gpu.svg"
   },
   {
-    "id": "ssd-nvme-500",
+    "id": "gpu-rx7700xt",
+    "brand": "Sapphire",
+    "name": "AMD Radeon RX 7700 XT PULSE 12GB",
+    "price": 47990,
+    "stock": 7,
+    "specs": {
+      "vramGB": 12,
+      "tdp": 245,
+      "lengthMM": 267,
+      "recommendedPSU": 650
+    },
+    "description": "Хороший вариант для 1440p с большим запасом видеопамяти.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx3060ti",
+    "brand": "Gigabyte",
+    "name": "GeForce RTX 3060 Ti WINDFORCE OC 8GB",
+    "price": 42990,
+    "stock": 6,
+    "specs": {
+      "vramGB": 8,
+      "tdp": 200,
+      "lengthMM": 262,
+      "recommendedPSU": 600
+    },
+    "description": "Проверенная видеокарта прошлого поколения для 1440p.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx4060ti",
+    "brand": "MSI",
+    "name": "GeForce RTX 4060 Ti GAMING X 8GB",
+    "price": 44990,
+    "stock": 8,
+    "specs": {
+      "vramGB": 8,
+      "tdp": 160,
+      "lengthMM": 270,
+      "recommendedPSU": 550
+    },
+    "description": "Более мощная версия RTX 4060 для 1440p.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx4070super",
+    "brand": "Gigabyte",
+    "name": "GeForce RTX 4070 SUPER WINDFORCE OC 12GB",
+    "price": 64990,
+    "stock": 5,
+    "specs": {
+      "vramGB": 12,
+      "tdp": 220,
+      "lengthMM": 301,
+      "recommendedPSU": 650
+    },
+    "description": "Обновлённая RTX 4070 с более высокой производительностью.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx4070tisuper",
+    "brand": "Gigabyte",
+    "name": "GeForce RTX 4070 Ti SUPER WINDFORCE OC 16GB",
+    "price": 89990,
+    "stock": 4,
+    "specs": {
+      "vramGB": 16,
+      "tdp": 285,
+      "lengthMM": 320,
+      "recommendedPSU": 750
+    },
+    "description": "16 ГБ памяти и высокая производительность для 1440p/4K прошлого поколения.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx4080super",
+    "brand": "Gigabyte",
+    "name": "GeForce RTX 4080 SUPER WINDFORCE OC 16GB",
+    "price": 119990,
+    "stock": 3,
+    "specs": {
+      "vramGB": 16,
+      "tdp": 320,
+      "lengthMM": 336,
+      "recommendedPSU": 850
+    },
+    "description": "Флагман прошлого поколения для игр в 4K.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rtx4090",
+    "brand": "ASUS",
+    "name": "GeForce RTX 4090 TUF Gaming OC 24GB",
+    "price": 189990,
+    "stock": 2,
+    "specs": {
+      "vramGB": 24,
+      "tdp": 450,
+      "lengthMM": 357,
+      "recommendedPSU": 1000
+    },
+    "description": "Флагман прошлого поколения NVIDIA — 24 ГБ памяти для 4K-гейминга и рендера.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "gpu-rx7900xtx",
+    "brand": "Sapphire",
+    "name": "AMD Radeon RX 7900 XTX NITRO+ 24GB",
+    "price": 119990,
+    "stock": 3,
+    "specs": {
+      "vramGB": 24,
+      "tdp": 355,
+      "lengthMM": 346,
+      "recommendedPSU": 850
+    },
+    "description": "Флагман AMD прошлого поколения — 24 ГБ памяти для 4K-гейминга.",
+    "category": "gpu",
+    "image": "gpu.svg"
+  },
+  {
+    "id": "ssd-nvme-kingston-nv3-500",
     "brand": "Kingston",
     "name": "NV3 500GB NVMe",
-    "price": 4490,
+    "price": 4499,
     "stock": 45,
     "specs": {
       "type": "NVMe SSD",
@@ -1284,25 +1284,25 @@
     "image": "ssd.svg"
   },
   {
-    "id": "ssd-nvme-1tb",
-    "brand": "Samsung",
-    "name": "980 Pro 1TB NVMe",
-    "price": 8990,
+    "id": "ssd-nvme-kingston-nv3-1tb",
+    "brand": "Kingston",
+    "name": "NV3 1000GB NVMe",
+    "price": 7499,
     "stock": 40,
     "specs": {
       "type": "NVMe SSD",
       "capacityGB": 1000,
       "interface": "PCIe 4.0"
     },
-    "description": "Скорость чтения до 7000 МБ/с.",
+    "description": "Скорость чтения до 6000 Мбайт/с при доступной цене.",
     "category": "storage",
     "image": "ssd.svg"
   },
   {
-    "id": "ssd-nvme-2tb",
-    "brand": "WD",
-    "name": "Black SN850X 2TB NVMe",
-    "price": 15990,
+    "id": "ssd-nvme-samsung-990pro-2tb",
+    "brand": "Samsung",
+    "name": "990 PRO 2TB NVMe",
+    "price": 19990,
     "stock": 20,
     "specs": {
       "type": "NVMe SSD",
@@ -1314,14 +1314,14 @@
     "image": "ssd.svg"
   },
   {
-    "id": "ssd-sata-500",
+    "id": "ssd-sata-kingston-a400-480",
     "brand": "Kingston",
-    "name": "A400 500GB SATA",
-    "price": 3290,
+    "name": "A400 480GB SATA",
+    "price": 3990,
     "stock": 50,
     "specs": {
       "type": "SATA SSD",
-      "capacityGB": 500,
+      "capacityGB": 480,
       "interface": "SATA III"
     },
     "description": "Надёжный и недорогой накопитель для системы.",
@@ -1329,10 +1329,10 @@
     "image": "ssd.svg"
   },
   {
-    "id": "hdd-2tb",
-    "brand": "Seagate",
-    "name": "Barracuda 2TB HDD",
-    "price": 4990,
+    "id": "hdd-wd-blue-2tb",
+    "brand": "WD",
+    "name": "Blue 2TB HDD",
+    "price": 6990,
     "stock": 35,
     "specs": {
       "type": "HDD",
@@ -1344,10 +1344,10 @@
     "image": "hdd.svg"
   },
   {
-    "id": "hdd-4tb",
+    "id": "hdd-wd-purple-4tb",
     "brand": "WD",
-    "name": "Blue 4TB HDD",
-    "price": 8490,
+    "name": "Purple 4TB HDD",
+    "price": 17299,
     "stock": 22,
     "specs": {
       "type": "HDD",
@@ -1359,9 +1359,9 @@
     "image": "hdd.svg"
   },
   {
-    "id": "psu-550w",
-    "brand": "Deepcool",
-    "name": "PK550D 550W 80+ Bronze",
+    "id": "psu-deepcool-pk550d",
+    "brand": "DEEPCOOL",
+    "name": "GamerStorm PK550D 550W 80+ Bronze",
     "price": 5490,
     "stock": 20,
     "specs": {
@@ -1374,26 +1374,41 @@
     "image": "psu.svg"
   },
   {
-    "id": "psu-650w",
-    "brand": "Cougar",
-    "name": "GEX 650W 80+ Gold",
-    "price": 8990,
+    "id": "psu-adata-pylon-650",
+    "brand": "ADATA",
+    "name": "XPG PYLON BRONZE 650W",
+    "price": 6990,
     "stock": 17,
     "specs": {
       "wattage": 650,
-      "certification": "80+ Gold",
-      "modular": true
+      "certification": "80+ Bronze",
+      "modular": false
     },
-    "description": "Модульная разводка кабелей и высокая эффективность.",
+    "description": "Надёжный блок питания с хорошим запасом мощности.",
     "category": "psu",
     "image": "psu.svg"
   },
   {
-    "id": "psu-850w",
-    "brand": "Corsair",
-    "name": "RM850x 850W 80+ Gold",
-    "price": 14990,
+    "id": "psu-thermaltake-gf-750",
+    "brand": "Thermaltake",
+    "name": "Toughpower GF 750W 80+ Gold",
+    "price": 9799,
     "stock": 11,
+    "specs": {
+      "wattage": 750,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    "description": "Модульная разводка кабелей и высокая эффективность 80+ Gold.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-thermaltake-gfa3-850",
+    "brand": "Thermaltake",
+    "name": "Toughpower GF A3 Snow 850W 80+ Gold",
+    "price": 10899,
+    "stock": 8,
     "specs": {
       "wattage": 850,
       "certification": "80+ Gold",
@@ -1404,46 +1419,32 @@
     "image": "psu.svg"
   },
   {
-    "id": "psu-1000w",
-    "brand": "Corsair",
-    "name": "RM1000x 1000W 80+ Gold",
-    "price": 19990,
-    "stock": 7,
+    "id": "psu-thermaltake-gf3-1000",
+    "brand": "Thermaltake",
+    "name": "Toughpower GF3 1000W 80+ Gold",
+    "price": 15599,
+    "stock": 5,
     "specs": {
       "wattage": 1000,
       "certification": "80+ Gold",
       "modular": true
     },
-    "description": "Для сборок с RTX 4090/5090 и мощными процессорами Ryzen 9/Core i9.",
+    "description": "Для сборок с RTX 5090 и мощными процессорами Ryzen 9/Core i9.",
     "category": "psu",
     "image": "psu.svg"
   },
   {
-    "id": "psu-1200w",
-    "brand": "be quiet!",
-    "name": "Dark Power 13 1200W 80+ Titanium",
-    "price": 27990,
-    "stock": 4,
-    "specs": {
-      "wattage": 1200,
-      "certification": "80+ Titanium",
-      "modular": true
-    },
-    "description": "Максимальный запас мощности и эффективности для флагманских сборок.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "case-matx-compact",
+    "id": "case-deepcool-matrexx30",
     "brand": "DeepCool",
-    "name": "MACUBE 110 (mATX)",
-    "price": 5490,
+    "name": "MATREXX 30 (mATX)",
+    "price": 4990,
     "stock": 19,
     "specs": {
       "formFactors": [
-        "mATX"
+        "mATX",
+        "Mini-ITX"
       ],
-      "maxGpuLengthMM": 320,
+      "maxGpuLengthMM": 250,
       "includedFans": 1
     },
     "description": "Компактный корпус для домашних и офисных сборок.",
@@ -1451,47 +1452,49 @@
     "image": "case.svg"
   },
   {
-    "id": "case-matx-nzxt",
-    "brand": "NZXT",
-    "name": "H5 Flow (mATX/ATX)",
+    "id": "case-deepcool-ck560",
+    "brand": "DeepCool",
+    "name": "CK560 (ATX)",
     "price": 8990,
     "stock": 13,
     "specs": {
       "formFactors": [
         "ATX",
-        "mATX"
+        "mATX",
+        "E-ATX"
       ],
-      "maxGpuLengthMM": 365,
-      "includedFans": 2
+      "maxGpuLengthMM": 380,
+      "includedFans": 4
     },
-    "description": "Хорошая вентиляция и аккуратная укладка кабелей.",
+    "description": "Хорошая вентиляция и ARGB-подсветка для игровой сборки.",
     "category": "case",
     "image": "case.svg"
   },
   {
-    "id": "case-atx-lianli",
+    "id": "case-lianli-lancool3",
     "brand": "Lian Li",
-    "name": "Lancool 216 (ATX)",
-    "price": 11990,
+    "name": "LANCOOL III (ATX)",
+    "price": 13990,
     "stock": 9,
     "specs": {
       "formFactors": [
         "ATX",
-        "mATX"
+        "mATX",
+        "E-ATX"
       ],
       "maxGpuLengthMM": 392,
-      "includedFans": 3
+      "includedFans": 4
     },
     "description": "Максимальный воздушный поток для мощных конфигураций.",
     "category": "case",
     "image": "case.svg"
   },
   {
-    "id": "case-atx-fractal",
-    "brand": "Fractal Design",
-    "name": "North XL (ATX/E-ATX)",
-    "price": 16990,
-    "stock": 6,
+    "id": "case-lianli-o11evo-xl",
+    "brand": "Lian Li",
+    "name": "O11 Dynamic EVO XL (E-ATX)",
+    "price": 22990,
+    "stock": 4,
     "specs": {
       "formFactors": [
         "ATX",
@@ -1499,9 +1502,9 @@
         "E-ATX"
       ],
       "maxGpuLengthMM": 422,
-      "includedFans": 3
+      "includedFans": 0
     },
-    "description": "Просторный корпус для топовых видеокарт вроде RTX 5090 и мощного охлаждения.",
+    "description": "Просторный корпус для топовых видеокарт и мощного охлаждения.",
     "category": "case",
     "image": "case.svg"
   }
