@@ -1444,7 +1444,8 @@
         "mATX"
       ],
       "maxGpuLengthMM": 320,
-      "includedFans": 1
+      "includedFans": 1,
+      "maxRadiatorSizeMM": 240
     },
     "description": "Компактный корпус для домашних и офисных сборок.",
     "category": "case",
@@ -1462,7 +1463,8 @@
         "mATX"
       ],
       "maxGpuLengthMM": 365,
-      "includedFans": 2
+      "includedFans": 2,
+      "maxRadiatorSizeMM": 360
     },
     "description": "Хорошая вентиляция и аккуратная укладка кабелей.",
     "category": "case",
@@ -1480,7 +1482,8 @@
         "mATX"
       ],
       "maxGpuLengthMM": 392,
-      "includedFans": 3
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 360
     },
     "description": "Максимальный воздушный поток для мощных конфигураций.",
     "category": "case",
@@ -1499,11 +1502,8 @@
         "E-ATX"
       ],
       "maxGpuLengthMM": 422,
-      "includedFans": 3
-<<<<<<< HEAD
-    },
-    "description": "Просторный корпус для топовых видеокарт вроде RTX 5090 и мощного охлаждения.",
-=======
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 420
     },
     "description": "Просторный корпус для топовых видеокарт вроде RTX 5090 и мощного охлаждения.",
     "category": "case",
@@ -2020,7 +2020,8 @@
         "ATX"
       ],
       "maxGpuLengthMM": 360,
-      "includedFans": 2
+      "includedFans": 2,
+      "maxRadiatorSizeMM": 360
     },
     "description": "Один из самых популярных корпусов для игровых сборок благодаря отличному airflow.",
     "category": "case",
@@ -2038,7 +2039,8 @@
         "ATX"
       ],
       "maxGpuLengthMM": 381,
-      "includedFans": 2
+      "includedFans": 2,
+      "maxRadiatorSizeMM": 360
     },
     "description": "Культовый минималистичный корпус, массово используется в готовых сборках.",
     "category": "case",
@@ -2056,7 +2058,8 @@
         "ATX"
       ],
       "maxGpuLengthMM": 355,
-      "includedFans": 3
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 360
     },
     "description": "Популярный корпус с панорамным стеклом и хорошей вентиляцией за свою цену.",
     "category": "case",
@@ -2073,7 +2076,8 @@
         "mATX"
       ],
       "maxGpuLengthMM": 360,
-      "includedFans": 1
+      "includedFans": 1,
+      "maxRadiatorSizeMM": 240
     },
     "description": "Один из самых доступных и часто покупаемых компактных корпусов.",
     "category": "case",
@@ -2091,11 +2095,326 @@
         "ATX"
       ],
       "maxGpuLengthMM": 345,
-      "includedFans": 0
+      "includedFans": 0,
+      "maxRadiatorSizeMM": 280
     },
     "description": "Культовый корпус для эффектных сборок с открытой архитектурой охлаждения.",
->>>>>>> 0e1e4e7def5d21577e9acbcbc595e0b5ac0ff89a
     "category": "case",
     "image": "case.svg"
+  },
+  {
+    "id": "cooler-idcooling-dashflow240",
+    "brand": "ID-COOLING",
+    "name": "DASHFLOW 240 BASIC",
+    "price": 3990,
+    "stock": 20,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 240,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 300
+    },
+    "description": "Доступная СЖО 240 мм для начального уровня охлаждения.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-deepcool-le240v2",
+    "brand": "DEEPCOOL",
+    "name": "LE240 V2",
+    "price": 4599,
+    "stock": 22,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 240,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 260
+    },
+    "description": "Одна из самых популярных бюджетных СЖО 240 мм с ARGB-подсветкой.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-msi-coreliquid-a13-240",
+    "brand": "MSI",
+    "name": "MAG CORELIQUID A13 240",
+    "price": 5399,
+    "stock": 18,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 240,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 250
+    },
+    "description": "Доступная СЖО 240 мм от MSI с ARGB вентиляторами.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-arctic-lf3pro-240",
+    "brand": "ARCTIC",
+    "name": "Liquid Freezer III Pro 240 A-RGB",
+    "price": 8399,
+    "stock": 15,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 240,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 320
+    },
+    "description": "Одна из лучших СЖО 240 мм по эффективности охлаждения в своём классе.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-lianli-galahad2-lite-240",
+    "brand": "LIAN LI",
+    "name": "GALAHAD II LITE 240R",
+    "price": 7199,
+    "stock": 12,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 240,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 280
+    },
+    "description": "Стильная СЖО 240 мм с ARGB-подсветкой водоблока.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-deepcool-le360v2",
+    "brand": "DEEPCOOL",
+    "name": "LE360 V2",
+    "price": 5499,
+    "stock": 20,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 360,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 300
+    },
+    "description": "Самая популярная СЖО 360 мм в своём ценовом сегменте — тихая помпа и хороший airflow.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-deepcool-le360whv2",
+    "brand": "DEEPCOOL",
+    "name": "LE360 WH V2",
+    "price": 5499,
+    "stock": 14,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 360,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 300
+    },
+    "description": "Белая версия LE360 V2 для светлых сборок.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-msi-coreliquid-a15-240",
+    "brand": "MSI",
+    "name": "MAG CORELIQUID A15 240",
+    "price": 5699,
+    "stock": 14,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 240,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 260
+    },
+    "description": "Обновлённая версия A13 с улучшенной помпой.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-deepcool-lm360",
+    "brand": "DEEPCOOL",
+    "name": "LM360",
+    "price": 8299,
+    "stock": 10,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 360,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 300
+    },
+    "description": "СЖО 360 мм с LCD-дисплеем на помпе для мониторинга температур.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-arctic-lf3-360",
+    "brand": "ARCTIC",
+    "name": "Liquid Freezer III 360",
+    "price": 11599,
+    "stock": 10,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 360,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 350
+    },
+    "description": "Флагманская СЖО 360 мм с одной из лучших эффективностей на рынке.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-arctic-lf3pro-360argb",
+    "brand": "ARCTIC",
+    "name": "Liquid Freezer III Pro 360 ARGB",
+    "price": 11999,
+    "stock": 9,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 360,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 400
+    },
+    "description": "Топовая СЖО 360 мм для мощных CPU вроде Ryzen 9 и Core i9.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-deepcool-lqultra-360",
+    "brand": "DEEPCOOL",
+    "name": "LQ360 ULTRA ARGB",
+    "price": 11199,
+    "stock": 7,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 360,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 320
+    },
+    "description": "Улучшенная серия СЖО с ARGB-подсветкой и высокой производительностью.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-lianli-galahad2-trinity-360",
+    "brand": "LIAN LI",
+    "name": "GALAHAD II TRINITY 360 SL-INF",
+    "price": 13199,
+    "stock": 6,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 360,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 280
+    },
+    "description": "Премиальная СЖО с бесшовной ARGB-подсветкой по всей системе.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-deepcool-spartacus-360",
+    "brand": "DEEPCOOL",
+    "name": "SPARTACUS 360",
+    "price": 15599,
+    "stock": 4,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 360,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 320
+    },
+    "description": "Флагманская СЖО с LCD-дисплеем для топовых сборок.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-arctic-lf3pro-420argb",
+    "brand": "ARCTIC",
+    "name": "Liquid Freezer III Pro 420 A-RGB",
+    "price": 13990,
+    "stock": 5,
+    "specs": {
+      "type": "AIO",
+      "radiatorSizeMM": 420,
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "tdpRating": 420
+    },
+    "description": "Максимальный радиатор 420 мм для самых горячих CPU (Ryzen 9, Core i9).",
+    "category": "cooler",
+    "image": "cooler.svg"
   }
 ]
