@@ -45,6 +45,10 @@
       <h2>Все товары</h2>
       <span class="count" id="result-count"></span>
     </div>
+    <div style="margin-bottom:20px;max-width:420px;position:relative">
+      <input type="text" id="search-input" placeholder="Поиск по названию или бренду…"
+        style="width:100%;padding:12px 16px;border-radius:999px;border:1px solid var(--border);background:var(--bg-card);font-family:var(--sans);font-size:14px;color:var(--text)">
+    </div>
     <div class="chips" id="chips"></div>
     <div class="grid" id="grid"></div>
   </div>
@@ -66,6 +70,7 @@ const CATEGORY_LABELS = {
 
 let allProducts = [];
 let activeCategory = "all";
+let searchQuery = "";
 
 function renderChips() {
   const chips = document.getElementById("chips");
@@ -84,17 +89,31 @@ function renderChips() {
   });
 }
 
+function matchesSearch(p, q) {
+  if (!q) return true;
+  const haystack = `${p.brand} ${p.name} ${p.description}`.toLowerCase();
+  return q.toLowerCase().split(/\s+/).every((word) => haystack.includes(word));
+}
+
 function renderGrid() {
   const grid = document.getElementById("grid");
-  const list = activeCategory === "all" ? allProducts : allProducts.filter((p) => p.category === activeCategory);
+  let list = activeCategory === "all" ? allProducts : allProducts.filter((p) => p.category === activeCategory);
+  list = list.filter((p) => matchesSearch(p, searchQuery));
   document.getElementById("result-count").textContent = `${list.length} позиций`;
+
+  if (!list.length) {
+    grid.innerHTML = `<p style="color:var(--text-dim);grid-column:1/-1">Ничего не найдено. Попробуйте другой запрос.</p>`;
+    return;
+  }
 
   grid.innerHTML = list.map((p) => `
     <div class="card">
-      <div class="thumb"><img src="img/${p.image}" alt="${p.name}" width="72" height="72"></div>
-      <div class="brand">${p.brand}</div>
-      <div class="name">${p.name}</div>
-      <div class="desc">${p.description}</div>
+      <a href="product.html?id=${p.id}" style="display:contents;color:inherit">
+        <div class="thumb"><img src="img/${p.image}" alt="${p.name}" width="72" height="72"></div>
+        <div class="brand">${p.brand}</div>
+        <div class="name">${p.name}</div>
+        <div class="desc">${p.description}</div>
+      </a>
       <div class="price-row">
         <span class="price">${money(p.price)}</span>
         <span class="stock ${p.stock < 5 ? "low" : ""}">${p.stock < 5 ? `Осталось ${p.stock}` : "В наличии"}</span>
@@ -112,6 +131,11 @@ function renderGrid() {
     });
   });
 }
+
+document.getElementById("search-input").addEventListener("input", (e) => {
+  searchQuery = e.target.value.trim();
+  renderGrid();
+});
 
 (async function init() {
   allProducts = await API.getProducts();

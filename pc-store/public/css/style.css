@@ -222,3 +222,12 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 
 .footer { border-top: 1px solid var(--border); padding: 36px 0; color: var(--text-dim); font-size: 13px; position: relative; }
+
+/* ============ Поиск ============ */
+#search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+/* ============ Страница товара ============ */
+#product-root table td:first-child { width: 45%; }
+@media (max-width: 760px) {
+  #product-root > div { grid-template-columns: 1fr !important; }
+}

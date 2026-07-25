@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Товар — NODE.PC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container bar">
+    <a href="/" class="logo"><span class="dot"></span>NODE.PC</a>
+    <nav class="nav">
+      <a href="/">Каталог</a>
+      <a href="/builder.html">Конструктор сборки</a>
+    </nav>
+    <a href="/cart.html" class="cart-link">
+      Корзина <span id="cart-count" class="cart-badge" style="display:none">0</span>
+    </a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div id="breadcrumb" style="font-size:13px;color:var(--text-dim);margin-bottom:20px"></div>
+    <div id="product-root">
+      <p style="color:var(--text-dim)">Загрузка…</p>
+    </div>
+
+    <div id="similar-block" style="margin-top:56px"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <img class="decor cable" src="img/decor/cable.svg" alt="">
+  <img class="decor mouse" src="img/decor/mouse.svg" alt="">
+  <div class="container">NODE.PC — демонстрационный проект интернет-магазина. Все цены и наличие условны.</div>
+</footer>
+
+<script src="js/api.js"></script>
+<script>
+const CATEGORY_LABELS = {
+  cpu: "Процессоры", motherboard: "Материнские платы", ram: "Оперативная память",
+  gpu: "Видеокарты", storage: "Накопители", psu: "Блоки питания", case: "Корпуса",
+};
+
+function specRows(category, specs) {
+  const labels = {
+    cpu: { socket: "Сокет", cores: "Ядра", threads: "Потоки", tdp: "TDP", boostClock: "Частота (Boost)" },
+    motherboard: { socket: "Сокет", ramType: "Тип памяти", ramSlots: "Слотов памяти", maxRamGB: "Макс. память", formFactor: "Форм-фактор", pcieVersion: "PCIe" },
+    ram: { type: "Тип", capacityGB: "Объём", speed: "Частота", modules: "Модулей" },
+    gpu: { vramGB: "Видеопамять", tdp: "TDP", lengthMM: "Длина", recommendedPSU: "Рекомендуемый БП" },
+    storage: { type: "Тип", capacityGB: "Объём", interface: "Интерфейс" },
+    psu: { wattage: "Мощность", certification: "Сертификация", modular: "Модульный" },
+    case: { formFactors: "Форм-факторы", maxGpuLengthMM: "Макс. длина видеокарты", includedFans: "Вентиляторов в комплекте" },
+  };
+  const units = {
+    tdp: " Вт", vramGB: " ГБ", lengthMM: " мм", recommendedPSU: " Вт", capacityGB: " ГБ",
+    ramSlots: "", maxRamGB: " ГБ", wattage: " Вт", maxGpuLengthMM: " мм",
+  };
+  const map = labels[category] || {};
+  return Object.entries(specs).map(([key, value]) => {
+    const label = map[key] || key;
+    let val = value;
+    if (Array.isArray(val)) val = val.join(", ");
+    if (typeof val === "boolean") val = val ? "Да" : "Нет";
+    if (units[key]) val = `${val}${units[key]}`;
+    return `<tr><td>${label}</td><td>${val}</td></tr>`;
+  }).join("");
+}
+
+async function renderSimilar(product) {
+  const all = await API.getProducts(product.category);
+  const similar = all.filter((p) => p.id !== product.id).slice(0, 4);
+  if (!similar.length) return;
+  document.getElementById("similar-block").innerHTML = `
+    <div class="section-head"><h2>Похожие товары</h2></div>
+    <div class="grid">
+      ${similar.map((p) => `
+        <a href="product.html?id=${p.id}" class="card" style="cursor:pointer">
+          <div class="thumb"><img src="img/${p.image}" alt="${p.name}" width="72" height="72"></div>
+          <div class="brand">${p.brand}</div>
+          <div class="name">${p.name}</div>
+          <div class="price-row"><span class="price">${money(p.price)}</span></div>
+        </a>
+      `).join("")}
+    </div>
+  `;
+}
+
+async function init() {
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+  const root = document.getElementById("product-root");
+  const crumb = document.getElementById("breadcrumb");
+
+  if (!id) {
+    root.innerHTML = `<p>Товар не найден. <a href="/" style="color:var(--accent-dark)">Вернуться в каталог</a>.</p>`;
+    return;
+  }
+
+  let product;
+  try {
+    product = await API.getProduct(id);
+    if (product.error) throw new Error(product.error);
+  } catch (e) {
+    root.innerHTML = `<p>Товар не найден. <a href="/" style="color:var(--accent-dark)">Вернуться в каталог</a>.</p>`;
+    return;
+  }
+
+  crumb.innerHTML = `<a href="/" style="color:var(--accent-dark)">Каталог</a> / ${CATEGORY_LABELS[product.category] || product.category} / ${product.name}`;
+  document.title = `${product.name} — NODE.PC`;
+
+  root.innerHTML = `
+    <div style="display:grid;grid-template-columns:380px 1fr;gap:40px;align-items:start">
+      <div class="thumb" style="border-radius:var(--radius);padding:40px">
+        <img src="img/${product.image}" alt="${product.name}" width="220" height="220">
+      </div>
+      <div>
+        <div class="brand" style="font-size:13px">${product.brand}</div>
+        <h1 style="font-family:var(--display);font-size:32px;margin:6px 0 14px">${product.name}</h1>
+        <p style="color:var(--text-dim);font-size:15px;max-width:520px;margin-bottom:20px">${product.description}</p>
+
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px">
+          <span class="price" style="font-size:28px">${money(product.price)}</span>
+          <span class="stock ${product.stock < 5 ? "low" : ""}">${product.stock < 5 ? `Осталось ${product.stock} шт.` : "В наличии"}</span>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-bottom:32px">
+          <button class="btn btn-primary" id="add-btn" style="min-width:200px">В корзину</button>
+          <a href="/builder.html" class="btn btn-ghost">Собрать ПК с этим компонентом</a>
+        </div>
+
+        <h3 style="font-family:var(--display);font-size:17px;margin-bottom:10px">Характеристики</h3>
+        <table style="width:100%;max-width:520px;border-collapse:collapse;font-size:14px">
+          <tbody>${specRows(product.category, product.specs)}</tbody>
+        </table>
+      </div>
+    </div>
+  `;
+
+  document.querySelectorAll("#product-root table tr").forEach((row, i) => {
+    row.style.borderBottom = "1px solid var(--border)";
+    row.querySelectorAll("td").forEach((td, j) => {
+      td.style.padding = "10px 0";
+      if (j === 0) { td.style.color = "var(--text-dim)"; }
+      else { td.style.fontFamily = "var(--mono)"; td.style.textAlign = "right"; }
+    });
+  });
+
+  document.getElementById("add-btn").addEventListener("click", async () => {
+    const btn = document.getElementById("add-btn");
+    await API.addToCart(product.id, 1);
+    await refreshCartBadge();
+    btn.textContent = "Добавлено ✓";
+    setTimeout(() => (btn.textContent = "В корзину"), 1200);
+  });
+
+  renderSimilar(product);
+}
+
+init();
+</script>
+</body>
+</html>
