@@ -56,6 +56,27 @@ const API = {
     const res = await fetch(`/api/checkout/order/${id}`);
     return res.json();
   },
+  async getBuilds(brand) {
+    const url = brand ? `/api/builds?brand=${encodeURIComponent(brand)}` : "/api/builds";
+    const res = await fetch(url);
+    return res.json();
+  },
+  async getBuild(id) {
+    const res = await fetch(`/api/builds/${id}`);
+    return res.json();
+  },
+  async getBuildReviews(id) {
+    const res = await fetch(`/api/builds/${id}/reviews`);
+    return res.json();
+  },
+  async addBuildReview(id, review) {
+    const res = await fetch(`/api/builds/${id}/reviews`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(review),
+    });
+    return res.json();
+  },
 };
 
 const money = (n) => n.toLocaleString("ru-RU") + " ₽";

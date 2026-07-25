@@ -14,7 +14,8 @@
   <div class="container bar">
     <a href="/" class="logo"><span class="dot"></span>NODE.PC</a>
     <nav class="nav">
-      <a href="/">Каталог</a>
+      <a href="/">Готовые сборки</a>
+      <a href="/catalog.html">Каталог</a>
       <a href="/builder.html">Конструктор сборки</a>
     </nav>
     <a href="/cart.html" class="cart-link">
@@ -41,11 +42,10 @@
 </footer>
 
 <script src="js/api.js"></script>
-<script src="js/nav-active.js"></script>
 <script>
 const CATEGORY_LABELS = {
   cpu: "Процессоры", motherboard: "Материнские платы", ram: "Оперативная память",
-  gpu: "Видеокарты", storage: "Накопители", psu: "Блоки питания", case: "Корпуса", cooler: "Охлаждение",
+  gpu: "Видеокарты", storage: "Накопители", psu: "Блоки питания", case: "Корпуса",
 };
 
 function specRows(category, specs) {
@@ -56,12 +56,11 @@ function specRows(category, specs) {
     gpu: { vramGB: "Видеопамять", tdp: "TDP", lengthMM: "Длина", recommendedPSU: "Рекомендуемый БП" },
     storage: { type: "Тип", capacityGB: "Объём", interface: "Интерфейс" },
     psu: { wattage: "Мощность", certification: "Сертификация", modular: "Модульный" },
-    case: { formFactors: "Форм-факторы", maxGpuLengthMM: "Макс. длина видеокарты", includedFans: "Вентиляторов в комплекте", maxRadiatorSizeMM: "Макс. радиатор СЖО" },
-    cooler: { radiatorSizeMM: "Радиатор", sockets: "Поддерживаемые сокеты", tdpRating: "Рассчитано на TDP" },
+    case: { formFactors: "Форм-факторы", maxGpuLengthMM: "Макс. длина видеокарты", includedFans: "Вентиляторов в комплекте" },
   };
   const units = {
     tdp: " Вт", vramGB: " ГБ", lengthMM: " мм", recommendedPSU: " Вт", capacityGB: " ГБ",
-    ramSlots: "", maxRamGB: " ГБ", wattage: " Вт", maxGpuLengthMM: " мм", radiatorSizeMM: " мм", tdpRating: " Вт", maxRadiatorSizeMM: " мм",
+    ramSlots: "", maxRamGB: " ГБ", wattage: " Вт", maxGpuLengthMM: " мм",
   };
   const map = labels[category] || {};
   return Object.entries(specs).map(([key, value]) => {
@@ -100,7 +99,7 @@ async function init() {
   const crumb = document.getElementById("breadcrumb");
 
   if (!id) {
-    root.innerHTML = `<p>Товар не найден. <a href="/" style="color:var(--accent-dark)">Вернуться в каталог</a>.</p>`;
+    root.innerHTML = `<p>Товар не найден. <a href="/catalog.html" style="color:var(--accent-dark)">Вернуться в каталог</a>.</p>`;
     return;
   }
 
@@ -109,11 +108,11 @@ async function init() {
     product = await API.getProduct(id);
     if (product.error) throw new Error(product.error);
   } catch (e) {
-    root.innerHTML = `<p>Товар не найден. <a href="/" style="color:var(--accent-dark)">Вернуться в каталог</a>.</p>`;
+    root.innerHTML = `<p>Товар не найден. <a href="/catalog.html" style="color:var(--accent-dark)">Вернуться в каталог</a>.</p>`;
     return;
   }
 
-  crumb.innerHTML = `<a href="/" style="color:var(--accent-dark)">Каталог</a> / ${CATEGORY_LABELS[product.category] || product.category} / ${product.name}`;
+  crumb.innerHTML = `<a href="/catalog.html" style="color:var(--accent-dark)">Каталог</a> / ${CATEGORY_LABELS[product.category] || product.category} / ${product.name}`;
   document.title = `${product.name} — NODE.PC`;
 
   root.innerHTML = `

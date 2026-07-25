@@ -14,7 +14,8 @@
   <div class="container bar">
     <a href="/" class="logo"><span class="dot"></span>NODE.PC</a>
     <nav class="nav">
-      <a href="/">Каталог</a>
+      <a href="/">Готовые сборки</a>
+      <a href="/catalog.html">Каталог</a>
       <a href="/builder.html">Конструктор сборки</a>
     </nav>
     <a href="/cart.html" class="cart-link">
@@ -38,7 +39,6 @@
 </footer>
 
 <script src="js/api.js"></script>
-<script src="js/nav-active.js"></script>
 <script>
 async function render() {
   const cart = await API.getCart();
@@ -49,7 +49,7 @@ async function render() {
       <div class="empty-state">
         <div class="big">🛒</div>
         <p>Корзина пуста</p>
-        <a href="/" class="btn btn-primary">Перейти в каталог</a>
+        <a href="/catalog.html" class="btn btn-primary">Перейти в каталог</a>
       </div>`;
     return;
   }

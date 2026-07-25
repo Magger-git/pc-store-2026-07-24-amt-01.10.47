@@ -10,7 +10,7 @@ router.post("/check", async (req, res) => {
   const build = {};
   let total = 0;
 
-  for (const key of ["cpu", "motherboard", "ram", "gpu", "cooler", "storage", "psu", "case"]) {
+  for (const key of ["cpu", "motherboard", "ram", "gpu", "storage", "psu", "case"]) {
     if (ids[key]) {
       const product = await db.getProductById(ids[key]);
       if (!product) {

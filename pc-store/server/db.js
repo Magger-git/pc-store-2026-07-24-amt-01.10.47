@@ -81,6 +81,30 @@ async function init() {
     );
   `);
 
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS builds (
+      id TEXT PRIMARY KEY,
+      brand TEXT NOT NULL,
+      tier TEXT,
+      name TEXT NOT NULL,
+      description TEXT,
+      components JSONB NOT NULL,
+      price NUMERIC NOT NULL,
+      image TEXT
+    );
+  `);
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS reviews (
+      id SERIAL PRIMARY KEY,
+      build_id TEXT NOT NULL REFERENCES builds(id) ON DELETE CASCADE,
+      author TEXT NOT NULL,
+      rating INTEGER NOT NULL,
+      text TEXT NOT NULL,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    );
+  `);
+
   const { rows } = await pool.query("SELECT COUNT(*)::int AS count FROM products");
   if (rows[0].count === 0) {
     const seedPath = path.join(__dirname, "data", "products.json");
@@ -94,6 +118,23 @@ async function init() {
       );
     }
     console.log(`🌱 Загружено ${seed.length} товаров из products.json в базу данных.`);
+  }
+
+  const { rows: buildRows } = await pool.query("SELECT COUNT(*)::int AS count FROM builds");
+  if (buildRows[0].count === 0) {
+    const buildsPath = path.join(__dirname, "data", "builds.json");
+    if (fs.existsSync(buildsPath)) {
+      const seed = JSON.parse(fs.readFileSync(buildsPath, "utf-8"));
+      for (const b of seed) {
+        await pool.query(
+          `INSERT INTO builds (id, brand, tier, name, description, components, price, image)
+           VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+           ON CONFLICT (id) DO NOTHING`,
+          [b.id, b.brand, b.tier, b.name, b.description, b.components, b.price, b.image]
+        );
+      }
+      console.log(`🌱 Загружено ${seed.length} готовых сборок из builds.json в базу данных.`);
+    }
   }
 }
 
@@ -212,6 +253,60 @@ async function deleteProduct(id) {
   await pool.query("DELETE FROM products WHERE id = $1", [id]);
 }
 
+// ---------- Готовые сборки ----------
+function rowToBuild(row) {
+  return {
+    id: row.id,
+    brand: row.brand,
+    tier: row.tier,
+    name: row.name,
+    description: row.description,
+    components: row.components,
+    price: Number(row.price),
+    image: row.image,
+  };
+}
+
+async function getBuilds() {
+  const { rows } = await pool.query("SELECT * FROM builds ORDER BY price ASC");
+  return rows.map(rowToBuild);
+}
+
+async function getBuildById(id) {
+  const { rows } = await pool.query("SELECT * FROM builds WHERE id = $1", [id]);
+  return rows[0] ? rowToBuild(rows[0]) : null;
+}
+
+// ---------- Отзывы на сборки ----------
+function rowToReview(row) {
+  return {
+    id: row.id,
+    buildId: row.build_id,
+    author: row.author,
+    rating: row.rating,
+    text: row.text,
+    createdAt: row.created_at,
+  };
+}
+
+async function getReviewsForBuild(buildId) {
+  const { rows } = await pool.query(
+    "SELECT * FROM reviews WHERE build_id = $1 ORDER BY created_at DESC",
+    [buildId]
+  );
+  return rows.map(rowToReview);
+}
+
+async function createReview(buildId, { author, rating, text }) {
+  const { rows } = await pool.query(
+    `INSERT INTO reviews (build_id, author, rating, text)
+     VALUES ($1,$2,$3,$4)
+     RETURNING *`,
+    [buildId, author, rating, text]
+  );
+  return rowToReview(rows[0]);
+}
+
 module.exports = {
   init,
   getProducts,
@@ -226,4 +321,8 @@ module.exports = {
   createOrder,
   getOrderById,
   getAllOrders,
+  getBuilds,
+  getBuildById,
+  getReviewsForBuild,
+  createReview,
 };

@@ -14,7 +14,8 @@
   <div class="container bar">
     <a href="/" class="logo"><span class="dot"></span>NODE.PC</a>
     <nav class="nav">
-      <a href="/">Каталог</a>
+      <a href="/">Готовые сборки</a>
+      <a href="/catalog.html">Каталог</a>
       <a href="/builder.html">Конструктор сборки</a>
     </nav>
     <a href="/cart.html" class="cart-link">
@@ -28,12 +29,11 @@
     <div style="font-size:48px;margin-bottom:12px">✅</div>
     <h2>Заказ оформлен</h2>
     <p id="order-info" style="color:var(--text-dim)">Загружаем детали заказа…</p>
-    <a href="/" class="btn btn-primary" style="margin-top:16px">Вернуться в каталог</a>
+    <a href="/catalog.html" class="btn btn-primary" style="margin-top:16px">Вернуться в каталог</a>
   </div>
 </section>
 
 <script src="js/api.js"></script>
-<script src="js/nav-active.js"></script>
 <script>
 (async function () {
   const params = new URLSearchParams(location.search);

@@ -8,6 +8,7 @@ const builderRouter = require("./routes/builder");
 const cartRouter = require("./routes/cart");
 const checkoutRouter = require("./routes/checkout");
 const adminRouter = require("./routes/admin");
+const buildsRouter = require("./routes/builds");
 const db = require("./db");
 
 const app = express();
@@ -39,6 +40,7 @@ app.use("/api/builder", builderRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/checkout", checkoutRouter);
 app.use("/api/admin", adminRouter);
+app.use("/api/builds", buildsRouter);
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NODE.PC — компьютеры и комплектующие</title>
+<title>Готовые сборки ПК — NODE.PC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -14,7 +14,8 @@
   <div class="container bar">
     <a href="/" class="logo"><span class="dot"></span>NODE.PC</a>
     <nav class="nav">
-      <a href="/">Каталог</a>
+      <a href="/" class="active">Готовые сборки</a>
+      <a href="/catalog.html">Каталог</a>
       <a href="/builder.html">Конструктор сборки</a>
     </nav>
     <a href="/cart.html" class="cart-link">
@@ -23,126 +24,70 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" style="padding-bottom:32px">
 <img class="decor mug" src="img/decor/mug.svg" alt="">
 <img class="decor laptop" src="img/decor/laptop.svg" alt="">
-<img class="decor headphones" src="img/decor/headphones.svg" alt="">
 
   <div class="container">
-    <div class="eyebrow">// каталог комплектующих</div>
-    <h1>Собери компьютер, который не будет узким местом.</h1>
-    <p>Процессоры, платы, память и видеокарты — в наличии. Не уверены, что совместимо между собой? Соберите систему в конструкторе — он сам проверит сокет, тип памяти и мощность БП.</p>
-    <div class="hero-actions">
-      <a href="/builder.html" class="btn btn-ghost">Открыть конструктор</a>
-      <a href="#catalog" class="btn btn-ghost">Смотреть каталог</a>
-    </div>
+    <div class="eyebrow">// готовые сборки</div>
+    <h1>Не хотите собирать сами — выберите готовое решение.</h1>
+    <p>10 сборок на AMD и 10 на Intel — от бюджетных до топовых, все проверены на совместимость. У каждой — характеристики, цена и отзывы. Хотите собрать своё — переходите в <a href="/builder.html" style="color:var(--accent-dark)">конструктор</a>.</p>
   </div>
 </section>
 
-<section class="section" id="catalog">
+<section class="section" style="padding-top:0">
   <div class="container">
     <div class="section-head">
-      <h2>Все товары</h2>
-      <span class="count" id="result-count"></span>
+      <h2>Сборки на AMD</h2>
+      <span class="count" id="amd-count"></span>
     </div>
-    <div style="margin-bottom:20px;max-width:420px;position:relative">
-      <input type="text" id="search-input" placeholder="Поиск по названию или бренду…"
-        style="width:100%;padding:12px 16px;border-radius:999px;border:1px solid var(--border);background:var(--bg-card);font-family:var(--sans);font-size:14px;color:var(--text)">
+    <div class="grid" id="amd-grid"></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <h2>Сборки на Intel</h2>
+      <span class="count" id="intel-count"></span>
     </div>
-    <div class="chips" id="chips"></div>
-    <div class="grid" id="grid"></div>
+    <div class="grid" id="intel-grid"></div>
   </div>
 </section>
 
 <footer class="footer">
 <img class="decor cable" src="img/decor/cable.svg" alt="">
 <img class="decor mouse" src="img/decor/mouse.svg" alt="">
-
   <div class="container">NODE.PC — демонстрационный проект интернет-магазина. Все цены и наличие условны.</div>
 </footer>
 
 <script src="js/api.js"></script>
-<script src="js/nav-active.js"></script>
 <script>
-const CATEGORY_LABELS = {
-  cpu: "Процессоры", motherboard: "Материнские платы", ram: "Оперативная память",
-  gpu: "Видеокарты", storage: "Накопители", psu: "Блоки питания", case: "Корпуса", cooler: "Охлаждение",
-};
+const TIER_LABELS = { budget: "Стартовая", mid: "Оптимальная", high: "Производительная", flagship: "Флагманская" };
 
-let allProducts = [];
-let activeCategory = "all";
-let searchQuery = "";
-
-function renderChips() {
-  const chips = document.getElementById("chips");
-  const cats = ["all", ...new Set(allProducts.map((p) => p.category))];
-  chips.innerHTML = cats.map((c) => `
-    <button class="chip ${c === activeCategory ? "active" : ""}" data-cat="${c}">
-      ${c === "all" ? "Все" : CATEGORY_LABELS[c] || c}
-    </button>
-  `).join("");
-  chips.querySelectorAll(".chip").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      activeCategory = btn.dataset.cat;
-      renderChips();
-      renderGrid();
-    });
-  });
+function buildCard(b) {
+  return `
+    <a href="build.html?id=${b.id}" class="card" style="cursor:pointer">
+      <div class="thumb"><img src="img/${b.image}" alt="${b.name}" width="72" height="72"></div>
+      <div class="brand">${TIER_LABELS[b.tier] || ""}</div>
+      <div class="name">${b.name}</div>
+      <div class="desc">${b.description}</div>
+      <div class="price-row"><span class="price">${money(b.price)}</span></div>
+    </a>
+  `;
 }
 
-function matchesSearch(p, q) {
-  if (!q) return true;
-  const haystack = `${p.brand} ${p.name} ${p.description}`.toLowerCase();
-  return q.toLowerCase().split(/\s+/).every((word) => haystack.includes(word));
+async function init() {
+  const [amd, intel] = await Promise.all([API.getBuilds("amd"), API.getBuilds("intel")]);
+
+  document.getElementById("amd-count").textContent = `${amd.length} сборок`;
+  document.getElementById("amd-grid").innerHTML = amd.map(buildCard).join("");
+
+  document.getElementById("intel-count").textContent = `${intel.length} сборок`;
+  document.getElementById("intel-grid").innerHTML = intel.map(buildCard).join("");
 }
 
-function renderGrid() {
-  const grid = document.getElementById("grid");
-  let list = activeCategory === "all" ? allProducts : allProducts.filter((p) => p.category === activeCategory);
-  list = list.filter((p) => matchesSearch(p, searchQuery));
-  document.getElementById("result-count").textContent = `${list.length} позиций`;
-
-  if (!list.length) {
-    grid.innerHTML = `<p style="color:var(--text-dim);grid-column:1/-1">Ничего не найдено. Попробуйте другой запрос.</p>`;
-    return;
-  }
-
-  grid.innerHTML = list.map((p) => `
-    <div class="card">
-      <a href="product.html?id=${p.id}" style="display:contents;color:inherit">
-        <div class="thumb"><img src="img/${p.image}" alt="${p.name}" width="72" height="72"></div>
-        <div class="brand">${p.brand}</div>
-        <div class="name">${p.name}</div>
-        <div class="desc">${p.description}</div>
-      </a>
-      <div class="price-row">
-        <span class="price">${money(p.price)}</span>
-        <span class="stock ${p.stock < 5 ? "low" : ""}">${p.stock < 5 ? `Осталось ${p.stock}` : "В наличии"}</span>
-      </div>
-      <button class="btn btn-primary btn-block btn-sm" data-add="${p.id}">В корзину</button>
-    </div>
-  `).join("");
-
-  grid.querySelectorAll("[data-add]").forEach((btn) => {
-    btn.addEventListener("click", async () => {
-      btn.textContent = "Добавлено ✓";
-      await API.addToCart(btn.dataset.add, 1);
-      await refreshCartBadge();
-      setTimeout(() => (btn.textContent = "В корзину"), 1200);
-    });
-  });
-}
-
-document.getElementById("search-input").addEventListener("input", (e) => {
-  searchQuery = e.target.value.trim();
-  renderGrid();
-});
-
-(async function init() {
-  allProducts = await API.getProducts();
-  renderChips();
-  renderGrid();
-})();
+init();
 </script>
 </body>
 </html>

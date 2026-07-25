@@ -4,7 +4,7 @@
 
 function checkBuild(build) {
   const issues = [];
-  const { cpu, motherboard, ram, gpu, storage, psu, case: pcCase, cooler } = build;
+  const { cpu, motherboard, ram, gpu, storage, psu, case: pcCase } = build;
 
   // CPU <-> Материнская плата: сокет
   if (cpu && motherboard) {
@@ -54,37 +54,6 @@ function checkBuild(build) {
       issues.push({
         level: "error",
         message: `Видеокарта ${gpu.name} (${gpu.specs.lengthMM} мм) длиннее, чем допускает корпус (макс. ${pcCase.specs.maxGpuLengthMM} мм).`,
-      });
-    }
-  }
-
-  // Охлаждение (СЖО) <-> Процессор: сокет и запас по TDP
-  if (cooler && cpu) {
-    if (!cooler.specs.sockets.includes(cpu.specs.socket)) {
-      issues.push({
-        level: "error",
-        message: `Охлаждение ${cooler.name} не поддерживает сокет ${cpu.specs.socket} (процессор ${cpu.name}).`,
-      });
-    }
-    if (cooler.specs.tdpRating < cpu.specs.tdp) {
-      issues.push({
-        level: "error",
-        message: `Охлаждение ${cooler.name} рассчитано на ${cooler.specs.tdpRating} Вт, а процессору ${cpu.name} требуется отвод ${cpu.specs.tdp} Вт.`,
-      });
-    } else if (cooler.specs.tdpRating < cpu.specs.tdp + 30) {
-      issues.push({
-        level: "warning",
-        message: `Небольшой запас по охлаждению для ${cpu.name} — при разгоне или в жару температуры могут быть высокими.`,
-      });
-    }
-  }
-
-  // Охлаждение (СЖО) <-> Корпус: размер радиатора
-  if (cooler && pcCase && pcCase.specs.maxRadiatorSizeMM) {
-    if (cooler.specs.radiatorSizeMM > pcCase.specs.maxRadiatorSizeMM) {
-      issues.push({
-        level: "error",
-        message: `Радиатор ${cooler.name} (${cooler.specs.radiatorSizeMM} мм) не помещается в корпус ${pcCase.name} (макс. ${pcCase.specs.maxRadiatorSizeMM} мм).`,
       });
     }
   }
