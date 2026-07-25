@@ -28,7 +28,7 @@
   <div class="container">
     <div class="eyebrow">// конструктор сборки</div>
     <h1 style="font-size:32px">Выберите компоненты — совместимость проверяем автоматически</h1>
-    <p>Откройте каждый раздел и выберите один вариант. Если что-то не подходит по сокету, типу памяти, форм-фактору или мощности блока питания — увидите предупреждение сразу.</p>
+    <p>Нажмите «Выбрать» в любом разделе — откроется список товаров с фильтрами и сортировкой, как в обычном магазине. Несовместимые варианты можно скрыть одним переключателем.</p>
   </div>
 </section>
 
@@ -56,9 +56,48 @@
 <footer class="footer">
 <img class="decor cable" src="img/decor/cable.svg" alt="">
 <img class="decor mouse" src="img/decor/mouse.svg" alt="">
-
   <div class="container">NODE.PC — демонстрационный проект интернет-магазина. Все цены и наличие условны.</div>
 </footer>
+
+<!-- Окно выбора компонента -->
+<div class="picker-backdrop" id="picker-backdrop">
+  <div class="picker-panel">
+    <div class="picker-head">
+      <h3 id="picker-title">Выбор компонента</h3>
+      <button class="picker-close" id="picker-close">✕</button>
+    </div>
+    <div class="picker-toolbar">
+      <div class="picker-chiprow" id="picker-brand-chips"></div>
+      <div class="picker-chiprow" id="picker-extra-chips"></div>
+      <div class="picker-controls">
+        <label class="picker-checkbox-row" style="padding:0">
+          <input type="checkbox" id="picker-compat-toggle">
+          Показывать только совместимые с уже выбранным
+        </label>
+        <select class="picker-select" id="picker-sort">
+          <option value="price-asc">Сначала дешёвые</option>
+          <option value="price-desc">Сначала дорогие</option>
+          <option value="name">По названию</option>
+        </select>
+      </div>
+    </div>
+    <div class="picker-body">
+      <div class="picker-sidebar">
+        <h4>Цена, ₽</h4>
+        <div class="price-range">
+          <input type="number" id="picker-price-min" placeholder="от">
+          <input type="number" id="picker-price-max" placeholder="до">
+        </div>
+        <h4>Поиск</h4>
+        <input type="text" id="picker-search" placeholder="Название или бренд…"
+          style="width:100%;padding:8px 10px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--bg-elevated);font-size:13px;margin-bottom:20px">
+        <h4>Бренд</h4>
+        <div id="picker-brand-list"></div>
+      </div>
+      <div class="picker-list" id="picker-list"></div>
+    </div>
+  </div>
+</div>
 
 <script src="js/api.js"></script>
 <script>
@@ -85,9 +124,40 @@ function specLine(category, specs) {
   }
 }
 
+function specBullets(category, specs) {
+  return specLine(category, specs).split(" · ").map((s) => `• ${s}`).join("<br>");
+}
+
 const state = {}; // key -> productId | null
 const productsByCategory = {};
 
+// ---------- Клиентская проверка совместимости (для быстрой фильтрации в окне выбора) ----------
+// Совпадает с логикой server/compatibility.js (только ошибки, без предупреждений).
+// Финальная проверка при добавлении сборки в корзину всё равно идёт через сервер.
+function isCandidateCompatible(category, candidate) {
+  const build = {};
+  ["cpu", "motherboard", "ram", "gpu", "storage", "psu", "case"].forEach((k) => {
+    if (k === category) { build[k] = candidate; return; }
+    const id = state[k];
+    build[k] = id ? (productsByCategory[k] || []).find((p) => p.id === id) : null;
+  });
+  const { cpu, motherboard, ram, gpu, case: pcCase, psu } = build;
+
+  if (cpu && motherboard && cpu.specs.socket !== motherboard.specs.socket) return false;
+  if (ram && motherboard) {
+    if (ram.specs.type !== motherboard.specs.ramType) return false;
+    if (ram.specs.modules > motherboard.specs.ramSlots) return false;
+  }
+  if (motherboard && pcCase && !pcCase.specs.formFactors.includes(motherboard.specs.formFactor)) return false;
+  if (gpu && pcCase && gpu.specs.lengthMM > pcCase.specs.maxGpuLengthMM) return false;
+  if (psu) {
+    const estimatedLoad = (cpu ? cpu.specs.tdp : 0) + (gpu ? gpu.specs.tdp : 0) + 80;
+    if (psu.specs.wattage < estimatedLoad) return false;
+  }
+  return true;
+}
+
+// ---------- Список слотов на странице ----------
 function renderSlots() {
   const container = document.getElementById("slots");
   container.innerHTML = SLOTS.map((slot) => {
@@ -96,46 +166,19 @@ function renderSlots() {
     const selected = options.find((o) => o.id === selectedId);
     return `
       <div class="slot" data-slot="${slot.key}">
-        <div class="slot-head" data-toggle="${slot.key}">
+        <div class="slot-head">
           <div>
             <div class="label">${slot.label}${slot.required ? "" : " (опционально)"}</div>
-            <div class="selected-name">${selected ? selected.name : "Не выбрано"}</div>
+            <div class="selected-name">${selected ? `${selected.brand} ${selected.name}` : "Не выбрано"}</div>
           </div>
-          <span class="chevron">▾</span>
-        </div>
-        <div class="slot-body">
-          ${!slot.required ? `<div class="option-row ${!selectedId ? "selected" : ""}" data-pick="${slot.key}" data-id=""><div class="meta"><div class="opt-name">Не устанавливать</div></div></div>` : ""}
-          ${options.map((o) => `
-            <div class="option-row ${o.id === selectedId ? "selected" : ""}" data-pick="${slot.key}" data-id="${o.id}">
-              <div class="meta">
-                <div class="opt-name">${o.brand} ${o.name}</div>
-                <div class="opt-specs">${specLine(slot.key, o.specs)}</div>
-              </div>
-              <div class="opt-price">${money(o.price)}</div>
-            </div>
-          `).join("")}
+          <button class="btn btn-ghost btn-sm" data-open="${slot.key}">${selected ? "Изменить" : "Выбрать"}</button>
         </div>
       </div>
     `;
   }).join("");
 
-  container.querySelectorAll("[data-toggle]").forEach((head) => {
-    head.addEventListener("click", () => {
-      const slotEl = head.closest(".slot");
-      const wasOpen = slotEl.classList.contains("open");
-      container.querySelectorAll(".slot").forEach((s) => s.classList.remove("open"));
-      if (!wasOpen) slotEl.classList.add("open");
-    });
-  });
-
-  container.querySelectorAll("[data-pick]").forEach((row) => {
-    row.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const key = row.dataset.pick;
-      state[key] = row.dataset.id || null;
-      renderSlots();
-      updateSummary();
-    });
+  container.querySelectorAll("[data-open]").forEach((btn) => {
+    btn.addEventListener("click", () => openPicker(btn.dataset.open));
   });
 }
 
@@ -174,13 +217,205 @@ document.getElementById("add-build-to-cart").addEventListener("click", async () 
   btn.disabled = false;
 });
 
+// ================= Окно выбора компонента =================
+let pickerCategory = null;
+let pickerFilters = {};
+
+function defaultFilters() {
+  return {
+    brand: null,
+    extra: null, // сокет / тип памяти — второй ряд чипсов
+    search: "",
+    priceMin: null,
+    priceMax: null,
+    compatibleOnly: false,
+    sort: "price-asc",
+  };
+}
+
+function extraChipField(category) {
+  if (category === "cpu" || category === "motherboard") return { field: "socket", label: "Сокет" };
+  if (category === "ram") return { field: "type", label: "Тип памяти" };
+  return null;
+}
+
+function openPicker(category) {
+  pickerCategory = category;
+  pickerFilters = defaultFilters();
+  document.getElementById("picker-title").textContent =
+    "Выбор: " + (SLOTS.find((s) => s.key === category) || {}).label;
+  document.getElementById("picker-search").value = "";
+  document.getElementById("picker-price-min").value = "";
+  document.getElementById("picker-price-max").value = "";
+  document.getElementById("picker-sort").value = "price-asc";
+  document.getElementById("picker-compat-toggle").checked = false;
+  renderPickerChips();
+  renderPickerBrandList();
+  renderPickerList();
+  document.getElementById("picker-backdrop").classList.add("open");
+}
+
+function closePicker() {
+  document.getElementById("picker-backdrop").classList.remove("open");
+  pickerCategory = null;
+}
+document.getElementById("picker-close").addEventListener("click", closePicker);
+document.getElementById("picker-backdrop").addEventListener("click", (e) => {
+  if (e.target.id === "picker-backdrop") closePicker();
+});
+
+function renderPickerChips() {
+  const options = productsByCategory[pickerCategory] || [];
+  const brands = [...new Set(options.map((o) => o.brand))];
+  const brandChips = document.getElementById("picker-brand-chips");
+  brandChips.innerHTML = `<button class="chip ${!pickerFilters.brand ? "active" : ""}" data-brand="">Все бренды</button>` +
+    brands.map((b) => `<button class="chip ${pickerFilters.brand === b ? "active" : ""}" data-brand="${b}">${b}</button>`).join("");
+  brandChips.querySelectorAll("[data-brand]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      pickerFilters.brand = chip.dataset.brand || null;
+      renderPickerChips();
+      renderPickerList();
+    });
+  });
+
+  const extraCfg = extraChipField(pickerCategory);
+  const extraChips = document.getElementById("picker-extra-chips");
+  if (!extraCfg) {
+    extraChips.innerHTML = "";
+  } else {
+    const values = [...new Set(options.map((o) => o.specs[extraCfg.field]))];
+    extraChips.innerHTML = `<button class="chip ${!pickerFilters.extra ? "active" : ""}" data-extra="">${extraCfg.label}: все</button>` +
+      values.map((v) => `<button class="chip ${pickerFilters.extra === v ? "active" : ""}" data-extra="${v}">${v}</button>`).join("");
+    extraChips.querySelectorAll("[data-extra]").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        pickerFilters.extra = chip.dataset.extra || null;
+        renderPickerChips();
+        renderPickerList();
+      });
+    });
+  }
+}
+
+function renderPickerBrandList() {
+  const options = productsByCategory[pickerCategory] || [];
+  const brands = [...new Set(options.map((o) => o.brand))];
+  const list = document.getElementById("picker-brand-list");
+  list.innerHTML = brands.map((b) => `
+    <label class="picker-checkbox-row">
+      <input type="checkbox" data-sidebar-brand="${b}" ${pickerFilters.brand === b ? "checked" : ""}>
+      ${b}
+    </label>
+  `).join("");
+  list.querySelectorAll("[data-sidebar-brand]").forEach((cb) => {
+    cb.addEventListener("change", () => {
+      pickerFilters.brand = cb.checked ? cb.dataset.sidebarBrand : null;
+      renderPickerChips();
+      renderPickerBrandList();
+      renderPickerList();
+    });
+  });
+}
+
+document.getElementById("picker-search").addEventListener("input", (e) => {
+  pickerFilters.search = e.target.value.trim().toLowerCase();
+  renderPickerList();
+});
+document.getElementById("picker-price-min").addEventListener("input", (e) => {
+  pickerFilters.priceMin = e.target.value ? Number(e.target.value) : null;
+  renderPickerList();
+});
+document.getElementById("picker-price-max").addEventListener("input", (e) => {
+  pickerFilters.priceMax = e.target.value ? Number(e.target.value) : null;
+  renderPickerList();
+});
+document.getElementById("picker-compat-toggle").addEventListener("change", (e) => {
+  pickerFilters.compatibleOnly = e.target.checked;
+  renderPickerList();
+});
+document.getElementById("picker-sort").addEventListener("change", (e) => {
+  pickerFilters.sort = e.target.value;
+  renderPickerList();
+});
+
+function renderPickerList() {
+  const extraCfg = extraChipField(pickerCategory);
+  let list = (productsByCategory[pickerCategory] || []).slice();
+
+  if (pickerFilters.brand) list = list.filter((o) => o.brand === pickerFilters.brand);
+  if (extraCfg && pickerFilters.extra) list = list.filter((o) => String(o.specs[extraCfg.field]) === pickerFilters.extra);
+  if (pickerFilters.search) {
+    list = list.filter((o) => `${o.brand} ${o.name}`.toLowerCase().includes(pickerFilters.search));
+  }
+  if (pickerFilters.priceMin != null) list = list.filter((o) => o.price >= pickerFilters.priceMin);
+  if (pickerFilters.priceMax != null) list = list.filter((o) => o.price <= pickerFilters.priceMax);
+
+  const withCompat = list.map((o) => ({ ...o, __compatible: isCandidateCompatible(pickerCategory, o) }));
+  const shown = pickerFilters.compatibleOnly ? withCompat.filter((o) => o.__compatible) : withCompat;
+
+  shown.sort((a, b) => {
+    if (pickerFilters.sort === "price-asc") return a.price - b.price;
+    if (pickerFilters.sort === "price-desc") return b.price - a.price;
+    return a.name.localeCompare(b.name, "ru");
+  });
+
+  const listEl = document.getElementById("picker-list");
+  const slotDef = SLOTS.find((s) => s.key === pickerCategory);
+  const noneRowHtml = !slotDef.required ? `
+    <div class="picker-row ${!state[pickerCategory] ? "is-selected" : ""}">
+      <div class="p-thumb" style="opacity:0.4">—</div>
+      <div class="p-info">
+        <div class="p-name">Не устанавливать</div>
+        <div class="p-specs">Пропустить этот компонент в сборке</div>
+      </div>
+      <div class="p-side">
+        <div class="p-price">&nbsp;</div>
+        <button class="btn btn-ghost btn-sm" data-select-none>${!state[pickerCategory] ? "Выбрано" : "Выбрать"}</button>
+      </div>
+    </div>
+  ` : "";
+
+  if (!shown.length) {
+    listEl.innerHTML = noneRowHtml + `<p style="color:var(--text-dim);padding:24px 8px">Ничего не найдено под эти фильтры.</p>`;
+    listEl.querySelectorAll("[data-select-none]").forEach((btn) => {
+      btn.addEventListener("click", () => { state[pickerCategory] = null; renderSlots(); updateSummary(); closePicker(); });
+    });
+    return;
+  }
+
+  listEl.innerHTML = noneRowHtml + shown.map((o) => `
+    <div class="picker-row ${o.id === state[pickerCategory] ? "is-selected" : ""}">
+      <div class="p-thumb"><img src="img/${o.image}" alt="" width="52" height="52"></div>
+      <div class="p-info">
+        <div class="p-name">${o.brand} ${o.name}</div>
+        <div class="p-specs">${specBullets(pickerCategory, o.specs)}</div>
+        ${!o.__compatible ? `<div class="p-incompatible">⚠ Может быть несовместимо с уже выбранным</div>` : ""}
+      </div>
+      <div class="p-side">
+        <div class="p-price">${money(o.price)}</div>
+        <button class="btn btn-primary btn-sm" data-select="${o.id}">${o.id === state[pickerCategory] ? "Выбрано" : "Выбрать"}</button>
+      </div>
+    </div>
+  `).join("");
+
+  listEl.querySelectorAll("[data-select-none]").forEach((btn) => {
+    btn.addEventListener("click", () => { state[pickerCategory] = null; renderSlots(); updateSummary(); closePicker(); });
+  });
+  listEl.querySelectorAll("[data-select]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state[pickerCategory] = btn.dataset.select;
+      renderSlots();
+      updateSummary();
+      closePicker();
+    });
+  });
+}
+
 (async function init() {
   for (const slot of SLOTS) {
     productsByCategory[slot.key] = await API.getProducts(slot.key);
   }
   renderSlots();
   updateSummary();
-  document.querySelector(".slot")?.classList.add("open");
 })();
 </script>
 </body>

@@ -231,3 +231,44 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
 @media (max-width: 760px) {
   #product-root > div { grid-template-columns: 1fr !important; }
 }
+
+/* ============ Окно выбора компонента (конструктор) ============ */
+.picker-backdrop {
+  position: fixed; inset: 0; background: rgba(43,36,28,0.55);
+  z-index: 200; display: none; align-items: center; justify-content: center; padding: 20px;
+}
+.picker-backdrop.open { display: flex; }
+.picker-panel {
+  background: var(--bg); border-radius: var(--radius); width: 100%; max-width: 1080px; height: 86vh;
+  display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow-lg);
+}
+.picker-head { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid var(--border); background: var(--bg-card); }
+.picker-head h3 { font-family: var(--display); font-size: 19px; margin: 0; }
+.picker-close { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-dim); line-height: 1; padding: 4px 8px; }
+.picker-close:hover { color: var(--text); }
+
+.picker-toolbar { padding: 14px 24px; border-bottom: 1px solid var(--border); background: var(--bg-card); }
+.picker-chiprow { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.picker-chiprow:last-child { margin-bottom: 0; }
+.picker-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+.picker-select { padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-elevated); font-family: var(--sans); font-size: 13px; color: var(--text); }
+
+.picker-body { flex: 1; display: flex; overflow: hidden; }
+.picker-sidebar { width: 220px; flex-shrink: 0; border-right: 1px solid var(--border); padding: 18px; overflow-y: auto; background: var(--bg-card); }
+.picker-sidebar h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); margin: 0 0 10px; }
+.picker-sidebar .price-range { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; }
+.picker-sidebar .price-range input { width: 100%; padding: 7px 8px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-elevated); font-size: 12px; font-family: var(--mono); }
+.picker-checkbox-row { display: flex; align-items: center; gap: 8px; font-size: 13px; padding: 5px 0; cursor: pointer; }
+
+.picker-list { flex: 1; overflow-y: auto; padding: 8px 24px; }
+.picker-row {
+  display: flex; align-items: center; gap: 18px; padding: 16px 8px; border-bottom: 1px solid var(--border);
+}
+.picker-row .p-thumb { width: 68px; height: 68px; background: var(--bg-elevated); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; padding: 10px; flex-shrink: 0; }
+.picker-row .p-info { flex: 1; min-width: 0; }
+.picker-row .p-name { font-family: var(--display); font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+.picker-row .p-specs { font-size: 12.5px; color: var(--text-dim); line-height: 1.6; }
+.picker-row .p-side { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.picker-row .p-price { font-family: var(--mono); font-weight: 700; font-size: 17px; color: var(--accent-dark); }
+.picker-row.is-selected { background: var(--accent-soft); }
+.picker-row .p-incompatible { font-size: 11.5px; color: var(--danger); }
