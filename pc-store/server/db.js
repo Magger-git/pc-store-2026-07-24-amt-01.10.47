@@ -116,6 +116,28 @@ async function getProductsByCategory(category) {
   return rows.map(rowToProduct);
 }
 
+async function createProduct(p) {
+  await pool.query(
+    `INSERT INTO products (id, category, brand, name, price, stock, image, specs, description)
+     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)`,
+    [p.id, p.category, p.brand, p.name, p.price, p.stock, p.image, JSON.stringify(p.specs), p.description]
+  );
+  return getProductById(p.id);
+}
+
+async function updateProduct(id, p) {
+  await pool.query(
+    `UPDATE products SET category=$2, brand=$3, name=$4, price=$5, stock=$6, image=$7, specs=$8, description=$9
+     WHERE id=$1`,
+    [id, p.category, p.brand, p.name, p.price, p.stock, p.image, JSON.stringify(p.specs), p.description]
+  );
+  return getProductById(id);
+}
+
+async function deleteProduct(id) {
+  await pool.query("DELETE FROM products WHERE id = $1", [id]);
+}
+
 // ---------- Корзины (session-based) ----------
 async function getCart(sessionId) {
   const { rows } = await pool.query("SELECT items FROM carts WHERE session_id = $1", [sessionId]);
@@ -167,11 +189,37 @@ async function getAllOrders() {
   return rows.map(rowToOrder);
 }
 
+// ---------- Управление товарами (админка) ----------
+async function createProduct(p) {
+  await pool.query(
+    `INSERT INTO products (id, category, brand, name, price, stock, image, specs, description)
+     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)`,
+    [p.id, p.category, p.brand, p.name, p.price, p.stock, p.image, JSON.stringify(p.specs || {}), p.description]
+  );
+  return getProductById(p.id);
+}
+
+async function updateProduct(id, p) {
+  await pool.query(
+    `UPDATE products SET category=$2, brand=$3, name=$4, price=$5, stock=$6, image=$7, specs=$8, description=$9
+     WHERE id=$1`,
+    [id, p.category, p.brand, p.name, p.price, p.stock, p.image, JSON.stringify(p.specs || {}), p.description]
+  );
+  return getProductById(id);
+}
+
+async function deleteProduct(id) {
+  await pool.query("DELETE FROM products WHERE id = $1", [id]);
+}
+
 module.exports = {
   init,
   getProducts,
   getProductById,
   getProductsByCategory,
+  createProduct,
+  updateProduct,
+  deleteProduct,
   getCart,
   saveCart,
   clearCart,

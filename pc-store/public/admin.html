@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Админка — NODE.PC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .admin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .admin-table th { text-align: left; padding: 10px 8px; border-bottom: 2px solid var(--border); color: var(--text-dim); font-weight: 600; }
+  .admin-table td { padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .admin-table tr:hover { background: var(--bg-elevated); }
+  .admin-actions { display: flex; gap: 6px; }
+  .modal-backdrop { position: fixed; inset: 0; background: rgba(43,36,28,0.5); display: none; align-items: center; justify-content: center; z-index: 100; padding: 20px; }
+  .modal-backdrop.open { display: flex; }
+  .modal { background: var(--bg-card); border-radius: var(--radius); padding: 28px; max-width: 520px; width: 100%; max-height: 90vh; overflow-y: auto; }
+  .modal h3 { font-family: var(--display); margin: 0 0 18px; font-size: 19px; }
+  .field { margin-bottom: 12px; }
+  .field label { font-size: 12px; color: var(--text-dim); display: block; margin-bottom: 4px; }
+  .field input, .field select, .field textarea {
+    width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--bg-elevated); font-family: var(--sans); font-size: 13px; color: var(--text);
+  }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+  .tab-btn { padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); cursor: pointer; font-size: 14px; font-family: var(--sans); }
+  .tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container bar">
+    <a href="/" class="logo"><span class="dot"></span>NODE.PC</a>
+    <nav class="nav"><span style="color:var(--accent-dark)">Панель администратора</span></nav>
+    <button class="btn btn-ghost btn-sm" id="logout-btn" style="display:none">Выйти</button>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Экран логина -->
+    <div id="login-screen" style="max-width:360px">
+      <h2 style="font-family:var(--display);margin-bottom:16px">Вход в админку</h2>
+      <div class="field">
+        <label>Пароль администратора</label>
+        <input type="password" id="password-input" placeholder="Введите пароль">
+      </div>
+      <div id="login-error" class="issue error" style="display:none"></div>
+      <button class="btn btn-primary btn-block" id="login-btn">Войти</button>
+    </div>
+
+    <!-- Экран управления -->
+    <div id="admin-screen" style="display:none">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="products">Товары</button>
+        <button class="tab-btn" data-tab="orders">Заказы</button>
+      </div>
+
+      <div id="tab-products">
+        <div class="section-head">
+          <h2>Товары (<span id="products-count">0</span>)</h2>
+          <button class="btn btn-primary btn-sm" id="new-product-btn">+ Добавить товар</button>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="admin-table">
+            <thead><tr><th>ID</th><th>Категория</th><th>Название</th><th>Цена</th><th>Остаток</th><th></th></tr></thead>
+            <tbody id="products-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tab-orders" style="display:none">
+        <div class="section-head"><h2>Заказы</h2></div>
+        <div style="overflow-x:auto">
+          <table class="admin-table">
+            <thead><tr><th>Номер</th><th>Дата</th><th>Клиент</th><th>Сумма</th><th>Статус</th></tr></thead>
+            <tbody id="orders-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Модалка создания/редактирования товара -->
+<div class="modal-backdrop" id="product-modal">
+  <div class="modal">
+    <h3 id="modal-title">Новый товар</h3>
+    <div class="field-row">
+      <div class="field"><label>ID (уникальный, латиницей)</label><input id="f-id"></div>
+      <div class="field">
+        <label>Категория</label>
+        <select id="f-category">
+          <option value="cpu">Процессор</option>
+          <option value="motherboard">Материнская плата</option>
+          <option value="ram">Оперативная память</option>
+          <option value="gpu">Видеокарта</option>
+          <option value="storage">Накопитель</option>
+          <option value="psu">Блок питания</option>
+          <option value="case">Корпус</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>Бренд</label><input id="f-brand"></div>
+      <div class="field"><label>Название</label><input id="f-name"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>Цена, ₽</label><input id="f-price" type="number"></div>
+      <div class="field"><label>Остаток, шт.</label><input id="f-stock" type="number"></div>
+    </div>
+    <div class="field"><label>Иконка (имя файла в public/img)</label><input id="f-image" placeholder="cpu.svg"></div>
+    <div class="field"><label>Описание</label><textarea id="f-description" rows="2"></textarea></div>
+    <div class="field">
+      <label>Характеристики (JSON) — например {"socket":"AM5","cores":6,"tdp":65}</label>
+      <textarea id="f-specs" rows="3" style="font-family:var(--mono)"></textarea>
+    </div>
+    <div id="modal-error" class="issue error" style="display:none"></div>
+    <div style="display:flex;gap:10px;margin-top:16px">
+      <button class="btn btn-primary" id="save-product-btn">Сохранить</button>
+      <button class="btn btn-ghost" id="cancel-modal-btn">Отмена</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script>
+const CATEGORY_LABELS = {
+  cpu: "Процессор", motherboard: "Мат. плата", ram: "Память",
+  gpu: "Видеокарта", storage: "Накопитель", psu: "БП", case: "Корпус",
+};
+
+async function adminFetch(url, options = {}) {
+  const res = await fetch(url, {
+    ...options,
+    headers: { "Content-Type": "application/json", ...(options.headers || {}) },
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || "Ошибка запроса");
+  return data;
+}
+
+// ---------- Логин ----------
+async function tryAutoLogin() {
+  try {
+    await adminFetch("/api/admin/check");
+    showAdminScreen();
+  } catch (e) {
+    // не авторизован — остаёмся на экране логина
+  }
+}
+
+document.getElementById("login-btn").addEventListener("click", async () => {
+  const password = document.getElementById("password-input").value;
+  const errBox = document.getElementById("login-error");
+  errBox.style.display = "none";
+  try {
+    await adminFetch("/api/admin/login", { method: "POST", body: JSON.stringify({ password }) });
+    showAdminScreen();
+  } catch (e) {
+    errBox.textContent = e.message;
+    errBox.style.display = "flex";
+  }
+});
+document.getElementById("password-input").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") document.getElementById("login-btn").click();
+});
+
+document.getElementById("logout-btn").addEventListener("click", async () => {
+  await adminFetch("/api/admin/logout", { method: "POST" });
+  location.reload();
+});
+
+function showAdminScreen() {
+  document.getElementById("login-screen").style.display = "none";
+  document.getElementById("admin-screen").style.display = "block";
+  document.getElementById("logout-btn").style.display = "inline-flex";
+  loadProducts();
+}
+
+// ---------- Вкладки ----------
+document.querySelectorAll(".tab-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    const tab = btn.dataset.tab;
+    document.getElementById("tab-products").style.display = tab === "products" ? "block" : "none";
+    document.getElementById("tab-orders").style.display = tab === "orders" ? "block" : "none";
+    if (tab === "orders") loadOrders();
+  });
+});
+
+// ---------- Товары ----------
+async function loadProducts() {
+  const products = await adminFetch("/api/admin/products");
+  document.getElementById("products-count").textContent = products.length;
+  const tbody = document.getElementById("products-tbody");
+  tbody.innerHTML = products.map((p) => `
+    <tr>
+      <td style="font-family:var(--mono);font-size:11px">${p.id}</td>
+      <td>${CATEGORY_LABELS[p.category] || p.category}</td>
+      <td>${p.brand ? p.brand + " " : ""}${p.name}</td>
+      <td style="font-family:var(--mono)">${money(p.price)}</td>
+      <td>${p.stock}</td>
+      <td>
+        <div class="admin-actions">
+          <button class="btn btn-ghost btn-sm" data-edit="${p.id}">Изменить</button>
+          <button class="btn btn-ghost btn-sm" data-delete="${p.id}" style="color:var(--danger)">Удалить</button>
+        </div>
+      </td>
+    </tr>
+  `).join("");
+
+  tbody.querySelectorAll("[data-edit]").forEach((btn) => {
+    btn.addEventListener("click", () => openModal(products.find((p) => p.id === btn.dataset.edit)));
+  });
+  tbody.querySelectorAll("[data-delete]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      if (!confirm(`Удалить товар "${btn.dataset.delete}"? Это необратимо.`)) return;
+      try {
+        await adminFetch(`/api/admin/products/${btn.dataset.delete}`, { method: "DELETE" });
+        loadProducts();
+      } catch (e) {
+        alert(e.message);
+      }
+    });
+  });
+}
+
+let editingId = null;
+
+function openModal(product) {
+  editingId = product ? product.id : null;
+  document.getElementById("modal-title").textContent = product ? "Изменить товар" : "Новый товар";
+  document.getElementById("f-id").value = product ? product.id : "";
+  document.getElementById("f-id").disabled = !!product;
+  document.getElementById("f-category").value = product ? product.category : "cpu";
+  document.getElementById("f-brand").value = product ? product.brand || "" : "";
+  document.getElementById("f-name").value = product ? product.name : "";
+  document.getElementById("f-price").value = product ? product.price : "";
+  document.getElementById("f-stock").value = product ? product.stock : "";
+  document.getElementById("f-image").value = product ? product.image : "";
+  document.getElementById("f-description").value = product ? product.description || "" : "";
+  document.getElementById("f-specs").value = product ? JSON.stringify(product.specs || {}, null, 2) : "{}";
+  document.getElementById("modal-error").style.display = "none";
+  document.getElementById("product-modal").classList.add("open");
+}
+
+document.getElementById("new-product-btn").addEventListener("click", () => openModal(null));
+document.getElementById("cancel-modal-btn").addEventListener("click", () => {
+  document.getElementById("product-modal").classList.remove("open");
+});
+
+document.getElementById("save-product-btn").addEventListener("click", async () => {
+  const errBox = document.getElementById("modal-error");
+  errBox.style.display = "none";
+
+  let specs;
+  try {
+    specs = JSON.parse(document.getElementById("f-specs").value || "{}");
+  } catch (e) {
+    errBox.textContent = "Характеристики должны быть корректным JSON, например: {\"socket\":\"AM5\"}";
+    errBox.style.display = "flex";
+    return;
+  }
+
+  const payload = {
+    id: document.getElementById("f-id").value.trim(),
+    category: document.getElementById("f-category").value,
+    brand: document.getElementById("f-brand").value.trim(),
+    name: document.getElementById("f-name").value.trim(),
+    price: Number(document.getElementById("f-price").value),
+    stock: Number(document.getElementById("f-stock").value),
+    image: document.getElementById("f-image").value.trim(),
+    description: document.getElementById("f-description").value.trim(),
+    specs,
+  };
+
+  if (!payload.id || !payload.name || !payload.price) {
+    errBox.textContent = "Заполните ID, название и цену.";
+    errBox.style.display = "flex";
+    return;
+  }
+
+  try {
+    if (editingId) {
+      await adminFetch(`/api/admin/products/${editingId}`, { method: "PUT", body: JSON.stringify(payload) });
+    } else {
+      await adminFetch("/api/admin/products", { method: "POST", body: JSON.stringify(payload) });
+    }
+    document.getElementById("product-modal").classList.remove("open");
+    loadProducts();
+  } catch (e) {
+    errBox.textContent = e.message;
+    errBox.style.display = "flex";
+  }
+});
+
+// ---------- Заказы ----------
+async function loadOrders() {
+  const orders = await adminFetch("/api/admin/orders");
+  const tbody = document.getElementById("orders-tbody");
+  if (!orders.length) {
+    tbody.innerHTML = `<tr><td colspan="5" style="color:var(--text-dim)">Заказов пока нет.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = orders.map((o) => `
+    <tr>
+      <td style="font-family:var(--mono)">${o.id}</td>
+      <td>${new Date(o.createdAt).toLocaleString("ru-RU")}</td>
+      <td>${o.customer?.name || "—"}<br><span style="color:var(--text-dim);font-size:12px">${o.customer?.email || ""}</span></td>
+      <td style="font-family:var(--mono)">${money(o.total)}</td>
+      <td>${o.status}</td>
+    </tr>
+  `).join("");
+}
+
+tryAutoLogin();
+</script>
+</body>
+</html>

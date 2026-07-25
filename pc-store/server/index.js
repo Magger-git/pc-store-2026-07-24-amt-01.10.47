@@ -7,6 +7,7 @@ const productsRouter = require("./routes/products");
 const builderRouter = require("./routes/builder");
 const cartRouter = require("./routes/cart");
 const checkoutRouter = require("./routes/checkout");
+const adminRouter = require("./routes/admin");
 const db = require("./db");
 
 const app = express();
@@ -27,7 +28,7 @@ app.use((req, res, next) => {
   let sid = cookies[COOKIE_NAME];
   if (!sid) {
     sid = crypto.randomUUID();
-    res.setHeader("Set-Cookie", `${COOKIE_NAME}=${sid}; Path=/; HttpOnly; SameSite=Lax; Max-Age=2592000`);
+    res.append("Set-Cookie", `${COOKIE_NAME}=${sid}; Path=/; HttpOnly; SameSite=Lax; Max-Age=2592000`);
   }
   req.sessionId = sid;
   next();
@@ -37,6 +38,7 @@ app.use("/api/products", productsRouter);
 app.use("/api/builder", builderRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/checkout", checkoutRouter);
+app.use("/api/admin", adminRouter);
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 
