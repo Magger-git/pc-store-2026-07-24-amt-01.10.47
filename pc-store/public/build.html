@@ -43,10 +43,10 @@
 <script>
 const SLOT_LABELS = {
   cpu: "Процессор", motherboard: "Материнская плата", ram: "Оперативная память",
-  gpu: "Видеокарта", storage: "Накопитель", psu: "Блок питания", case: "Корпус",
+  gpu: "Видеокарта", cooler: "Охлаждение (СЖО)", storage: "Накопитель", psu: "Блок питания", case: "Корпус",
 };
 const TIER_LABELS = { budget: "Стартовая", mid: "Оптимальная", high: "Производительная", flagship: "Флагманская" };
-const SLOT_ORDER = ["cpu", "motherboard", "ram", "gpu", "storage", "psu", "case"];
+const SLOT_ORDER = ["cpu", "motherboard", "cooler", "ram", "gpu", "storage", "psu", "case"];
 
 function specLine(category, specs) {
   switch (category) {
@@ -54,6 +54,7 @@ function specLine(category, specs) {
     case "motherboard": return `${specs.socket} · ${specs.ramType} · ${specs.formFactor}`;
     case "ram": return `${specs.type} · ${specs.capacityGB}ГБ · ${specs.speed}`;
     case "gpu": return `${specs.vramGB}ГБ VRAM · TDP ${specs.tdp}Вт`;
+    case "cooler": return `${specs.radiatorSizeMM}мм · до ${specs.tdpRating}Вт · ${specs.sockets.join("/")}`;
     case "storage": return `${specs.type} · ${specs.capacityGB}ГБ`;
     case "psu": return `${specs.wattage}Вт · ${specs.certification}`;
     case "case": return `${specs.formFactors.join("/")} · до ${specs.maxGpuLengthMM}мм видеокарты`;

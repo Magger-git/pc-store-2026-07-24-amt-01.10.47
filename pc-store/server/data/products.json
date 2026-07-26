@@ -1444,7 +1444,8 @@
         "mATX"
       ],
       "maxGpuLengthMM": 320,
-      "includedFans": 1
+      "includedFans": 1,
+      "maxRadiatorSizeMM": 240
     },
     "description": "Компактный корпус для домашних и офисных сборок.",
     "category": "case",
@@ -1462,7 +1463,8 @@
         "mATX"
       ],
       "maxGpuLengthMM": 365,
-      "includedFans": 2
+      "includedFans": 2,
+      "maxRadiatorSizeMM": 280
     },
     "description": "Хорошая вентиляция и аккуратная укладка кабелей.",
     "category": "case",
@@ -1480,7 +1482,8 @@
         "mATX"
       ],
       "maxGpuLengthMM": 392,
-      "includedFans": 3
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 360
     },
     "description": "Максимальный воздушный поток для мощных конфигураций.",
     "category": "case",
@@ -1499,7 +1502,8 @@
         "E-ATX"
       ],
       "maxGpuLengthMM": 422,
-      "includedFans": 3
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 360
     },
     "description": "Просторный корпус для топовых видеокарт вроде RTX 5090 и мощного охлаждения.",
     "category": "case",
@@ -2016,7 +2020,8 @@
         "ATX"
       ],
       "maxGpuLengthMM": 360,
-      "includedFans": 2
+      "includedFans": 2,
+      "maxRadiatorSizeMM": 360
     },
     "description": "Один из самых популярных корпусов для игровых сборок благодаря отличному airflow.",
     "category": "case",
@@ -2034,7 +2039,8 @@
         "ATX"
       ],
       "maxGpuLengthMM": 381,
-      "includedFans": 2
+      "includedFans": 2,
+      "maxRadiatorSizeMM": 280
     },
     "description": "Культовый минималистичный корпус, массово используется в готовых сборках.",
     "category": "case",
@@ -2052,7 +2058,8 @@
         "ATX"
       ],
       "maxGpuLengthMM": 355,
-      "includedFans": 3
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 360
     },
     "description": "Популярный корпус с панорамным стеклом и хорошей вентиляцией за свою цену.",
     "category": "case",
@@ -2069,7 +2076,8 @@
         "mATX"
       ],
       "maxGpuLengthMM": 360,
-      "includedFans": 1
+      "includedFans": 1,
+      "maxRadiatorSizeMM": 240
     },
     "description": "Один из самых доступных и часто покупаемых компактных корпусов.",
     "category": "case",
@@ -2087,10 +2095,151 @@
         "ATX"
       ],
       "maxGpuLengthMM": 345,
-      "includedFans": 0
+      "includedFans": 0,
+      "maxRadiatorSizeMM": 280
     },
     "description": "Культовый корпус для эффектных сборок с открытой архитектурой охлаждения.",
     "category": "case",
     "image": "case.svg"
+  },
+  {
+    "id": "cooler-deepcool-le500",
+    "brand": "DeepCool",
+    "name": "LE500 240mm ARGB",
+    "price": 5490,
+    "stock": 22,
+    "specs": {
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "radiatorSizeMM": 240,
+      "tdpRating": 220
+    },
+    "description": "Доступная и популярная СЖО начального уровня, подходит почти под любой сокет.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-coolermaster-ml240l",
+    "brand": "Cooler Master",
+    "name": "MasterLiquid ML240L V2",
+    "price": 6490,
+    "stock": 18,
+    "specs": {
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "radiatorSizeMM": 240,
+      "tdpRating": 200
+    },
+    "description": "Один из самых массовых 240-мм комплектов жидкостного охлаждения.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-arctic-lf2-280",
+    "brand": "ARCTIC",
+    "name": "Liquid Freezer II 280",
+    "price": 8990,
+    "stock": 16,
+    "specs": {
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "radiatorSizeMM": 280,
+      "tdpRating": 250
+    },
+    "description": "Отличное соотношение цены и эффективности охлаждения, popular выбор для игровых сборок.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-nzxt-kraken-x63",
+    "brand": "NZXT",
+    "name": "Kraken X63 280mm",
+    "price": 12990,
+    "stock": 10,
+    "specs": {
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "radiatorSizeMM": 280,
+      "tdpRating": 250
+    },
+    "description": "Популярная СЖО с кастомизируемым логотипом на помпе для сборок среднего и высокого уровня.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-bequiet-pureloop2-280",
+    "brand": "be quiet!",
+    "name": "Pure Loop 2 280mm",
+    "price": 9990,
+    "stock": 14,
+    "specs": {
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "radiatorSizeMM": 280,
+      "tdpRating": 260
+    },
+    "description": "Тихая и надёжная СЖО — частый выбор для сборок без лишнего шума.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-corsair-h150i",
+    "brand": "Corsair",
+    "name": "iCUE H150i Elite 360mm",
+    "price": 14990,
+    "stock": 9,
+    "specs": {
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "radiatorSizeMM": 360,
+      "tdpRating": 300
+    },
+    "description": "Топовая 360-мм СЖО для флагманских процессоров с большим TDP.",
+    "category": "cooler",
+    "image": "cooler.svg"
+  },
+  {
+    "id": "cooler-lianli-galahad2-360",
+    "brand": "Lian Li",
+    "name": "Galahad II 360mm",
+    "price": 13990,
+    "stock": 9,
+    "specs": {
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "radiatorSizeMM": 360,
+      "tdpRating": 280
+    },
+    "description": "Мощная 360-мм СЖО для топовых сборок с эффектной подсветкой.",
+    "category": "cooler",
+    "image": "cooler.svg"
   }
 ]

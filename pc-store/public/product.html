@@ -45,7 +45,7 @@
 <script>
 const CATEGORY_LABELS = {
   cpu: "Процессоры", motherboard: "Материнские платы", ram: "Оперативная память",
-  gpu: "Видеокарты", storage: "Накопители", psu: "Блоки питания", case: "Корпуса",
+  gpu: "Видеокарты", cooler: "Охлаждение (СЖО)", storage: "Накопители", psu: "Блоки питания", case: "Корпуса",
 };
 
 function specRows(category, specs) {
@@ -54,13 +54,15 @@ function specRows(category, specs) {
     motherboard: { socket: "Сокет", ramType: "Тип памяти", ramSlots: "Слотов памяти", maxRamGB: "Макс. память", formFactor: "Форм-фактор", pcieVersion: "PCIe" },
     ram: { type: "Тип", capacityGB: "Объём", speed: "Частота", modules: "Модулей" },
     gpu: { vramGB: "Видеопамять", tdp: "TDP", lengthMM: "Длина", recommendedPSU: "Рекомендуемый БП" },
+    cooler: { sockets: "Поддерживаемые сокеты", radiatorSizeMM: "Размер радиатора", tdpRating: "Рассчитан на TDP до" },
     storage: { type: "Тип", capacityGB: "Объём", interface: "Интерфейс" },
     psu: { wattage: "Мощность", certification: "Сертификация", modular: "Модульный" },
-    case: { formFactors: "Форм-факторы", maxGpuLengthMM: "Макс. длина видеокарты", includedFans: "Вентиляторов в комплекте" },
+    case: { formFactors: "Форм-факторы", maxGpuLengthMM: "Макс. длина видеокарты", includedFans: "Вентиляторов в комплекте", maxRadiatorSizeMM: "Макс. размер радиатора СЖО" },
   };
   const units = {
     tdp: " Вт", vramGB: " ГБ", lengthMM: " мм", recommendedPSU: " Вт", capacityGB: " ГБ",
     ramSlots: "", maxRamGB: " ГБ", wattage: " Вт", maxGpuLengthMM: " мм",
+    radiatorSizeMM: " мм", tdpRating: " Вт", maxRadiatorSizeMM: " мм",
   };
   const map = labels[category] || {};
   return Object.entries(specs).map(([key, value]) => {
