@@ -3,7 +3,7 @@
     "id": "build-amd-budget-r5-3600",
     "brand": "amd",
     "tier": "budget",
-    "name": "Народная база на Ryzen 5 3600",
+    "name": "Входной билет: Народная база на Ryzen 5 3600",
     "description": "6-ядерная народная сборка для FullHD-гейминга без переплат.",
     "components": {
       "cpu": "cpu-r5-3600",
@@ -22,7 +22,7 @@
     "id": "build-amd-5600-rtx4060",
     "brand": "amd",
     "tier": "mid",
-    "name": "Ryzen 5 5600 + RTX 4060",
+    "name": "Народный хит: Ryzen 5 5600 + RTX 4060",
     "description": "Уверенный FullHD гейминг на ультра-настройках с трассировкой лучей и DLSS.",
     "components": {
       "cpu": "cpu-r5-5600",
@@ -41,7 +41,7 @@
     "id": "build-amd-am5-7500f-4070super",
     "brand": "amd",
     "tier": "flagship",
-    "name": "AM5: Ryzen 5 7500F + RTX 4070 SUPER",
+    "name": "Оптимальный средний: AM5: Ryzen 5 7500F + RTX 4070 SUPER",
     "description": "Идеальный компьютер для 2K (1440p) на максимальных настройках. Платформа AM5 готова к будущим апгрейдам.",
     "components": {
       "cpu": "cpu-r5-7500f",
@@ -136,7 +136,7 @@
     "id": "build-intel-i5-13400f-4070",
     "brand": "intel",
     "tier": "high",
-    "name": "Core i5-13400F + RTX 4070",
+    "name": "Продвинутый баланс: Core i5-13400F + RTX 4070",
     "description": "Баланс производительности для 1440p с современной платформой LGA1700 и DDR5.",
     "components": {
       "cpu": "cpu-i5-13400f",
