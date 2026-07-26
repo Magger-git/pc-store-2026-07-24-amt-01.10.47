@@ -245,10 +245,10 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
 /* ============ Поиск ============ */
 #search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 
-/* ============ Страница товара ============ */
+/* ============ Страница товара / готовой сборки ============ */
 #product-root table td:first-child { width: 45%; }
 @media (max-width: 760px) {
-  #product-root > div { grid-template-columns: 1fr !important; }
+  #product-root > div, #build-root > div { grid-template-columns: 1fr !important; }
 }
 
 /* ============ Всплывающее окно выбора компонента (конструктор) ============ */
@@ -329,4 +329,81 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
   .picker-sidebar { border-right: none; border-bottom: 1px solid var(--border); }
   .picker-panel { max-height: 92vh; }
 }
+
+/* ============ Мобильная адаптация ============ */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+}
+
+/* Шапка: на узких экранах переносим меню на вторую строку */
+@media (max-width: 640px) {
+  .site-header .bar { flex-wrap: wrap; height: auto; padding: 12px 0; gap: 10px 14px; }
+  .logo { order: 1; }
+  .cart-link { order: 2; margin-left: auto; padding: 8px 12px; font-size: 13px; }
+  .nav {
+    order: 3; width: 100%; gap: 4px; justify-content: space-between;
+    overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 2px;
+  }
+  .nav a { white-space: nowrap; font-size: 12.5px; flex: none; }
+}
+
+/* Hero: меньше текста и кнопки в столбик при нехватке места */
+@media (max-width: 640px) {
+  .hero { padding: 48px 0 40px; }
+  .hero h1 { font-size: 30px; }
+  .hero p { font-size: 15px; }
+  .hero-actions { flex-wrap: wrap; }
+  .hero-actions .btn { flex: 1 1 auto; }
+}
+
+/* Кнопки действий на странице товара/сборки — не сжимаются, а переносятся */
+@media (max-width: 560px) {
+  #product-root [style*="display:flex"][style*="gap:12px"],
+  #build-root [style*="display:flex"][style*="gap:12px"] {
+    flex-wrap: wrap;
+  }
+  #product-root .btn, #build-root .btn { flex: 1 1 auto; min-width: 0 !important; }
+}
+
+/* Карточка товара/сборки: картинка не такая большая на телефоне */
+@media (max-width: 560px) {
+  #product-root .thumb, #build-root .thumb { padding: 20px; }
+}
+
+/* Корзина: превращаем жёсткую grid-раскладку строки в перенос по флексу */
+@media (max-width: 640px) {
+  .cart-row {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+  }
+  .cart-row .thumb-sm { width: 48px; height: 48px; }
+  .build-group-body .cart-row .thumb-sm { width: 44px; height: 44px; }
+  .qty-control { order: 3; }
+}
+
+/* Заголовок группы-сборки в корзине: перенос при нехватке ширины */
+@media (max-width: 640px) {
+  .build-group-head { flex-wrap: wrap; }
+  .build-group-head .build-total { order: 3; }
+  .build-group-head button { order: 4; margin-left: auto; }
+}
+
+/* Итоговая строка + кнопка оформления в корзине не должны сжиматься */
+@media (max-width: 480px) {
+  #cart-body > div[style*="justify-content:space-between"] {
+    flex-wrap: wrap; gap: 8px;
+  }
+}
+
+/* Админка: поля формы в модалке — по одному в столбик */
+@media (max-width: 560px) {
+  .field-row { grid-template-columns: 1fr; }
+  .modal { padding: 20px; }
+}
+
+/* Табы/шапка админки на мобильном */
+@media (max-width: 560px) {
+  .tabs { flex-wrap: wrap; }
+  .section-head { flex-wrap: wrap; gap: 10px; }
+}
+
 
