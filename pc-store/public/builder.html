@@ -383,6 +383,8 @@ function renderPickerList() {
   const shown = pickerFilters.compatibleOnly ? withCompat.filter((o) => o.__compatible) : withCompat;
 
   shown.sort((a, b) => {
+    // Несовместимые товары всегда уходят в конец списка, независимо от выбранной сортировки.
+    if (a.__compatible !== b.__compatible) return a.__compatible ? -1 : 1;
     if (pickerFilters.sort === "price-asc") return a.price - b.price;
     if (pickerFilters.sort === "price-desc") return b.price - a.price;
     return a.name.localeCompare(b.name, "ru");
