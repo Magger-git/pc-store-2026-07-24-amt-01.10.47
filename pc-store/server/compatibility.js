@@ -4,7 +4,7 @@
 
 function checkBuild(build) {
   const issues = [];
-  const { cpu, motherboard, ram, gpu, storage, psu, cooler, case: pcCase } = build;
+  const { cpu, motherboard, ram, gpu, cooler, storage, psu, case: pcCase } = build;
 
   // CPU <-> Материнская плата: сокет
   if (cpu && motherboard) {
@@ -12,32 +12,6 @@ function checkBuild(build) {
       issues.push({
         level: "error",
         message: `Процессор ${cpu.name} (сокет ${cpu.specs.socket}) не подходит к плате ${motherboard.name} (сокет ${motherboard.specs.socket}).`,
-      });
-    }
-  }
-
-  // Охлаждение (СЖО) <-> Процессор: сокет и допустимый TDP
-  if (cooler && cpu) {
-    if (!cooler.specs.sockets.includes(cpu.specs.socket)) {
-      issues.push({
-        level: "error",
-        message: `Охлаждение ${cooler.name} не поддерживает сокет ${cpu.specs.socket} (процессор ${cpu.name}).`,
-      });
-    }
-    if (cooler.specs.tdpRating < cpu.specs.tdp) {
-      issues.push({
-        level: "warning",
-        message: `Охлаждение ${cooler.name} рассчитано на TDP до ${cooler.specs.tdpRating}Вт, а у процессора ${cpu.name} — ${cpu.specs.tdp}Вт.`,
-      });
-    }
-  }
-
-  // Охлаждение (СЖО) <-> Корпус: радиатор помещается
-  if (cooler && pcCase && pcCase.specs.maxRadiatorSizeMM) {
-    if (cooler.specs.radiatorSizeMM > pcCase.specs.maxRadiatorSizeMM) {
-      issues.push({
-        level: "error",
-        message: `Радиатор СЖО ${cooler.name} (${cooler.specs.radiatorSizeMM}мм) не помещается в корпус ${pcCase.name} (макс. ${pcCase.specs.maxRadiatorSizeMM}мм).`,
       });
     }
   }
@@ -80,6 +54,38 @@ function checkBuild(build) {
       issues.push({
         level: "error",
         message: `Видеокарта ${gpu.name} (${gpu.specs.lengthMM} мм) длиннее, чем допускает корпус (макс. ${pcCase.specs.maxGpuLengthMM} мм).`,
+      });
+    }
+  }
+
+  // Охлаждение (СЖО) <-> Процессор: сокет и рейтинг TDP
+  if (cooler && cpu) {
+    if (!cooler.specs.sockets.includes(cpu.specs.socket)) {
+      issues.push({
+        level: "error",
+        message: `Охлаждение ${cooler.name} не поддерживает сокет процессора (${cpu.specs.socket}).`,
+      });
+    }
+    if (cooler.specs.tdpRating < cpu.specs.tdp) {
+      issues.push({
+        level: "error",
+        message: `Охлаждение ${cooler.name} рассчитано максимум на ${cooler.specs.tdpRating} Вт, а TDP процессора ${cpu.name} — ${cpu.specs.tdp} Вт.`,
+      });
+    }
+  }
+
+  // Охлаждение <-> Корпус: радиатор (СЖО) или высота башни (воздух)
+  if (cooler && pcCase) {
+    if (cooler.specs.type === "liquid" && pcCase.specs.maxRadiatorSizeMM && cooler.specs.radiatorSizeMM > pcCase.specs.maxRadiatorSizeMM) {
+      issues.push({
+        level: "error",
+        message: `Радиатор охлаждения ${cooler.name} (${cooler.specs.radiatorSizeMM} мм) не помещается в корпус (макс. ${pcCase.specs.maxRadiatorSizeMM} мм).`,
+      });
+    }
+    if (cooler.specs.type === "air" && pcCase.specs.maxCoolerHeightMM && cooler.specs.heightMM > pcCase.specs.maxCoolerHeightMM) {
+      issues.push({
+        level: "error",
+        message: `Кулер ${cooler.name} (${cooler.specs.heightMM} мм в высоту) не помещается в корпус (макс. высота кулера ${pcCase.specs.maxCoolerHeightMM} мм).`,
       });
     }
   }

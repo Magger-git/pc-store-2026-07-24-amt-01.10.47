@@ -899,7 +899,8 @@
         "LGA1851"
       ],
       "radiatorSizeMM": 240,
-      "tdpRating": 220
+      "tdpRating": 220,
+      "type": "liquid"
     },
     "description": "Доступная и популярная СЖО начального уровня, подходит почти под любой сокет.",
     "category": "cooler",
@@ -919,7 +920,8 @@
         "LGA1851"
       ],
       "radiatorSizeMM": 240,
-      "tdpRating": 200
+      "tdpRating": 200,
+      "type": "liquid"
     },
     "description": "Один из самых массовых 240-мм комплектов жидкостного охлаждения.",
     "category": "cooler",
@@ -939,7 +941,8 @@
         "LGA1851"
       ],
       "radiatorSizeMM": 280,
-      "tdpRating": 250
+      "tdpRating": 250,
+      "type": "liquid"
     },
     "description": "Отличное соотношение цены и эффективности охлаждения, popular выбор для игровых сборок.",
     "category": "cooler",
@@ -959,7 +962,8 @@
         "LGA1851"
       ],
       "radiatorSizeMM": 280,
-      "tdpRating": 250
+      "tdpRating": 250,
+      "type": "liquid"
     },
     "description": "Популярная СЖО с кастомизируемым логотипом на помпе для сборок среднего и высокого уровня.",
     "category": "cooler",
@@ -979,7 +983,8 @@
         "LGA1851"
       ],
       "radiatorSizeMM": 280,
-      "tdpRating": 260
+      "tdpRating": 260,
+      "type": "liquid"
     },
     "description": "Тихая и надёжная СЖО — частый выбор для сборок без лишнего шума.",
     "category": "cooler",
@@ -999,7 +1004,8 @@
         "LGA1851"
       ],
       "radiatorSizeMM": 360,
-      "tdpRating": 300
+      "tdpRating": 300,
+      "type": "liquid"
     },
     "description": "Топовая 360-мм СЖО для флагманских процессоров с большим TDP.",
     "category": "cooler",
@@ -1019,7 +1025,8 @@
         "LGA1851"
       ],
       "radiatorSizeMM": 360,
-      "tdpRating": 280
+      "tdpRating": 280,
+      "type": "liquid"
     },
     "description": "Мощная 360-мм СЖО для топовых сборок с эффектной подсветкой.",
     "category": "cooler",
@@ -1037,7 +1044,8 @@
       ],
       "maxGpuLengthMM": 330,
       "includedFans": 4,
-      "maxRadiatorSizeMM": 240
+      "maxRadiatorSizeMM": 240,
+      "maxCoolerHeightMM": 160
     },
     "description": "Самый продаваемый белый бюджетник. 4 сетчатых кулера в комплекте, закалённое стекло.",
     "category": "case",
@@ -1056,7 +1064,8 @@
       ],
       "maxGpuLengthMM": 350,
       "includedFans": 4,
-      "maxRadiatorSizeMM": 240
+      "maxRadiatorSizeMM": 240,
+      "maxCoolerHeightMM": 165
     },
     "description": "Фирменный хит DNS. Отличный металл за эти деньги, яркая ARGB-подсветка с контроллером.",
     "category": "case",
@@ -1075,7 +1084,8 @@
       ],
       "maxGpuLengthMM": 355,
       "includedFans": 3,
-      "maxRadiatorSizeMM": 280
+      "maxRadiatorSizeMM": 280,
+      "maxCoolerHeightMM": 165
     },
     "description": "Базовый полноразмерный ATX-корпус, «рабочая лошадка» для стандартных игровых ПК.",
     "category": "case",
@@ -1094,7 +1104,8 @@
       ],
       "maxGpuLengthMM": 370,
       "includedFans": 3,
-      "maxRadiatorSizeMM": 280
+      "maxRadiatorSizeMM": 280,
+      "maxCoolerHeightMM": 170
     },
     "description": "Главный хит продаж в категории панорамных корпусов без передней стойки.",
     "category": "case",
@@ -1113,7 +1124,8 @@
       ],
       "maxGpuLengthMM": 380,
       "includedFans": 4,
-      "maxRadiatorSizeMM": 360
+      "maxRadiatorSizeMM": 360,
+      "maxCoolerHeightMM": 175
     },
     "description": "Конкурент Lian Li, но в два раза дешевле. Стеклянный «аквариум» с шикарным кабель-менеджментом.",
     "category": "case",
@@ -1132,7 +1144,8 @@
       ],
       "maxGpuLengthMM": 365,
       "includedFans": 2,
-      "maxRadiatorSizeMM": 280
+      "maxRadiatorSizeMM": 280,
+      "maxCoolerHeightMM": 165
     },
     "description": "Эталон стиля. Фирменный скрытый нижний вентилятор, который дует прямо на видеокарту.",
     "category": "case",
@@ -1151,7 +1164,8 @@
       ],
       "maxGpuLengthMM": 392,
       "includedFans": 2,
-      "maxRadiatorSizeMM": 360
+      "maxRadiatorSizeMM": 360,
+      "maxCoolerHeightMM": 180
     },
     "description": "Бескомпромиссное охлаждение благодаря двум огромным 160-мм вентиляторам спереди.",
     "category": "case",
@@ -1170,7 +1184,8 @@
       ],
       "maxGpuLengthMM": 375,
       "includedFans": 3,
-      "maxRadiatorSizeMM": 360
+      "maxRadiatorSizeMM": 360,
+      "maxCoolerHeightMM": 185
     },
     "description": "Поддерживает материнские платы со скрытыми разъёмами на обороте (Project Stealth / BTF).",
     "category": "case",
@@ -1189,7 +1204,8 @@
       ],
       "maxGpuLengthMM": 369,
       "includedFans": 3,
-      "maxRadiatorSizeMM": 360
+      "maxRadiatorSizeMM": 360,
+      "maxCoolerHeightMM": 172
     },
     "description": "Толстая сталь, плотные пылевые фильтры, идеальный баланс между тишиной и продуваемостью.",
     "category": "case",
@@ -1208,7 +1224,8 @@
       ],
       "maxGpuLengthMM": 355,
       "includedFans": 2,
-      "maxRadiatorSizeMM": 280
+      "maxRadiatorSizeMM": 280,
+      "maxCoolerHeightMM": 170
     },
     "description": "Дизайнерский корпус с фронтальной панелью из натурального дерева (орех/дуб).",
     "category": "case",
@@ -1228,7 +1245,8 @@
       ],
       "maxGpuLengthMM": 422,
       "includedFans": 0,
-      "maxRadiatorSizeMM": 420
+      "maxRadiatorSizeMM": 420,
+      "maxCoolerHeightMM": 167
     },
     "description": "Двухкамерный модульный эталон корпусостроения для сложных сборок с водяным охлаждением.",
     "category": "case",
@@ -1971,5 +1989,341 @@
     "description": "Отборные чипы для оверклокеров. Покупается под топовые платы Z790/Z890 для максимального FPS.",
     "category": "ram",
     "image": "ram.svg"
+  },
+  {
+    "id": "cooler-deepcool-iceedgemini-v2",
+    "brand": "Deepcool",
+    "name": "ICE EDGE MINI FS V2.0",
+    "price": 1050,
+    "stock": 34,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700"
+      ],
+      "heightMM": 47,
+      "tdpRating": 100
+    },
+    "description": "Самая дешёвая «башня». Компактная, встанет в любой узкий старый корпус.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-idcooling-se214xt",
+    "brand": "ID-Cooling",
+    "name": "SE-214-XT",
+    "price": 1600,
+    "stock": 40,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "heightMM": 154,
+      "tdpRating": 150
+    },
+    "description": "Абсолютный король бюджетных сборок. Идеальный прижим, есть версии с подсветкой и в белом цвете.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-pccooler-paladinex400",
+    "brand": "PCCOOLER",
+    "name": "Paladin EX400",
+    "price": 1850,
+    "stock": 26,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "heightMM": 155,
+      "tdpRating": 150
+    },
+    "description": "Главный конкурент SE-214-XT. Более широкая площадь пластин радиатора и тихая вертушка.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-deepcool-ak400",
+    "brand": "Deepcool",
+    "name": "AK400",
+    "price": 2290,
+    "stock": 30,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM5",
+        "LGA1700"
+      ],
+      "heightMM": 155,
+      "tdpRating": 160
+    },
+    "description": "Очень красивый строгий дизайн с декоративной накладкой сверху. Отличный гидродинамический подшипник.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-idcooling-se226xt",
+    "brand": "ID-Cooling",
+    "name": "SE-226-XT",
+    "price": 3300,
+    "stock": 20,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "heightMM": 165,
+      "tdpRating": 200
+    },
+    "description": "Тяжёлая одиночная башня с медным основанием. Конструкция смещена назад, чтобы не перекрывать оперативную память.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-thermalright-pa120se",
+    "brand": "Thermalright",
+    "name": "Peerless Assassin 120 SE",
+    "price": 4300,
+    "stock": 22,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM5",
+        "LGA1700"
+      ],
+      "heightMM": 157,
+      "tdpRating": 240
+    },
+    "description": "Двухбашенный монстр. Уничтожил сегмент дорогих кулеров, предлагая флагманскую эффективность за копейки.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-deepcool-ak620",
+    "brand": "Deepcool",
+    "name": "AK620",
+    "price": 6750,
+    "stock": 14,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "heightMM": 160,
+      "tdpRating": 240
+    },
+    "description": "Двухбашенная классика в строгом стиле. Выглядит монолитно, собран из премиальных материалов.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-noctua-nhd15-chromax",
+    "brand": "Noctua",
+    "name": "NH-D15 Chromax Black",
+    "price": 16750,
+    "stock": 8,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "heightMM": 165,
+      "tdpRating": 260
+    },
+    "description": "Ультра-премиум двухбашенный кулер, тянет любые флагманские процессоры.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "mb-maxsun-msterminator-b550m-wifi",
+    "brand": "Maxsun",
+    "name": "MS-Terminator B550M WiFi",
+    "price": 8000,
+    "stock": 16,
+    "specs": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "ramSlots": 4,
+      "maxRamGB": 128,
+      "formFactor": "mATX",
+      "pcieVersion": "4.0",
+      "wifi": true
+    },
+    "description": "Самая доступная плата на чипсете B550 с радиаторами VRM и встроенным Wi-Fi 5.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-msi-b550mprovdh-wifi",
+    "brand": "MSI",
+    "name": "B550M PRO-VDH WIFI",
+    "price": 11750,
+    "stock": 15,
+    "specs": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "ramSlots": 4,
+      "maxRamGB": 128,
+      "formFactor": "mATX",
+      "pcieVersion": "4.0",
+      "wifi": true
+    },
+    "description": "«Золотой стандарт» для AM4: удобный BIOS, надёжное охлаждение VRM и Wi-Fi/Bluetooth на борту.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-msi-b550tomahawkmaxwifi",
+    "brand": "MSI",
+    "name": "MAG B550 TOMAHAWK MAX WIFI",
+    "price": 16500,
+    "stock": 10,
+    "specs": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "ramSlots": 4,
+      "maxRamGB": 128,
+      "formFactor": "ATX",
+      "pcieVersion": "4.0",
+      "wifi": true
+    },
+    "description": "Вершина платформы AM4. Спокойно держит Ryzen 9 5900X/5950X и Ryzen 7 5800X3D. Wi-Fi 6E.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "cooler-deepcool-iceedge-minifs",
+    "brand": "Deepcool",
+    "name": "ICE EDGE MINI FS V2.0",
+    "price": 1050,
+    "stock": 30,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "LGA1700"
+      ],
+      "heightMM": 59,
+      "tdpRating": 100
+    },
+    "description": "Самая дешёвая «башня» на 2 трубках. Компактная, встанет в любой узкий старый корпус.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-idcooling-se214xt",
+    "brand": "ID-Cooling",
+    "name": "SE-214-XT",
+    "price": 1600,
+    "stock": 32,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "LGA1700"
+      ],
+      "heightMM": 154,
+      "tdpRating": 150
+    },
+    "description": "Абсолютный народный хит бюджетных сборок. Идеальный прижим, есть версии с подсветкой и в белом цвете.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-pccooler-paladinex400",
+    "brand": "PCCOOLER",
+    "name": "Paladin EX400",
+    "price": 1850,
+    "stock": 26,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "LGA1700"
+      ],
+      "heightMM": 155,
+      "tdpRating": 150
+    },
+    "description": "Главный конкурент SE-214-XT. Более широкая площадь пластин радиатора и очень тихая вертушка.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-idcooling-se226xt",
+    "brand": "ID-Cooling",
+    "name": "SE-226-XT",
+    "price": 3300,
+    "stock": 18,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM5",
+        "LGA1700"
+      ],
+      "heightMM": 158,
+      "tdpRating": 200
+    },
+    "description": "Тяжёлая одиночная башня с медным основанием, слегка смещена назад, чтобы не перекрывать слоты ОЗУ.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-deepcool-ak620",
+    "brand": "Deepcool",
+    "name": "AK620",
+    "price": 6750,
+    "stock": 12,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM5",
+        "LGA1700"
+      ],
+      "heightMM": 160,
+      "tdpRating": 240
+    },
+    "description": "Двухбашенная классика в строгом стиле. Выглядит монолитно, собрана из премиальных материалов.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
+  },
+  {
+    "id": "cooler-noctua-nhd15-chromax",
+    "brand": "Noctua",
+    "name": "NH-D15 Chromax Black",
+    "price": 16750,
+    "stock": 8,
+    "specs": {
+      "type": "air",
+      "sockets": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1851"
+      ],
+      "heightMM": 165,
+      "tdpRating": 260
+    },
+    "description": "Ультра-премиум версия эталонного двухбашенного кулера в чёрном исполнении. Держит любые флагманские CPU.",
+    "category": "cooler",
+    "image": "cooler-air.svg"
   }
 ]
