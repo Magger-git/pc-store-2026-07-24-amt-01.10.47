@@ -38,18 +38,26 @@
     <div class="builder-layout">
       <div id="slots"></div>
 
-      <aside class="summary">
-        <h3>Ваша сборка</h3>
-        <div id="issues"></div>
-        <div class="total-row">
-          <span>Итого</span>
-          <span id="total">0 ₽</span>
+      <div class="builder-side">
+        <div class="case-preview-card">
+          <h3>Превью сборки</h3>
+          <div id="case-preview"></div>
+          <div id="case-preview-legend"></div>
         </div>
-        <button class="btn btn-primary btn-block" id="add-build-to-cart" disabled>Добавить сборку в корзину</button>
-        <p style="font-size:12px;color:var(--text-dim);margin-top:10px">
-          Кнопка активна, когда выбраны все обязательные компоненты и нет ошибок совместимости.
-        </p>
-      </aside>
+
+        <aside class="summary">
+          <h3>Ваша сборка</h3>
+          <div id="issues"></div>
+          <div class="total-row">
+            <span>Итого</span>
+            <span id="total">0 ₽</span>
+          </div>
+          <button class="btn btn-primary btn-block" id="add-build-to-cart" disabled>Добавить сборку в корзину</button>
+          <p style="font-size:12px;color:var(--text-dim);margin-top:10px">
+            Кнопка активна, когда выбраны все обязательные компоненты и нет ошибок совместимости.
+          </p>
+        </aside>
+      </div>
     </div>
   </div>
 </section>
@@ -186,6 +194,8 @@ function renderSlots() {
   container.querySelectorAll("[data-open]").forEach((btn) => {
     btn.addEventListener("click", () => openPicker(btn.dataset.open));
   });
+
+  renderCasePreview();
 }
 
 async function updateSummary() {
@@ -415,6 +425,158 @@ function renderPickerList() {
       closePicker();
     });
   });
+}
+
+// ================= Превью корпуса =================
+const FF_DIMS = {
+  "mATX": { w: 210, h: 250 },
+  "ATX": { w: 250, h: 300 },
+  "E-ATX": { w: 280, h: 330 },
+};
+
+function findSel(key) {
+  const id = state[key];
+  return id ? (productsByCategory[key] || []).find((p) => p.id === id) : null;
+}
+
+function esc(s) { const d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+
+function renderCasePreview() {
+  const pcCase = findSel("case");
+  const cpu = findSel("cpu");
+  const mb = findSel("motherboard");
+  const gpu = findSel("gpu");
+  const cooler = findSel("cooler");
+  const ram = findSel("ram");
+  const psu = findSel("psu");
+  const storage = findSel("storage");
+
+  const ff = mb ? mb.specs.formFactor : (pcCase ? pcCase.specs.formFactors[pcCase.specs.formFactors.length - 1] : "ATX");
+  const dims = FF_DIMS[ff] || FF_DIMS.ATX;
+
+  const padTop = 70; // место сверху под радиатор СЖО / вентиляторы
+  const outerW = 340, outerH = dims.h + padTop + 60;
+  const caseX = 20, caseY = 20, caseW = outerW - 40, caseH = outerH - 40;
+
+  const mbX = caseX + (caseW - dims.w) / 2;
+  const mbY = caseY + padTop;
+  const mbW = dims.w, mbH = dims.h * 0.62;
+
+  // --- CPU ---
+  const cpuSize = 30;
+  const cpuX = mbX + mbW * 0.28, cpuY = mbY + 18;
+
+  // --- RAM (2 полоски справа от CPU) ---
+  const ramX = cpuX + cpuSize + 14;
+  const ramY = cpuY - 4;
+
+  // --- GPU (полоса под CPU, длина пропорциональна lengthMM) ---
+  const gpuMaxLen = pcCase ? pcCase.specs.maxGpuLengthMM : 400;
+  const gpuTrackW = mbW - 20;
+  const gpuW = gpu ? Math.max(50, Math.min(gpuTrackW, (gpu.specs.lengthMM / gpuMaxLen) * gpuTrackW)) : 0;
+  const gpuY = cpuY + cpuSize + 34;
+  const gpuH = 26;
+
+  // --- PSU (низ корпуса) ---
+  const psuW = mbW * 0.6, psuH = 24;
+  const psuX = mbX + (mbW - psuW) / 2;
+  const psuY = caseY + caseH - psuH - 14;
+
+  // --- Накопитель ---
+  const stW = 34, stH = 20;
+  const stX = caseX + caseW - stW - 14;
+  const stY = psuY - stH - 10;
+
+  // --- Кулер / СЖО ---
+  let coolerSvg = "";
+  if (cooler) {
+    const radW = Math.min(caseW - 30, (cooler.specs.radiatorSizeMM / 360) * (caseW - 30));
+    const radX = caseX + (caseW - radW) / 2;
+    const radY = caseY + 10;
+    const fanCount = Math.max(2, Math.round(cooler.specs.radiatorSizeMM / 120));
+    let fans = "";
+    for (let i = 0; i < fanCount; i++) {
+      const fx = radX + (radW / fanCount) * (i + 0.5);
+      fans += `<circle cx="${fx}" cy="${radY + 9}" r="8" fill="none" stroke="var(--accent-dark)" stroke-width="1.3"/>`;
+    }
+    coolerSvg = `
+      <g>
+        <rect x="${radX}" y="${radY}" width="${radW}" height="18" rx="3" fill="var(--accent-soft)" stroke="var(--accent-dark)" stroke-width="1.4"/>
+        ${fans}
+        <path d="M ${radX + radW * 0.35} ${radY + 18} C ${radX + radW * 0.35} ${mbY - 10}, ${cpuX + 6} ${mbY - 10}, ${cpuX + 6} ${cpuY}"
+              fill="none" stroke="var(--accent-dark)" stroke-width="2"/>
+        <path d="M ${radX + radW * 0.65} ${radY + 18} C ${radX + radW * 0.65} ${mbY - 4}, ${cpuX + cpuSize - 6} ${mbY - 4}, ${cpuX + cpuSize - 6} ${cpuY}"
+              fill="none" stroke="var(--accent-dark)" stroke-width="2"/>
+      </g>`;
+  } else {
+    // условный воздушный кулер прямо на CPU
+    coolerSvg = `
+      <g>
+        <rect x="${cpuX - 4}" y="${cpuY - 16}" width="${cpuSize + 8}" height="14" rx="2" fill="var(--bg-elevated)" stroke="var(--border)" stroke-width="1.3" stroke-dasharray="3 3"/>
+        <circle cx="${cpuX + cpuSize / 2}" cy="${cpuY - 9}" r="4.5" fill="none" stroke="var(--text-dim)" stroke-width="1.2" stroke-dasharray="2 2"/>
+      </g>`;
+  }
+
+  // --- Передние вентиляторы корпуса ---
+  const fanN = pcCase ? (pcCase.specs.includedFans || 0) : 0;
+  let frontFans = "";
+  for (let i = 0; i < Math.min(fanN, 3); i++) {
+    frontFans += `<circle cx="${caseX + 20}" cy="${mbY + 30 + i * 40}" r="12" fill="none" stroke="var(--accent-dark)" stroke-width="1.3"/>`;
+  }
+
+  const part = (present, x, y, w, h, fill, label, rx = 4) => `
+    <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}"
+      fill="${present ? fill : "transparent"}"
+      stroke="${present ? "var(--accent-dark)" : "var(--border)"}"
+      stroke-width="${present ? 1.6 : 1.3}"
+      stroke-dasharray="${present ? "0" : "3 3"}"/>
+    ${label ? `<text x="${x + w / 2}" y="${y + h / 2 + 3}" text-anchor="middle" font-family="var(--mono)" font-size="8.5" fill="${present ? "var(--text)" : "var(--text-dim)"}">${label}</text>` : ""}
+  `;
+
+  const svg = `
+  <svg viewBox="0 0 ${outerW} ${outerH}" width="100%" role="img" aria-label="Схема сборки">
+    <rect x="${caseX}" y="${caseY}" width="${caseW}" height="${caseH}" rx="10"
+      fill="var(--bg-elevated)" stroke="${pcCase ? "var(--accent-dark)" : "var(--border)"}"
+      stroke-width="${pcCase ? 2 : 1.5}" stroke-dasharray="${pcCase ? "0" : "4 4"}"/>
+
+    ${frontFans}
+    ${coolerSvg}
+
+    <!-- материнская плата -->
+    <rect x="${mbX}" y="${mbY}" width="${mbW}" height="${mbH}" rx="4"
+      fill="${mb ? "rgba(226,83,47,0.06)" : "transparent"}"
+      stroke="${mb ? "var(--accent-dark)" : "var(--border)"}" stroke-width="${mb ? 1.6 : 1.2}"
+      stroke-dasharray="${mb ? "0" : "3 3"}"/>
+
+    ${part(!!cpu, cpuX, cpuY, cpuSize, cpuSize, "var(--accent)", "CPU")}
+    ${part(!!ram, ramX, ramY, 8, 34, "var(--accent)", "")}
+    ${part(!!ram, ramX + 11, ramY, 8, 34, "var(--accent)", "")}
+
+    ${gpu ? part(true, mbX + 10, gpuY, gpuW, gpuH, "var(--accent)", "GPU") : part(false, mbX + 10, gpuY, gpuTrackW, gpuH, "var(--bg-card)", "GPU")}
+
+    ${part(!!storage, stX, stY, stW, stH, "var(--accent)", "")}
+    ${part(!!psu, psuX, psuY, psuW, psuH, "var(--accent)", "PSU")}
+  </svg>`;
+
+  document.getElementById("case-preview").innerHTML = svg;
+
+  const legendItems = [
+    ["Корпус", pcCase],
+    ["Плата", mb],
+    ["Процессор", cpu],
+    ["Охлаждение", cooler],
+    ["Память", ram],
+    ["Видеокарта", gpu],
+    ["Накопитель", storage],
+    ["БП", psu],
+  ];
+  document.getElementById("case-preview-legend").innerHTML = legendItems.map(([label, item]) => `
+    <div class="cp-legend-row ${item ? "on" : ""}">
+      <span class="cp-dot"></span>
+      <span class="cp-label">${label}</span>
+      <span class="cp-value">${item ? esc(`${item.brand} ${item.name}`) : "не выбрано"}</span>
+    </div>
+  `).join("");
 }
 
 (async function init() {

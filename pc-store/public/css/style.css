@@ -310,3 +310,32 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
   .picker-sidebar { border-right: none; border-bottom: 1px solid var(--border); }
   .picker-panel { max-height: 92vh; }
 }
+
+/* ============ Превью корпуса в конструкторе ============ */
+.builder-side { display: grid; gap: 20px; position: sticky; top: 92px; }
+
+.case-preview-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px; box-shadow: var(--shadow-md);
+}
+.case-preview-card h3 { font-family: var(--display); margin: 0 0 14px; font-size: 17px; }
+#case-preview { background: var(--bg); border-radius: var(--radius-sm); padding: 4px; }
+#case-preview svg { display: block; }
+
+#case-preview-legend { margin-top: 14px; display: grid; gap: 6px; }
+.cp-legend-row {
+  display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-dim);
+  padding: 3px 0;
+}
+.cp-legend-row .cp-dot {
+  width: 7px; height: 7px; border-radius: 999px; flex: none;
+  background: var(--border); border: 1px solid var(--border);
+}
+.cp-legend-row.on .cp-dot { background: var(--accent); border-color: var(--accent-dark); }
+.cp-legend-row .cp-label { flex: none; width: 78px; color: var(--text-dim); }
+.cp-legend-row.on .cp-value { color: var(--text); font-weight: 500; }
+.cp-legend-row .cp-value { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.summary { position: static; }
+
+@media (max-width: 900px) { .builder-side { position: static; } }
