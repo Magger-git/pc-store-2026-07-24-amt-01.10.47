@@ -40,11 +40,25 @@
 
 <script src="js/api.js"></script>
 <script>
+let currentCart = null;
+let selected = new Set(); // ключи вида "group:<id>" или "product:<id>"
+let initialized = false;
+
+function keyFor(kind, id) {
+  return `${kind}:${id}`;
+}
+
 async function render() {
-  const cart = await API.getCart();
+  currentCart = await API.getCart();
+  renderCart();
+}
+
+function renderCart() {
+  const cart = currentCart;
   const body = document.getElementById("cart-body");
 
-  if (!cart.items.length) {
+  const hasAnything = cart.groups.length || cart.individual.length;
+  if (!hasAnything) {
     body.innerHTML = `
       <div class="empty-state">
         <div class="big">🛒</div>
@@ -54,48 +68,136 @@ async function render() {
     return;
   }
 
-  body.innerHTML = `
-    <div>
-      ${cart.items.map((i) => `
-        <div class="cart-row">
-          <div class="thumb-sm"><img src="img/${i.product.image}" alt=""></div>
-          <div>
-            <div style="font-weight:600;font-size:14px">${i.product.name}</div>
-            <div style="font-size:12px;color:var(--text-dim)">${money(i.product.price)} / шт.</div>
-          </div>
-          <div class="qty-control">
-            <button data-dec="${i.productId}">−</button>
-            <span>${i.qty}</span>
-            <button data-inc="${i.productId}">+</button>
-          </div>
-          <div style="text-align:right">
-            <div style="font-family:var(--mono);font-weight:700">${money(i.subtotal)}</div>
-            <button data-remove="${i.productId}" class="btn btn-ghost btn-sm" style="margin-top:6px;padding:4px 10px">Удалить</button>
-          </div>
+  const allKeys = [
+    ...cart.groups.map((g) => keyFor("group", g.groupId)),
+    ...cart.individual.map((i) => keyFor("product", i.productId)),
+  ];
+
+  // Всё выбрано по умолчанию только при первой загрузке страницы.
+  if (!initialized) {
+    allKeys.forEach((k) => selected.add(k));
+    initialized = true;
+  } else {
+    // Если позицию удалили из корзины — убираем её и из выбора.
+    [...selected].forEach((k) => { if (!allKeys.includes(k)) selected.delete(k); });
+  }
+
+  const groupsHtml = cart.groups.map((g) => {
+    const key = keyFor("group", g.groupId);
+    return `
+      <div class="build-group">
+        <div class="build-group-head">
+          <input type="checkbox" class="cart-select" data-select="${key}" ${selected.has(key) ? "checked" : ""}>
+          <div class="build-name">🖥 ${g.groupLabel}</div>
+          <div class="build-total">${money(g.subtotal)}</div>
+          <button class="btn btn-ghost btn-sm" data-remove-group="${g.groupId}">Удалить сборку</button>
         </div>
-      `).join("")}
-    </div>
+        <div class="build-group-body">
+          ${g.items.map((i) => `
+            <div class="cart-row">
+              <div class="thumb-sm"><img src="img/${i.product.image}" alt=""></div>
+              <div>
+                <div style="font-weight:600;font-size:13.5px">${i.product.brand} ${i.product.name}</div>
+                <div style="font-size:12px;color:var(--text-dim)">${money(i.product.price)}</div>
+              </div>
+              <div style="font-family:var(--mono);font-weight:600">${money(i.subtotal)}</div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  const individualHtml = cart.individual.map((i) => {
+    const key = keyFor("product", i.productId);
+    return `
+      <div class="cart-row">
+        <input type="checkbox" class="cart-select" data-select="${key}" ${selected.has(key) ? "checked" : ""}>
+        <div class="thumb-sm"><img src="img/${i.product.image}" alt=""></div>
+        <div>
+          <div style="font-weight:600;font-size:14px">${i.product.name}</div>
+          <div style="font-size:12px;color:var(--text-dim)">${money(i.product.price)} / шт.</div>
+        </div>
+        <div class="qty-control">
+          <button data-dec="${i.productId}">−</button>
+          <span>${i.qty}</span>
+          <button data-inc="${i.productId}">+</button>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--mono);font-weight:700">${money(i.subtotal)}</div>
+          <button data-remove="${i.productId}" class="btn btn-ghost btn-sm" style="margin-top:6px;padding:4px 10px">Удалить</button>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  let selectedTotal = 0;
+  cart.groups.forEach((g) => { if (selected.has(keyFor("group", g.groupId))) selectedTotal += g.subtotal; });
+  cart.individual.forEach((i) => { if (selected.has(keyFor("product", i.productId))) selectedTotal += i.subtotal; });
+
+  body.innerHTML = `
+    <label class="cart-select-all-row">
+      <input type="checkbox" class="cart-select" id="select-all" ${selected.size === allKeys.length ? "checked" : ""}>
+      Выбрать всё
+    </label>
+    ${groupsHtml}
+    ${individualHtml}
     <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 0">
-      <span style="font-size:16px">Итого</span>
-      <span style="font-family:var(--mono);font-size:22px;font-weight:700">${money(cart.total)}</span>
+      <span style="font-size:16px">К оформлению (${selected.size} из ${allKeys.length})</span>
+      <span style="font-family:var(--mono);font-size:22px;font-weight:700">${money(selectedTotal)}</span>
     </div>
-    <a href="/checkout.html" class="btn btn-primary btn-block">Оформить заказ</a>
+    <button class="btn btn-primary btn-block" id="go-checkout" ${selected.size === 0 ? "disabled" : ""}>Оформить выбранное</button>
+    <p style="font-size:12px;color:var(--text-dim);margin-top:10px">
+      Всего в корзине на ${money(cart.total)}. То, что не отметите, останется в корзине.
+    </p>
   `;
 
+  document.getElementById("select-all").addEventListener("change", (e) => {
+    if (e.target.checked) allKeys.forEach((k) => selected.add(k));
+    else selected.clear();
+    renderCart();
+  });
+
+  body.querySelectorAll("[data-select]").forEach((cb) => {
+    cb.addEventListener("change", (e) => {
+      const key = cb.dataset.select;
+      if (e.target.checked) selected.add(key); else selected.delete(key);
+      renderCart();
+    });
+  });
+
+  body.querySelectorAll("[data-remove-group]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      await API.removeGroupFromCart(btn.dataset.removeGroup);
+      selected.delete(keyFor("group", btn.dataset.removeGroup));
+      render(); refreshCartBadge();
+    });
+  });
+
   body.querySelectorAll("[data-inc]").forEach((b) => b.addEventListener("click", async () => {
-    const item = cart.items.find((i) => i.productId === b.dataset.inc);
+    const item = cart.individual.find((i) => i.productId === b.dataset.inc);
     await API.updateCart(b.dataset.inc, item.qty + 1);
     render(); refreshCartBadge();
   }));
   body.querySelectorAll("[data-dec]").forEach((b) => b.addEventListener("click", async () => {
-    const item = cart.items.find((i) => i.productId === b.dataset.dec);
+    const item = cart.individual.find((i) => i.productId === b.dataset.dec);
     await API.updateCart(b.dataset.dec, item.qty - 1);
     render(); refreshCartBadge();
   }));
   body.querySelectorAll("[data-remove]").forEach((b) => b.addEventListener("click", async () => {
     await API.removeFromCart(b.dataset.remove);
+    selected.delete(keyFor("product", b.dataset.remove));
     render(); refreshCartBadge();
   }));
+
+  document.getElementById("go-checkout")?.addEventListener("click", () => {
+    const selection = {
+      productIds: cart.individual.filter((i) => selected.has(keyFor("product", i.productId))).map((i) => i.productId),
+      groupIds: cart.groups.filter((g) => selected.has(keyFor("group", g.groupId))).map((g) => g.groupId),
+    };
+    localStorage.setItem("nodepc_checkout_selection", JSON.stringify(selection));
+    window.location.href = "/checkout.html";
+  });
 }
 
 render();

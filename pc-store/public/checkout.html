@@ -65,15 +65,47 @@
 
 <script src="js/api.js"></script>
 <script>
+let selection = null;
+try {
+  selection = JSON.parse(localStorage.getItem("nodepc_checkout_selection") || "null");
+} catch (e) {
+  selection = null;
+}
+const hasSelection = selection && ((selection.productIds && selection.productIds.length) || (selection.groupIds && selection.groupIds.length));
+
 (async function () {
   const cart = await API.getCart();
   const summary = document.getElementById("summary");
-  if (!cart.items.length) {
+
+  if (!cart.groups.length && !cart.individual.length) {
     summary.innerHTML = "Корзина пуста — <a href='/' style='color:var(--accent)'>вернуться в каталог</a>.";
     document.getElementById("checkout-form").style.display = "none";
     return;
   }
-  summary.innerHTML = `${cart.items.length} позиций в заказе · Итого: <strong style="color:var(--text)">${money(cart.total)}</strong>`;
+
+  // Если пришли из корзины с выбором — оформляем только отмеченное.
+  // Если открыли страницу напрямую (выбора нет) — оформляем всё, что в корзине.
+  const groups = hasSelection ? cart.groups.filter((g) => selection.groupIds.includes(g.groupId)) : cart.groups;
+  const individual = hasSelection ? cart.individual.filter((i) => selection.productIds.includes(i.productId)) : cart.individual;
+
+  if (!groups.length && !individual.length) {
+    summary.innerHTML = "Ничего не выбрано для оформления — <a href='/cart.html' style='color:var(--accent)'>вернуться в корзину</a>.";
+    document.getElementById("checkout-form").style.display = "none";
+    return;
+  }
+
+  const positionsCount = groups.reduce((n, g) => n + g.items.length, 0) + individual.length;
+  const total = groups.reduce((s, g) => s + g.subtotal, 0) + individual.reduce((s, i) => s + i.subtotal, 0);
+
+  const lines = [
+    ...groups.map((g) => `🖥 ${g.groupLabel} — ${money(g.subtotal)}`),
+    ...individual.map((i) => `${i.product.name} × ${i.qty} — ${money(i.subtotal)}`),
+  ];
+
+  summary.innerHTML = `
+    <div style="margin-bottom:10px">${positionsCount} позиций в заказе · Итого: <strong style="color:var(--text)">${money(total)}</strong></div>
+    <ul style="margin:0;padding-left:18px;line-height:1.7">${lines.map((l) => `<li>${l}</li>`).join("")}</ul>
+  `;
 })();
 
 document.getElementById("checkout-form").addEventListener("submit", async (e) => {
@@ -92,7 +124,7 @@ document.getElementById("checkout-form").addEventListener("submit", async (e) =>
   };
 
   try {
-    const result = await API.checkout(customer);
+    const result = await API.checkout(customer, hasSelection ? selection : null);
     if (result.error) {
       errBox.textContent = result.error;
       errBox.style.display = "flex";
@@ -100,6 +132,7 @@ document.getElementById("checkout-form").addEventListener("submit", async (e) =>
       btn.textContent = "Оплатить и оформить";
       return;
     }
+    localStorage.removeItem("nodepc_checkout_selection");
     if (result.mode === "stripe" && result.checkoutUrl) {
       window.location.href = result.checkoutUrl; // редирект на реальную оплату Stripe
     } else {

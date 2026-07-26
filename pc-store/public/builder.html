@@ -214,13 +214,24 @@ async function updateSummary() {
   document.getElementById("add-build-to-cart").disabled = !(requiredFilled && result.ok);
 }
 
+function buildGroupLabel() {
+  const cpu = productsByCategory.cpu?.find((p) => p.id === state.cpu);
+  const gpu = productsByCategory.gpu?.find((p) => p.id === state.gpu);
+  const parts = [];
+  if (cpu) parts.push(`${cpu.brand} ${cpu.name}`);
+  if (gpu) parts.push(`${gpu.brand} ${gpu.name}`);
+  return "Сборка: " + (parts.length ? parts.join(" + ") : "своя конфигурация");
+}
+
 document.getElementById("add-build-to-cart").addEventListener("click", async () => {
   const btn = document.getElementById("add-build-to-cart");
   btn.disabled = true;
   btn.textContent = "Добавляем…";
+  const groupId = "build-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+  const groupLabel = buildGroupLabel();
   const picks = Object.values(state).filter(Boolean);
   for (const id of picks) {
-    await API.addToCart(id, 1);
+    await API.addToCart(id, 1, groupId, groupLabel);
   }
   await refreshCartBadge();
   btn.textContent = "Добавлено ✓ — перейти в корзину";

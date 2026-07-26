@@ -20,35 +20,43 @@ const API = {
     const res = await fetch("/api/cart");
     return res.json();
   },
-  async addToCart(productId, qty = 1) {
+  async addToCart(productId, qty = 1, groupId = null, groupLabel = null) {
     const res = await fetch("/api/cart/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ productId, qty }),
+      body: JSON.stringify({ productId, qty, groupId, groupLabel }),
     });
     return res.json();
   },
-  async updateCart(productId, qty) {
+  async updateCart(productId, qty, groupId = null) {
     const res = await fetch("/api/cart/update", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ productId, qty }),
+      body: JSON.stringify({ productId, qty, groupId }),
     });
     return res.json();
   },
-  async removeFromCart(productId) {
+  async removeFromCart(productId, groupId = null) {
     const res = await fetch("/api/cart/remove", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ productId }),
+      body: JSON.stringify({ productId, groupId }),
     });
     return res.json();
   },
-  async checkout(customer) {
+  async removeGroupFromCart(groupId) {
+    const res = await fetch("/api/cart/remove-group", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ groupId }),
+    });
+    return res.json();
+  },
+  async checkout(customer, selection = null) {
     const res = await fetch("/api/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ customer }),
+      body: JSON.stringify({ customer, selection }),
     });
     return res.json();
   },
