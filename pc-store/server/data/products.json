@@ -272,539 +272,6 @@
     "image": "cpu.svg"
   },
   {
-    "id": "cpu-ultra5-245k",
-    "brand": "Intel",
-    "name": "Core Ultra 5 245K",
-    "price": 24990,
-    "stock": 11,
-    "specs": {
-      "socket": "LGA1851",
-      "cores": 14,
-      "threads": 14,
-      "tdp": 125,
-      "boostClock": "5.2 GHz"
-    },
-    "description": "Новая архитектура Arrow Lake, ниже энергопотребление при сравнимой производительности.",
-    "category": "cpu",
-    "image": "cpu.svg"
-  },
-  {
-    "id": "cpu-ultra5-250kplus",
-    "brand": "Intel",
-    "name": "Core Ultra 5 250K Plus",
-    "price": 21990,
-    "stock": 13,
-    "specs": {
-      "socket": "LGA1851",
-      "cores": 18,
-      "threads": 18,
-      "tdp": 125,
-      "boostClock": "5.3 GHz"
-    },
-    "description": "Обновлённая версия 245K с дополнительными E-ядрами и поддержкой DDR5-7200.",
-    "category": "cpu",
-    "image": "cpu.svg"
-  },
-  {
-    "id": "cpu-ultra7-265k",
-    "brand": "Intel",
-    "name": "Core Ultra 7 265K",
-    "price": 34990,
-    "stock": 9,
-    "specs": {
-      "socket": "LGA1851",
-      "cores": 20,
-      "threads": 20,
-      "tdp": 125,
-      "boostClock": "5.5 GHz"
-    },
-    "description": "20 ядер для мощных игровых и рабочих сборок на новой платформе Intel.",
-    "category": "cpu",
-    "image": "cpu.svg"
-  },
-  {
-    "id": "cpu-ultra7-270kplus",
-    "brand": "Intel",
-    "name": "Core Ultra 7 270K Plus",
-    "price": 31990,
-    "stock": 10,
-    "specs": {
-      "socket": "LGA1851",
-      "cores": 24,
-      "threads": 24,
-      "tdp": 125,
-      "boostClock": "5.6 GHz"
-    },
-    "description": "24 ядра — почти как у Ultra 9 285K, но по более доступной цене.",
-    "category": "cpu",
-    "image": "cpu.svg"
-  },
-  {
-    "id": "cpu-ultra9-285k",
-    "brand": "Intel",
-    "name": "Core Ultra 9 285K",
-    "price": 54990,
-    "stock": 5,
-    "specs": {
-      "socket": "LGA1851",
-      "cores": 24,
-      "threads": 24,
-      "tdp": 125,
-      "boostClock": "5.7 GHz"
-    },
-    "description": "Флагман Intel на архитектуре Arrow Lake для самых требовательных задач.",
-    "category": "cpu",
-    "image": "cpu.svg"
-  },
-  {
-    "id": "mb-a520m",
-    "brand": "ASRock",
-    "name": "A520M-HDV",
-    "price": 5990,
-    "stock": 20,
-    "specs": {
-      "socket": "AM4",
-      "ramType": "DDR4",
-      "ramSlots": 2,
-      "maxRamGB": 64,
-      "formFactor": "mATX",
-      "pcieVersion": "3.0"
-    },
-    "description": "Самая доступная плата для сборки на Ryzen 5000 без разгона.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b550m-pro",
-    "brand": "MSI",
-    "name": "PRO B550M-VC WiFi",
-    "price": 8490,
-    "stock": 16,
-    "specs": {
-      "socket": "AM4",
-      "ramType": "DDR4",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "mATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Популярный выбор для Ryzen 5 5600X/5700X с поддержкой PCIe 4.0 и WiFi.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-x570-tuf",
-    "brand": "ASUS",
-    "name": "TUF Gaming X570-Plus",
-    "price": 14990,
-    "stock": 8,
-    "specs": {
-      "socket": "AM4",
-      "ramType": "DDR4",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "ATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Топовый чипсет для AM4 — разгон процессора и памяти, полноразмерный ATX.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-a620m",
-    "brand": "ASRock",
-    "name": "A620M-HDV",
-    "price": 8490,
-    "stock": 18,
-    "specs": {
-      "socket": "AM5",
-      "ramType": "DDR5",
-      "ramSlots": 2,
-      "maxRamGB": 64,
-      "formFactor": "mATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Бюджетная плата для сборок на AM5 без разгона.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b650-pro",
-    "brand": "MSI",
-    "name": "PRO B650-P WiFi",
-    "price": 13990,
-    "stock": 14,
-    "specs": {
-      "socket": "AM5",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "ATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Доступная полноразмерная плата с WiFi 6 и хорошим набором портов.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b650-tuf",
-    "brand": "ASUS",
-    "name": "TUF Gaming B650-Plus",
-    "price": 15990,
-    "stock": 12,
-    "specs": {
-      "socket": "AM5",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "ATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Военная сертификация компонентов и усиленная VRM-секция серии TUF.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b650-tomahawk",
-    "brand": "MSI",
-    "name": "MAG B650 Tomahawk WiFi",
-    "price": 17990,
-    "stock": 10,
-    "specs": {
-      "socket": "AM5",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "ATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Прочная VRM-секция, WiFi 6E, поддержка PCIe 4.0 NVMe.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-x670-aorus",
-    "brand": "Gigabyte",
-    "name": "X670 Aorus Elite AX",
-    "price": 24990,
-    "stock": 8,
-    "specs": {
-      "socket": "AM5",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "ATX",
-      "pcieVersion": "5.0"
-    },
-    "description": "Чипсет X670 с PCIe 5.0 для накопителей и видеокарты, хорош для разгона памяти.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-x670e-taichi",
-    "brand": "ASRock",
-    "name": "X670E Taichi Lite",
-    "price": 34990,
-    "stock": 4,
-    "specs": {
-      "socket": "AM5",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 256,
-      "formFactor": "ATX",
-      "pcieVersion": "5.0"
-    },
-    "description": "Топовая плата для мощных процессоров Ryzen 9 и максимального разгона.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b760m-ds3h",
-    "brand": "Gigabyte",
-    "name": "B760M DS3H (DDR4)",
-    "price": 9990,
-    "stock": 15,
-    "specs": {
-      "socket": "LGA1700",
-      "ramType": "DDR4",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "mATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Доступная плата под Intel 12/13/14 поколения с поддержкой DDR4.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b760m-msi-ddr4",
-    "brand": "MSI",
-    "name": "PRO B760M-A (DDR4)",
-    "price": 11990,
-    "stock": 13,
-    "specs": {
-      "socket": "LGA1700",
-      "ramType": "DDR4",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "mATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Компактная плата для апгрейда старого ПК на DDR4 без переплаты за DDR5.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-z790-aorus",
-    "brand": "Gigabyte",
-    "name": "Z790 Aorus Elite AX (DDR5)",
-    "price": 26990,
-    "stock": 7,
-    "specs": {
-      "socket": "LGA1700",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "ATX",
-      "pcieVersion": "5.0"
-    },
-    "description": "Топовый чипсет Z790 для разгона старших Core i7/i9.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-z790-strix",
-    "brand": "ASUS",
-    "name": "ROG Strix Z790-E Gaming (DDR5)",
-    "price": 39990,
-    "stock": 4,
-    "specs": {
-      "socket": "LGA1700",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 192,
-      "formFactor": "ATX",
-      "pcieVersion": "5.0"
-    },
-    "description": "Флагманская плата ROG для самых мощных сборок на 14-м поколении Intel.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b860-pro",
-    "brand": "MSI",
-    "name": "PRO B860-P WiFi",
-    "price": 15990,
-    "stock": 9,
-    "specs": {
-      "socket": "LGA1851",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 192,
-      "formFactor": "ATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Доступный вход в новую платформу Intel Core Ultra 200 серии.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b860-tuf",
-    "brand": "ASUS",
-    "name": "TUF Gaming B860-Plus WiFi",
-    "price": 18990,
-    "stock": 8,
-    "specs": {
-      "socket": "LGA1851",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 192,
-      "formFactor": "ATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Усиленное питание и хорошее охлаждение VRM для Core Ultra 7/9.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-z890-tomahawk",
-    "brand": "MSI",
-    "name": "MAG Z890 Tomahawk WiFi",
-    "price": 28990,
-    "stock": 6,
-    "specs": {
-      "socket": "LGA1851",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 256,
-      "formFactor": "ATX",
-      "pcieVersion": "5.0"
-    },
-    "description": "Чипсет Z890 с разгоном и поддержкой DDR5-7200+ для Core Ultra 200S Plus.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "ram-ddr5-16-5600",
-    "brand": "Crucial",
-    "name": "16GB (2x8) DDR5-5600",
-    "price": 6490,
-    "stock": 30,
-    "specs": {
-      "type": "DDR5",
-      "capacityGB": 16,
-      "speed": "5600MHz",
-      "modules": 2
-    },
-    "description": "Стартовый комплект памяти для современных платформ.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr5-32-6000",
-    "brand": "Kingston",
-    "name": "Fury Beast 32GB (2x16) DDR5-6000",
-    "price": 11990,
-    "stock": 25,
-    "specs": {
-      "type": "DDR5",
-      "capacityGB": 32,
-      "speed": "6000MHz",
-      "modules": 2
-    },
-    "description": "Оптимальная частота для платформы AM5, комплект из двух модулей.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr5-32-6400",
-    "brand": "Corsair",
-    "name": "Dominator Platinum 32GB (2x16) DDR5-6400",
-    "price": 15990,
-    "stock": 14,
-    "specs": {
-      "type": "DDR5",
-      "capacityGB": 32,
-      "speed": "6400MHz",
-      "modules": 2
-    },
-    "description": "Премиальные модули с эффектной подсветкой и низкими таймингами.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr5-64-6000",
-    "brand": "G.Skill",
-    "name": "Trident Z5 64GB (2x32) DDR5-6000",
-    "price": 27990,
-    "stock": 9,
-    "specs": {
-      "type": "DDR5",
-      "capacityGB": 64,
-      "speed": "6000MHz",
-      "modules": 2
-    },
-    "description": "Большой объём для монтажа видео, рендера и тяжёлой многозадачности.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr4-8-2666",
-    "brand": "Crucial",
-    "name": "8GB (1x8) DDR4-2666",
-    "price": 2490,
-    "stock": 40,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 8,
-      "speed": "2666MHz",
-      "modules": 1
-    },
-    "description": "Самый доступный вариант для офисных и бюджетных сборок на DDR4.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr4-16-3200",
-    "brand": "Kingston",
-    "name": "Fury Beast 16GB (2x8) DDR4-3200",
-    "price": 4490,
-    "stock": 32,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 16,
-      "speed": "3200MHz",
-      "modules": 2
-    },
-    "description": "Популярный выбор для бюджетных и средних игровых сборок.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr4-16-3200-adata",
-    "brand": "ADATA",
-    "name": "XPG Gammix D10 16GB (2x8) DDR4-3200",
-    "price": 4290,
-    "stock": 28,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 16,
-      "speed": "3200MHz",
-      "modules": 2
-    },
-    "description": "Доступный комплект с алюминиевым радиатором для стабильного охлаждения.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr4-32-3200",
-    "brand": "Corsair",
-    "name": "Vengeance LPX 32GB (2x16) DDR4-3200",
-    "price": 7990,
-    "stock": 24,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 32,
-      "speed": "3200MHz",
-      "modules": 2
-    },
-    "description": "Низкопрофильный радиатор — впишется в любой корпус и кулер.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr4-32-3600",
-    "brand": "G.Skill",
-    "name": "Ripjaws V 32GB (2x16) DDR4-3600",
-    "price": 8490,
-    "stock": 20,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 32,
-      "speed": "3600MHz",
-      "modules": 2
-    },
-    "description": "Проверенная память для плат на DDR4 с запасом по частоте.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr4-64-3600",
-    "brand": "Kingston",
-    "name": "Fury Beast 64GB (2x32) DDR4-3600",
-    "price": 15990,
-    "stock": 10,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 64,
-      "speed": "3600MHz",
-      "modules": 2
-    },
-    "description": "Максимальный объём на DDR4 — для рендера, виртуальных машин и тяжёлых проектов.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
     "id": "gpu-rtx2060",
     "name": "GeForce RTX 2060 6GB",
     "price": 16990,
@@ -1269,247 +736,6 @@
     "image": "gpu.svg"
   },
   {
-    "id": "ssd-nvme-500",
-    "brand": "Kingston",
-    "name": "NV3 500GB NVMe",
-    "price": 4490,
-    "stock": 45,
-    "specs": {
-      "type": "NVMe SSD",
-      "capacityGB": 500,
-      "interface": "PCIe 4.0"
-    },
-    "description": "Быстрый и доступный накопитель для системного диска.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "ssd-nvme-1tb",
-    "brand": "Samsung",
-    "name": "980 Pro 1TB NVMe",
-    "price": 8990,
-    "stock": 40,
-    "specs": {
-      "type": "NVMe SSD",
-      "capacityGB": 1000,
-      "interface": "PCIe 4.0"
-    },
-    "description": "Скорость чтения до 7000 МБ/с.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "ssd-nvme-2tb",
-    "brand": "WD",
-    "name": "Black SN850X 2TB NVMe",
-    "price": 15990,
-    "stock": 20,
-    "specs": {
-      "type": "NVMe SSD",
-      "capacityGB": 2000,
-      "interface": "PCIe 4.0"
-    },
-    "description": "Топовый NVMe-накопитель для игр и рабочих проектов с большим объёмом данных.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "ssd-sata-500",
-    "brand": "Kingston",
-    "name": "A400 500GB SATA",
-    "price": 3290,
-    "stock": 50,
-    "specs": {
-      "type": "SATA SSD",
-      "capacityGB": 500,
-      "interface": "SATA III"
-    },
-    "description": "Надёжный и недорогой накопитель для системы.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "hdd-2tb",
-    "brand": "Seagate",
-    "name": "Barracuda 2TB HDD",
-    "price": 4990,
-    "stock": 35,
-    "specs": {
-      "type": "HDD",
-      "capacityGB": 2000,
-      "interface": "SATA III"
-    },
-    "description": "Большой объём для хранения файлов и медиатеки.",
-    "category": "storage",
-    "image": "hdd.svg"
-  },
-  {
-    "id": "hdd-4tb",
-    "brand": "WD",
-    "name": "Blue 4TB HDD",
-    "price": 8490,
-    "stock": 22,
-    "specs": {
-      "type": "HDD",
-      "capacityGB": 4000,
-      "interface": "SATA III"
-    },
-    "description": "Ещё больше места для архивов, бэкапов и медиабиблиотек.",
-    "category": "storage",
-    "image": "hdd.svg"
-  },
-  {
-    "id": "psu-550w",
-    "brand": "Deepcool",
-    "name": "PK550D 550W 80+ Bronze",
-    "price": 5490,
-    "stock": 20,
-    "specs": {
-      "wattage": 550,
-      "certification": "80+ Bronze",
-      "modular": false
-    },
-    "description": "Базовый блок питания для сборок среднего уровня.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "psu-650w",
-    "brand": "Cougar",
-    "name": "GEX 650W 80+ Gold",
-    "price": 8990,
-    "stock": 17,
-    "specs": {
-      "wattage": 650,
-      "certification": "80+ Gold",
-      "modular": true
-    },
-    "description": "Модульная разводка кабелей и высокая эффективность.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "psu-850w",
-    "brand": "Corsair",
-    "name": "RM850x 850W 80+ Gold",
-    "price": 14990,
-    "stock": 11,
-    "specs": {
-      "wattage": 850,
-      "certification": "80+ Gold",
-      "modular": true
-    },
-    "description": "Запас мощности для топовых видеокарт и разгона.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "psu-1000w",
-    "brand": "Corsair",
-    "name": "RM1000x 1000W 80+ Gold",
-    "price": 19990,
-    "stock": 7,
-    "specs": {
-      "wattage": 1000,
-      "certification": "80+ Gold",
-      "modular": true
-    },
-    "description": "Для сборок с RTX 4090/5090 и мощными процессорами Ryzen 9/Core i9.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "psu-1200w",
-    "brand": "be quiet!",
-    "name": "Dark Power 13 1200W 80+ Titanium",
-    "price": 27990,
-    "stock": 4,
-    "specs": {
-      "wattage": 1200,
-      "certification": "80+ Titanium",
-      "modular": true
-    },
-    "description": "Максимальный запас мощности и эффективности для флагманских сборок.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "case-matx-compact",
-    "brand": "DeepCool",
-    "name": "MACUBE 110 (mATX)",
-    "price": 5490,
-    "stock": 19,
-    "specs": {
-      "formFactors": [
-        "mATX"
-      ],
-      "maxGpuLengthMM": 320,
-      "includedFans": 1,
-      "maxRadiatorSizeMM": 240
-    },
-    "description": "Компактный корпус для домашних и офисных сборок.",
-    "category": "case",
-    "image": "case.svg"
-  },
-  {
-    "id": "case-matx-nzxt",
-    "brand": "NZXT",
-    "name": "H5 Flow (mATX/ATX)",
-    "price": 8990,
-    "stock": 13,
-    "specs": {
-      "formFactors": [
-        "ATX",
-        "mATX"
-      ],
-      "maxGpuLengthMM": 365,
-      "includedFans": 2,
-      "maxRadiatorSizeMM": 280
-    },
-    "description": "Хорошая вентиляция и аккуратная укладка кабелей.",
-    "category": "case",
-    "image": "case.svg"
-  },
-  {
-    "id": "case-atx-lianli",
-    "brand": "Lian Li",
-    "name": "Lancool 216 (ATX)",
-    "price": 11990,
-    "stock": 9,
-    "specs": {
-      "formFactors": [
-        "ATX",
-        "mATX"
-      ],
-      "maxGpuLengthMM": 392,
-      "includedFans": 3,
-      "maxRadiatorSizeMM": 360
-    },
-    "description": "Максимальный воздушный поток для мощных конфигураций.",
-    "category": "case",
-    "image": "case.svg"
-  },
-  {
-    "id": "case-atx-fractal",
-    "brand": "Fractal Design",
-    "name": "North XL (ATX/E-ATX)",
-    "price": 16990,
-    "stock": 6,
-    "specs": {
-      "formFactors": [
-        "ATX",
-        "mATX",
-        "E-ATX"
-      ],
-      "maxGpuLengthMM": 422,
-      "includedFans": 3,
-      "maxRadiatorSizeMM": 360
-    },
-    "description": "Просторный корпус для топовых видеокарт вроде RTX 5090 и мощного охлаждения.",
-    "category": "case",
-    "image": "case.svg"
-  },
-  {
     "id": "cpu-r5-5500",
     "brand": "AMD",
     "name": "Ryzen 5 5500",
@@ -1612,160 +838,6 @@
     "image": "cpu.svg"
   },
   {
-    "id": "mb-a320m",
-    "brand": "ASRock",
-    "name": "A320M-HDV",
-    "price": 4490,
-    "stock": 15,
-    "specs": {
-      "socket": "AM4",
-      "ramType": "DDR4",
-      "ramSlots": 2,
-      "maxRamGB": 32,
-      "formFactor": "mATX",
-      "pcieVersion": "3.0"
-    },
-    "description": "Самая доступная плата под AM4 для бюджетных офисных сборок.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b550-tomahawk",
-    "brand": "MSI",
-    "name": "MAG B550 Tomahawk",
-    "price": 10990,
-    "stock": 14,
-    "specs": {
-      "socket": "AM4",
-      "ramType": "DDR4",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "ATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Одна из самых популярных плат для AM4 — надёжная VRM-подсистема и полноразмерный ATX.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-h610m",
-    "brand": "Gigabyte",
-    "name": "H610M K DDR4",
-    "price": 5990,
-    "stock": 20,
-    "specs": {
-      "socket": "LGA1700",
-      "ramType": "DDR4",
-      "ramSlots": 2,
-      "maxRamGB": 64,
-      "formFactor": "mATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Массовая бюджетная плата для сборок на Intel 12/13/14 поколения без разгона.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b660m-ds3h",
-    "brand": "Gigabyte",
-    "name": "B660M DS3H DDR4",
-    "price": 8490,
-    "stock": 18,
-    "specs": {
-      "socket": "LGA1700",
-      "ramType": "DDR4",
-      "ramSlots": 4,
-      "maxRamGB": 128,
-      "formFactor": "mATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Самая ходовая плата среднего класса для платформы LGA1700 с DDR4.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "mb-b760-tomahawk",
-    "brand": "MSI",
-    "name": "PRO B760-A WiFi DDR5",
-    "price": 13990,
-    "stock": 14,
-    "specs": {
-      "socket": "LGA1700",
-      "ramType": "DDR5",
-      "ramSlots": 4,
-      "maxRamGB": 192,
-      "formFactor": "ATX",
-      "pcieVersion": "4.0"
-    },
-    "description": "Популярная ATX-плата для геймерских сборок на DDR5 без переплаты за топовый чипсет.",
-    "category": "motherboard",
-    "image": "mb.svg"
-  },
-  {
-    "id": "ram-ddr4-8-3200",
-    "brand": "Kingston",
-    "name": "Fury Beast 8GB (1x8) DDR4-3200",
-    "price": 2490,
-    "stock": 40,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 8,
-      "speed": "3200MHz",
-      "modules": 1
-    },
-    "description": "Самый доступный модуль DDR4 для минимального апгрейда офисного ПК.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr5-32-5600",
-    "brand": "Corsair",
-    "name": "Vengeance 32GB (2x16) DDR5-5600",
-    "price": 8990,
-    "stock": 28,
-    "specs": {
-      "type": "DDR5",
-      "capacityGB": 32,
-      "speed": "5600MHz",
-      "modules": 2
-    },
-    "description": "Один из самых массовых комплектов DDR5 — стандарт для современных игровых сборок.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr5-16-6000",
-    "brand": "G.Skill",
-    "name": "Trident Z5 RGB 16GB (2x8) DDR5-6000",
-    "price": 6990,
-    "stock": 24,
-    "specs": {
-      "type": "DDR5",
-      "capacityGB": 16,
-      "speed": "6000MHz",
-      "modules": 2
-    },
-    "description": "Популярный комплект для бюджетных DDR5-сборок с RGB-подсветкой.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
-    "id": "ram-ddr4-16-3600-corsair",
-    "brand": "Corsair",
-    "name": "Vengeance LPX 16GB (2x8) DDR4-3600",
-    "price": 4290,
-    "stock": 35,
-    "specs": {
-      "type": "DDR4",
-      "capacityGB": 16,
-      "speed": "3600MHz",
-      "modules": 2
-    },
-    "description": "Самый продаваемый комплект DDR4 для игровых ПК среднего уровня.",
-    "category": "ram",
-    "image": "ram.svg"
-  },
-  {
     "id": "gpu-gtx1660super",
     "brand": "NVIDIA",
     "name": "GeForce GTX 1660 Super 6GB",
@@ -1812,295 +884,6 @@
     "description": "Ходовая карта для 1080p/1440p игр с хорошим соотношением цена/производительность.",
     "category": "gpu",
     "image": "gpu.svg"
-  },
-  {
-    "id": "ssd-nvme-samsung-970evoplus-1tb",
-    "brand": "Samsung",
-    "name": "970 EVO Plus 1TB NVMe",
-    "price": 6990,
-    "stock": 30,
-    "specs": {
-      "type": "NVMe SSD",
-      "capacityGB": 1000,
-      "interface": "PCIe 3.0"
-    },
-    "description": "Один из самых популярных NVMe-накопителей на рынке благодаря надёжности и стабильной цене.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "ssd-nvme-crucial-p3-1tb",
-    "brand": "Crucial",
-    "name": "P3 1TB NVMe",
-    "price": 5490,
-    "stock": 38,
-    "specs": {
-      "type": "NVMe SSD",
-      "capacityGB": 1000,
-      "interface": "PCIe 3.0"
-    },
-    "description": "Массовый бюджетный NVMe-накопитель — стандартный выбор для системного диска.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "ssd-nvme-wd-sn580-1tb",
-    "brand": "WD",
-    "name": "Blue SN580 1TB NVMe",
-    "price": 6290,
-    "stock": 32,
-    "specs": {
-      "type": "NVMe SSD",
-      "capacityGB": 1000,
-      "interface": "PCIe 4.0"
-    },
-    "description": "Один из самых востребованных SSD среднего класса на PCIe 4.0.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "ssd-nvme-kingston-kc3000-1tb",
-    "brand": "Kingston",
-    "name": "KC3000 1TB NVMe",
-    "price": 8490,
-    "stock": 20,
-    "specs": {
-      "type": "NVMe SSD",
-      "capacityGB": 1000,
-      "interface": "PCIe 4.0"
-    },
-    "description": "Высокоскоростной NVMe для сборок с упором на производительность.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "ssd-sata-samsung-870evo-1tb",
-    "brand": "Samsung",
-    "name": "870 EVO 1TB SATA",
-    "price": 6990,
-    "stock": 25,
-    "specs": {
-      "type": "SATA SSD",
-      "capacityGB": 1000,
-      "interface": "SATA III"
-    },
-    "description": "Эталонный SATA SSD, один из самых популярных накопителей для апгрейда старых ПК.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "ssd-sata-crucial-mx500-500",
-    "brand": "Crucial",
-    "name": "MX500 500GB SATA",
-    "price": 3990,
-    "stock": 34,
-    "specs": {
-      "type": "SATA SSD",
-      "capacityGB": 500,
-      "interface": "SATA III"
-    },
-    "description": "Классический недорогой SATA SSD, часто берут для дополнительного диска.",
-    "category": "storage",
-    "image": "ssd.svg"
-  },
-  {
-    "id": "hdd-seagate-1tb",
-    "brand": "Seagate",
-    "name": "Barracuda 1TB HDD",
-    "price": 3290,
-    "stock": 30,
-    "specs": {
-      "type": "HDD",
-      "capacityGB": 1000,
-      "interface": "SATA III"
-    },
-    "description": "Самый доступный жёсткий диск для хранения файлов.",
-    "category": "storage",
-    "image": "hdd.svg"
-  },
-  {
-    "id": "hdd-wd-2tb",
-    "brand": "WD",
-    "name": "Blue 2TB HDD",
-    "price": 4990,
-    "stock": 22,
-    "specs": {
-      "type": "HDD",
-      "capacityGB": 2000,
-      "interface": "SATA III"
-    },
-    "description": "Популярный HDD для домашних медиатек и архивов.",
-    "category": "storage",
-    "image": "hdd.svg"
-  },
-  {
-    "id": "psu-corsair-rm750x",
-    "brand": "Corsair",
-    "name": "RM750x 750W 80+ Gold",
-    "price": 7990,
-    "stock": 18,
-    "specs": {
-      "wattage": 750,
-      "certification": "80+ Gold",
-      "modular": true
-    },
-    "description": "Один из самых популярных БП для игровых сборок среднего и высокого уровня.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "psu-msi-mpg-a750gf",
-    "brand": "MSI",
-    "name": "MPG A750GF 750W 80+ Gold",
-    "price": 7490,
-    "stock": 16,
-    "specs": {
-      "wattage": 750,
-      "certification": "80+ Gold",
-      "modular": true
-    },
-    "description": "Массовый модульный блок питания, часто идёт в связке с видеокартами уровня RTX 4070/4070 Ti.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "psu-evga-600bq",
-    "brand": "EVGA",
-    "name": "600 BQ 600W 80+ Bronze",
-    "price": 4490,
-    "stock": 25,
-    "specs": {
-      "wattage": 600,
-      "certification": "80+ Bronze",
-      "modular": false
-    },
-    "description": "Один из самых продаваемых бюджетных БП для сборок среднего уровня.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "psu-coolermaster-mwe650",
-    "brand": "Cooler Master",
-    "name": "MWE 650 Gold V2 650W",
-    "price": 6290,
-    "stock": 20,
-    "specs": {
-      "wattage": 650,
-      "certification": "80+ Gold",
-      "modular": false
-    },
-    "description": "Надёжный и популярный блок питания среднего сегмента.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "psu-bequiet-purepower11-500",
-    "brand": "be quiet!",
-    "name": "Pure Power 11 500W 80+ Gold",
-    "price": 4990,
-    "stock": 22,
-    "specs": {
-      "wattage": 500,
-      "certification": "80+ Gold",
-      "modular": false
-    },
-    "description": "Тихий и надёжный БП, частый выбор для компактных игровых ПК.",
-    "category": "psu",
-    "image": "psu.svg"
-  },
-  {
-    "id": "case-corsair-4000d",
-    "brand": "Corsair",
-    "name": "4000D Airflow (ATX)",
-    "price": 8490,
-    "stock": 16,
-    "specs": {
-      "formFactors": [
-        "mATX",
-        "ATX"
-      ],
-      "maxGpuLengthMM": 360,
-      "includedFans": 2,
-      "maxRadiatorSizeMM": 360
-    },
-    "description": "Один из самых популярных корпусов для игровых сборок благодаря отличному airflow.",
-    "category": "case",
-    "image": "case.svg"
-  },
-  {
-    "id": "case-nzxt-h510",
-    "brand": "NZXT",
-    "name": "H510 (ATX)",
-    "price": 7490,
-    "stock": 14,
-    "specs": {
-      "formFactors": [
-        "mATX",
-        "ATX"
-      ],
-      "maxGpuLengthMM": 381,
-      "includedFans": 2,
-      "maxRadiatorSizeMM": 280
-    },
-    "description": "Культовый минималистичный корпус, массово используется в готовых сборках.",
-    "category": "case",
-    "image": "case.svg"
-  },
-  {
-    "id": "case-deepcool-ch560",
-    "brand": "DeepCool",
-    "name": "CH560 (ATX)",
-    "price": 6990,
-    "stock": 18,
-    "specs": {
-      "formFactors": [
-        "mATX",
-        "ATX"
-      ],
-      "maxGpuLengthMM": 355,
-      "includedFans": 3,
-      "maxRadiatorSizeMM": 360
-    },
-    "description": "Популярный корпус с панорамным стеклом и хорошей вентиляцией за свою цену.",
-    "category": "case",
-    "image": "case.svg"
-  },
-  {
-    "id": "case-coolermaster-q300l",
-    "brand": "Cooler Master",
-    "name": "MasterBox Q300L (mATX)",
-    "price": 4290,
-    "stock": 20,
-    "specs": {
-      "formFactors": [
-        "mATX"
-      ],
-      "maxGpuLengthMM": 360,
-      "includedFans": 1,
-      "maxRadiatorSizeMM": 240
-    },
-    "description": "Один из самых доступных и часто покупаемых компактных корпусов.",
-    "category": "case",
-    "image": "case.svg"
-  },
-  {
-    "id": "case-lianli-o11-mini",
-    "brand": "Lian Li",
-    "name": "O11 Dynamic Mini (ATX)",
-    "price": 13990,
-    "stock": 8,
-    "specs": {
-      "formFactors": [
-        "mATX",
-        "ATX"
-      ],
-      "maxGpuLengthMM": 345,
-      "includedFans": 0,
-      "maxRadiatorSizeMM": 280
-    },
-    "description": "Культовый корпус для эффектных сборок с открытой архитектурой охлаждения.",
-    "category": "case",
-    "image": "case.svg"
   },
   {
     "id": "cooler-deepcool-le500",
@@ -2241,5 +1024,952 @@
     "description": "Мощная 360-мм СЖО для топовых сборок с эффектной подсветкой.",
     "category": "cooler",
     "image": "cooler.svg"
+  },
+  {
+    "id": "case-powercase-mistral-micro-z3w",
+    "brand": "PowerCase",
+    "name": "Mistral Micro Z3W",
+    "price": 3600.0,
+    "stock": 24,
+    "specs": {
+      "formFactors": [
+        "mATX"
+      ],
+      "maxGpuLengthMM": 330,
+      "includedFans": 4,
+      "maxRadiatorSizeMM": 240
+    },
+    "description": "Самый продаваемый белый бюджетник. 4 сетчатых кулера в комплекте, закалённое стекло.",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-ardor-crystal-cm2",
+    "brand": "ARDOR GAMING",
+    "name": "Crystal CM2",
+    "price": 4550.0,
+    "stock": 20,
+    "specs": {
+      "formFactors": [
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 350,
+      "includedFans": 4,
+      "maxRadiatorSizeMM": 240
+    },
+    "description": "Фирменный хит DNS. Отличный металл за эти деньги, яркая ARGB-подсветка с контроллером.",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-deepcool-cc560v2",
+    "brand": "DeepCool",
+    "name": "CC560 V2",
+    "price": 4850.0,
+    "stock": 22,
+    "specs": {
+      "formFactors": [
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 355,
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 280
+    },
+    "description": "Базовый полноразмерный ATX-корпус, «рабочая лошадка» для стандартных игровых ПК.",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-cougar-fv150rgb",
+    "brand": "Cougar",
+    "name": "FV150 RGB",
+    "price": 6850.0,
+    "stock": 16,
+    "specs": {
+      "formFactors": [
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 370,
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 280
+    },
+    "description": "Главный хит продаж в категории панорамных корпусов без передней стойки.",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-ardor-crystal-flow",
+    "brand": "ARDOR GAMING",
+    "name": "Crystal Flow",
+    "price": 8000.0,
+    "stock": 14,
+    "specs": {
+      "formFactors": [
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 380,
+      "includedFans": 4,
+      "maxRadiatorSizeMM": 360
+    },
+    "description": "Конкурент Lian Li, но в два раза дешевле. Стеклянный «аквариум» с шикарным кабель-менеджментом.",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-nzxt-h5-flow",
+    "brand": "NZXT",
+    "name": "H5 Flow",
+    "price": 10000.0,
+    "stock": 13,
+    "specs": {
+      "formFactors": [
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 365,
+      "includedFans": 2,
+      "maxRadiatorSizeMM": 280
+    },
+    "description": "Эталон стиля. Фирменный скрытый нижний вентилятор, который дует прямо на видеокарту.",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-lianli-lancool216",
+    "brand": "Lian Li",
+    "name": "Lancool 216",
+    "price": 9250.0,
+    "stock": 14,
+    "specs": {
+      "formFactors": [
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 392,
+      "includedFans": 2,
+      "maxRadiatorSizeMM": 360
+    },
+    "description": "Бескомпромиссное охлаждение благодаря двум огромным 160-мм вентиляторам спереди.",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-phanteks-xtproultra",
+    "brand": "Phanteks",
+    "name": "XT Pro Ultra",
+    "price": 8750.0,
+    "stock": 12,
+    "specs": {
+      "formFactors": [
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 375,
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 360
+    },
+    "description": "Поддерживает материнские платы со скрытыми разъёмами на обороте (Project Stealth / BTF).",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-bequiet-purebase500dx",
+    "brand": "be quiet!",
+    "name": "Pure Base 500DX",
+    "price": 13000.0,
+    "stock": 10,
+    "specs": {
+      "formFactors": [
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 369,
+      "includedFans": 3,
+      "maxRadiatorSizeMM": 360
+    },
+    "description": "Толстая сталь, плотные пылевые фильтры, идеальный баланс между тишиной и продуваемостью.",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-fractal-north",
+    "brand": "Fractal Design",
+    "name": "North",
+    "price": 20000.0,
+    "stock": 7,
+    "specs": {
+      "formFactors": [
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 355,
+      "includedFans": 2,
+      "maxRadiatorSizeMM": 280
+    },
+    "description": "Дизайнерский корпус с фронтальной панелью из натурального дерева (орех/дуб).",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "case-lianli-o11dynamicevo",
+    "brand": "Lian Li",
+    "name": "O11 Dynamic EVO",
+    "price": 21500.0,
+    "stock": 6,
+    "specs": {
+      "formFactors": [
+        "E-ATX",
+        "ATX",
+        "mATX"
+      ],
+      "maxGpuLengthMM": 422,
+      "includedFans": 0,
+      "maxRadiatorSizeMM": 420
+    },
+    "description": "Двухкамерный модульный эталон корпусостроения для сложных сборок с водяным охлаждением.",
+    "category": "case",
+    "image": "case.svg"
+  },
+  {
+    "id": "psu-deepcool-pf500",
+    "brand": "DeepCool",
+    "name": "PF500",
+    "price": 3550.0,
+    "stock": 30,
+    "specs": {
+      "wattage": 500,
+      "certification": "80+ Standard",
+      "modular": false
+    },
+    "description": "Главный хит для бюджетных ПК. Надёжнее аналогов, провода полностью плоские и чёрные.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-deepcool-pk650d",
+    "brand": "DeepCool",
+    "name": "PK650D",
+    "price": 5200.0,
+    "stock": 26,
+    "specs": {
+      "wattage": 650,
+      "certification": "80+ Bronze",
+      "modular": false
+    },
+    "description": "Самый частый выбор в сборки до 70-80 тысяч рублей. Надёжная платформа, тихий вентилятор.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-1stplayer-ngdp750",
+    "brand": "1STPLAYER",
+    "name": "NGDP 750W",
+    "price": 6900.0,
+    "stock": 20,
+    "specs": {
+      "wattage": 750,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    "description": "Взорвал рынок. Самый дешёвый качественный «золотой» блок с родным кабелем для новых видеокарт (ATX 3.0).",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-ardor-origin850",
+    "brand": "ARDOR GAMING",
+    "name": "Origin 850",
+    "price": 8000.0,
+    "stock": 18,
+    "specs": {
+      "wattage": 850,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    "description": "Фирменный блок DNS. Отличная схемотехника, японские компоненты, ATX 3.0.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-montech-centuryg5-750",
+    "brand": "Montech",
+    "name": "CENTURY G5 750W",
+    "price": 8500.0,
+    "stock": 16,
+    "specs": {
+      "wattage": 750,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    "description": "Полноценная японская платформа внутри. Очень тихий, высокая энергоэффективность, ATX 3.0.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-deepcool-pn750m",
+    "brand": "DeepCool",
+    "name": "PN750M",
+    "price": 9750.0,
+    "stock": 14,
+    "specs": {
+      "wattage": 750,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    "description": "Новое поколение БП. Поддерживает свежий и безопасный разъём питания видеокарт 12V-2x6 (ATX 3.1).",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-msi-maga850gl",
+    "brand": "MSI",
+    "name": "MAG A850GL",
+    "price": 11250.0,
+    "stock": 14,
+    "specs": {
+      "wattage": 850,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    "description": "Бестселлер от именитого бренда. Компактный корпус, двухцветный кабель 12VHPWR, ATX 3.0.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-chieftec-powerup850",
+    "brand": "Chieftec",
+    "name": "Powerup 850W",
+    "price": 10250.0,
+    "stock": 12,
+    "specs": {
+      "wattage": 850,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    "description": "Классика для тех, кто не доверяет «новичкам». Проверенная временем рабочая лошадка.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-bequiet-purepower12m-850",
+    "brand": "be quiet!",
+    "name": "Pure Power 12 M 850W",
+    "price": 15500.0,
+    "stock": 9,
+    "specs": {
+      "wattage": 850,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    "description": "Выбор тех, кто собирает бесшумный ПК. Фирменный вентилятор Silent Wings, 10 лет гарантии, ATX 3.0.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-superflower-leadex7-1000",
+    "brand": "Super Flower",
+    "name": "Leadex VII Gold 1000W",
+    "price": 19750.0,
+    "stock": 7,
+    "specs": {
+      "wattage": 1000,
+      "certification": "80+ Gold",
+      "modular": true
+    },
+    "description": "Легендарный бренд (платформы для EVGA). Идеальный ток, выдерживает любые скачки нагрузки.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "psu-asus-rogthor-1000platinum",
+    "brand": "ASUS",
+    "name": "ROG Thor 1000W Platinum II",
+    "price": 35500.0,
+    "stock": 4,
+    "specs": {
+      "wattage": 1000,
+      "certification": "80+ Platinum",
+      "modular": true
+    },
+    "description": "Флагманский блок питания с OLED-дисплеем мощности для топовых игровых сборок.",
+    "category": "psu",
+    "image": "psu.svg"
+  },
+  {
+    "id": "mb-msi-h610me-ddr4",
+    "brand": "MSI",
+    "name": "PRO H610M-E DDR4",
+    "price": 6500.0,
+    "stock": 20,
+    "specs": {
+      "socket": "LGA1700",
+      "ramType": "DDR4",
+      "ramSlots": 2,
+      "maxRamGB": 64,
+      "formFactor": "mATX",
+      "pcieVersion": "4.0"
+    },
+    "description": "База для офисных ПК и недорогих игровых станций на Core i3-12100F / i5-12400F.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-msi-b760-gamingpluswifi",
+    "brand": "MSI",
+    "name": "B760 GAMING PLUS WIFI",
+    "price": 12000.0,
+    "stock": 18,
+    "specs": {
+      "socket": "LGA1700",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 192,
+      "formFactor": "ATX",
+      "pcieVersion": "4.0"
+    },
+    "description": "Главный бестселлер для процессоров Core i5-13400F / 14400F. Современная память DDR5 за адекватный ценник.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-msi-b760tomahawkwifi",
+    "brand": "MSI",
+    "name": "MAG B760 TOMAHAWK WIFI",
+    "price": 17500.0,
+    "stock": 14,
+    "specs": {
+      "socket": "LGA1700",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 192,
+      "formFactor": "ATX",
+      "pcieVersion": "4.0"
+    },
+    "description": "Легендарная серия «Томагавк». Мощные 14 фаз питания, которые легко вывозят горячие камни вроде Core i5-14600K.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-gigabyte-z790aoruselite",
+    "brand": "Gigabyte",
+    "name": "Z790 AORUS ELITE AX",
+    "price": 26000.0,
+    "stock": 10,
+    "specs": {
+      "socket": "LGA1700",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 192,
+      "formFactor": "ATX",
+      "pcieVersion": "5.0"
+    },
+    "description": "Полноценный разгон процессоров с индексом «K». Толстый текстолит, продвинутый разгон оперативной памяти.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-asrock-z890prors",
+    "brand": "ASRock",
+    "name": "Z890 Pro RS",
+    "price": 24000.0,
+    "stock": 8,
+    "specs": {
+      "socket": "LGA1851",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 256,
+      "formFactor": "ATX",
+      "pcieVersion": "5.0"
+    },
+    "description": "Плата нового поколения под процессоры Intel Core Ultra (серия Arrow Lake). Передовой сокет LGA1851.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-asus-rogmaximusz890hero",
+    "brand": "ASUS",
+    "name": "ROG MAXIMUS Z890 HERO",
+    "price": 70000.0,
+    "stock": 3,
+    "specs": {
+      "socket": "LGA1851",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 256,
+      "formFactor": "ATX",
+      "pcieVersion": "5.0"
+    },
+    "description": "Вершина инженерной мысли под новые флагманы Intel Ultra 9. Бескомпромиссный VRM, Thunderbolt 4.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-asus-primeb450mk2",
+    "brand": "ASUS",
+    "name": "PRIME B450M-K II",
+    "price": 6000.0,
+    "stock": 22,
+    "specs": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "ramSlots": 2,
+      "maxRamGB": 64,
+      "formFactor": "mATX",
+      "pcieVersion": "3.0"
+    },
+    "description": "Абсолютный король ультрабюджетных сборок (под Ryzen 5 3600 / 5500). Кнопка прошивки BIOS без процессора.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-gigabyte-b550maoruselite",
+    "brand": "Gigabyte",
+    "name": "B550M AORUS ELITE",
+    "price": 10250.0,
+    "stock": 18,
+    "specs": {
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "ramSlots": 4,
+      "maxRamGB": 128,
+      "formFactor": "mATX",
+      "pcieVersion": "4.0"
+    },
+    "description": "Лучшая плата для легендарного процессора Ryzen 5 5600. Полноценный PCIe 4.0 и отличный радиатор VRM.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-gigabyte-b650eagleax",
+    "brand": "Gigabyte",
+    "name": "B650 EAGLE AX",
+    "price": 13250.0,
+    "stock": 16,
+    "specs": {
+      "socket": "AM5",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 192,
+      "formFactor": "ATX",
+      "pcieVersion": "4.0"
+    },
+    "description": "Самый доступный способ перейти на новый сокет под Ryzen 5 7500F. Встроенный Wi-Fi и массивные радиаторы.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-msi-b650gamingpluswifi",
+    "brand": "MSI",
+    "name": "B650 GAMING PLUS WIFI",
+    "price": 15000.0,
+    "stock": 16,
+    "specs": {
+      "socket": "AM5",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 192,
+      "formFactor": "ATX",
+      "pcieVersion": "4.0"
+    },
+    "description": "Стандарт де-факто для мощных игровых ПК на AM5. Держит любые процессоры вплоть до Ryzen 7 7800X3D.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-msi-b850gamingpluswifi",
+    "brand": "MSI",
+    "name": "B850 GAMING PLUS WIFI",
+    "price": 19750.0,
+    "stock": 12,
+    "specs": {
+      "socket": "AM5",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 256,
+      "formFactor": "ATX",
+      "pcieVersion": "5.0"
+    },
+    "description": "Свежий чипсет 800-й серии. Идеальна для процессоров Ryzen 9000-й серии и видеокарт нового поколения.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "mb-asus-rogstrixx870a",
+    "brand": "ASUS",
+    "name": "ROG STRIX X870-A GAMING",
+    "price": 35000.0,
+    "stock": 6,
+    "specs": {
+      "socket": "AM5",
+      "ramType": "DDR5",
+      "ramSlots": 4,
+      "maxRamGB": 256,
+      "formFactor": "ATX",
+      "pcieVersion": "5.0"
+    },
+    "description": "Премиальная плата для оверклокеров. Поддержка PCIe 5.0, порты USB4 и мощнейшая система питания.",
+    "category": "motherboard",
+    "image": "mb.svg"
+  },
+  {
+    "id": "ssd-agi-ai198-512",
+    "brand": "Agi",
+    "name": "AI198 512ГБ",
+    "price": 3650.0,
+    "stock": 30,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 512,
+      "interface": "PCIe 3.0"
+    },
+    "description": "Самый дешёвый вариант «оживить» систему.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-teamgroup-mp33-512",
+    "brand": "TEAMGROUP",
+    "name": "MP33 512ГБ",
+    "price": 3900.0,
+    "stock": 32,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 512,
+      "interface": "PCIe 3.0"
+    },
+    "description": "Король ультрабюджета. Невероятно живучий чип, один из самых низких процентов брака.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-teamgroup-mp33-1tb",
+    "brand": "TEAMGROUP",
+    "name": "MP33 1ТБ",
+    "price": 6500.0,
+    "stock": 28,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 1000,
+      "interface": "PCIe 3.0"
+    },
+    "description": "Король ультрабюджета. Невероятно живучий чип, один из самых низких процентов брака.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-kingston-nv2-1tb",
+    "brand": "Kingston",
+    "name": "NV2 1ТБ",
+    "price": 6750.0,
+    "stock": 30,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 1000,
+      "interface": "PCIe 4.0"
+    },
+    "description": "Стандартный базовый терабайтник.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-ardor-ally-1tb",
+    "brand": "ARDOR GAMING",
+    "name": "Ally 1ТБ",
+    "price": 7300.0,
+    "stock": 22,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 1000,
+      "interface": "PCIe 4.0"
+    },
+    "description": "Хорошая скорость за вменяемый ценник.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-adata-sx8200pro-1tb",
+    "brand": "ADATA",
+    "name": "XPG SX8200 Pro 1ТБ",
+    "price": 8350.0,
+    "stock": 20,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 1000,
+      "interface": "PCIe 3.0"
+    },
+    "description": "Модель со встроенным DRAM-буфером.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-teamgroup-mp44-1tb",
+    "brand": "TEAMGROUP",
+    "name": "MP44 1ТБ",
+    "price": 11250.0,
+    "stock": 18,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 1000,
+      "interface": "PCIe 4.0"
+    },
+    "description": "Убийца дорогих брендов. Флагманская скорость до 7400 МБ/с.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-adata-legend960max-1tb",
+    "brand": "ADATA",
+    "name": "LEGEND 960 MAX 1ТБ",
+    "price": 12250.0,
+    "stock": 15,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 1000,
+      "interface": "PCIe 4.0"
+    },
+    "description": "Отличный накопитель с радиатором, в том числе для PS5.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-teamgroup-tcreateclassic-1tb",
+    "brand": "TEAMGROUP",
+    "name": "T-CREATE Classic 1ТБ",
+    "price": 10250.0,
+    "stock": 14,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 1000,
+      "interface": "PCIe 4.0"
+    },
+    "description": "Специальная серия для рабочих станций (монтаж, 3D, рендеринг).",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-kingston-kc3000-1024",
+    "brand": "Kingston",
+    "name": "KC3000 1024ГБ",
+    "price": 13500.0,
+    "stock": 13,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 1024,
+      "interface": "PCIe 4.0"
+    },
+    "description": "Максимальная стабильность под нагрузками.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ssd-samsung-990pro-1tb",
+    "brand": "Samsung",
+    "name": "990 PRO 1ТБ",
+    "price": 16750.0,
+    "stock": 10,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacityGB": 1000,
+      "interface": "PCIe 4.0"
+    },
+    "description": "Самый престижный и быстрый бренд, до 7450 МБ/с.",
+    "category": "storage",
+    "image": "ssd.svg"
+  },
+  {
+    "id": "ram-ddr4-teamgroup-vulcanz-16",
+    "brand": "TEAMGROUP",
+    "name": "T-Force Vulcan Z 16ГБ (2x8) 3200МГц",
+    "price": 4300.0,
+    "stock": 30,
+    "specs": {
+      "type": "DDR4",
+      "capacityGB": 16,
+      "speed": "3200MHz",
+      "modules": 2
+    },
+    "description": "Отличные металлические радиаторы, низкий профиль, встаёт под любые башенные кулеры.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr4-ardor-reaper-16",
+    "brand": "ARDOR GAMING",
+    "name": "Reaper 16ГБ (2x8) 3200МГц",
+    "price": 4400.0,
+    "stock": 28,
+    "specs": {
+      "type": "DDR4",
+      "capacityGB": 16,
+      "speed": "3200MHz",
+      "modules": 2
+    },
+    "description": "Собственный бренд DNS. Лучшая цена за чипы с чёрными радиаторами, XMP в один клик.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr4-adata-gammixd35-16",
+    "brand": "ADATA",
+    "name": "XPG GAMMIX D35 16ГБ (2x8) 3200МГц",
+    "price": 4700.0,
+    "stock": 26,
+    "specs": {
+      "type": "DDR4",
+      "capacityGB": 16,
+      "speed": "3200MHz",
+      "modules": 2
+    },
+    "description": "Мировой бестселлер. Минималистичный дизайн, высокая надёжность.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr4-adata-spectrixd35g-16",
+    "brand": "ADATA",
+    "name": "XPG SPECTRIX D35G 16ГБ (2x8) 3200МГц",
+    "price": 5150.0,
+    "stock": 22,
+    "specs": {
+      "type": "DDR4",
+      "capacityGB": 16,
+      "speed": "3200MHz",
+      "modules": 2
+    },
+    "description": "Вариант для красивых сборок. Яркая, сочная и полностью настраиваемая подсветка.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr4-kingston-furybeastblack-16",
+    "brand": "Kingston",
+    "name": "FURY Beast Black 16ГБ (2x8) 3600МГц",
+    "price": 6100.0,
+    "stock": 24,
+    "specs": {
+      "type": "DDR4",
+      "capacityGB": 16,
+      "speed": "3600MHz",
+      "modules": 2
+    },
+    "description": "Легендарная серия. Повышенная частота 3600 МГц даёт приятный буст для процессоров Ryzen.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr4-teamgroup-create-32",
+    "brand": "TEAMGROUP",
+    "name": "T-Force Create 32ГБ (2x16) 3200МГц",
+    "price": 8000.0,
+    "stock": 16,
+    "specs": {
+      "type": "DDR4",
+      "capacityGB": 32,
+      "speed": "3200MHz",
+      "modules": 2
+    },
+    "description": "Лучший доступный комплект на 32 ГБ для «тяжёлых» современных игр и рабочих задач.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr5-crucial-16-4800",
+    "brand": "Crucial",
+    "name": "CT2K8G48C40U5 16ГБ (2x8) 4800МГц",
+    "price": 6500.0,
+    "stock": 26,
+    "specs": {
+      "type": "DDR5",
+      "capacityGB": 16,
+      "speed": "4800MHz",
+      "modules": 2
+    },
+    "description": "Самая простая базовая DDR5 без радиаторов. Подходит для офисных ПК или эконом-сборок на Intel.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr5-teamgroup-vulcan-32-6000",
+    "brand": "TEAMGROUP",
+    "name": "T-Force Vulcan 32ГБ (2x16) 6000МГц",
+    "price": 12250.0,
+    "stock": 20,
+    "specs": {
+      "type": "DDR5",
+      "capacityGB": 32,
+      "speed": "6000MHz",
+      "modules": 2
+    },
+    "description": "Король среднего сегмента. Оптимальная частота 6000 МГц, стильные радиаторы.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr5-ardor-portal-32-6000",
+    "brand": "ARDOR GAMING",
+    "name": "Portal 32ГБ (2x16) 6000МГц CL30",
+    "price": 13150.0,
+    "stock": 18,
+    "specs": {
+      "type": "DDR5",
+      "capacityGB": 32,
+      "speed": "6000MHz",
+      "modules": 2
+    },
+    "description": "Хит продаж за счёт низких таймингов (CL30). Минимальная задержка памяти в играх.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr5-adata-lancerblade-32-6000",
+    "brand": "ADATA",
+    "name": "XPG Lancer Blade 32ГБ (2x16) 6000МГц",
+    "price": 13750.0,
+    "stock": 18,
+    "specs": {
+      "type": "DDR5",
+      "capacityGB": 32,
+      "speed": "6000MHz",
+      "modules": 2
+    },
+    "description": "Самый покупаемый комплект для процессоров Ryzen 7000/9000. Чипы Hynix A-die.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr5-kingston-furyrenegade-32-6400",
+    "brand": "Kingston",
+    "name": "FURY Renegade RGB 32ГБ (2x16) 6400МГц",
+    "price": 17250.0,
+    "stock": 12,
+    "specs": {
+      "type": "DDR5",
+      "capacityGB": 32,
+      "speed": "6400MHz",
+      "modules": 2
+    },
+    "description": "Премиальный дизайн, агрессивные радиаторы, шикарная RGB-лента. Хорош для платформ Intel.",
+    "category": "ram",
+    "image": "ram.svg"
+  },
+  {
+    "id": "ram-ddr5-gskill-tridentz5-32-7200",
+    "brand": "G.Skill",
+    "name": "TRIDENT Z5 RGB 32ГБ (2x16) 7200МГц",
+    "price": 21000.0,
+    "stock": 8,
+    "specs": {
+      "type": "DDR5",
+      "capacityGB": 32,
+      "speed": "7200MHz",
+      "modules": 2
+    },
+    "description": "Отборные чипы для оверклокеров. Покупается под топовые платы Z790/Z890 для максимального FPS.",
+    "category": "ram",
+    "image": "ram.svg"
   }
 ]

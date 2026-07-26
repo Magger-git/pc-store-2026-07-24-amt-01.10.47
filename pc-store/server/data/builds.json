@@ -7,14 +7,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 5 5500 с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r5-5500",
-      "motherboard": "mb-a320m",
-      "ram": "ram-ddr4-8-2666",
+      "motherboard": "mb-asus-primeb450mk2",
+      "ram": "ram-ddr4-teamgroup-vulcanz-16",
       "gpu": "gpu-gtx1660super",
-      "storage": "ssd-nvme-500",
-      "psu": "psu-bequiet-purepower11-500",
-      "case": "case-coolermaster-q300l"
+      "storage": "ssd-agi-ai198-512",
+      "psu": "psu-deepcool-pf500",
+      "case": "case-powercase-mistral-micro-z3w"
     },
-    "price": 43230,
+    "price": 43580.0,
     "image": "cpu.svg"
   },
   {
@@ -25,14 +25,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 5 5600 с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r5-5600",
-      "motherboard": "mb-a320m",
-      "ram": "ram-ddr4-8-2666",
+      "motherboard": "mb-asus-primeb450mk2",
+      "ram": "ram-ddr4-teamgroup-vulcanz-16",
       "gpu": "gpu-gtx1660super",
-      "storage": "ssd-nvme-500",
-      "psu": "psu-bequiet-purepower11-500",
-      "case": "case-coolermaster-q300l"
+      "storage": "ssd-agi-ai198-512",
+      "psu": "psu-deepcool-pf500",
+      "case": "case-powercase-mistral-micro-z3w"
     },
-    "price": 45730,
+    "price": 46080.0,
     "image": "cpu.svg"
   },
   {
@@ -43,14 +43,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 5 5600X с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r5-5600x",
-      "motherboard": "mb-a320m",
-      "ram": "ram-ddr4-8-2666",
+      "motherboard": "mb-asus-primeb450mk2",
+      "ram": "ram-ddr4-teamgroup-vulcanz-16",
       "gpu": "gpu-gtx1660super",
-      "storage": "ssd-nvme-500",
-      "psu": "psu-bequiet-purepower11-500",
-      "case": "case-coolermaster-q300l"
+      "storage": "ssd-agi-ai198-512",
+      "psu": "psu-deepcool-pf500",
+      "case": "case-powercase-mistral-micro-z3w"
     },
-    "price": 47730,
+    "price": 48080.0,
     "image": "cpu.svg"
   },
   {
@@ -61,14 +61,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 5 7600 с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r5-7600",
-      "motherboard": "mb-a620m",
-      "ram": "ram-ddr5-16-5600",
+      "motherboard": "mb-gigabyte-b650eagleax",
+      "ram": "ram-ddr5-crucial-16-4800",
       "gpu": "gpu-gtx1660super",
-      "storage": "ssd-nvme-500",
-      "psu": "psu-bequiet-purepower11-500",
-      "case": "case-coolermaster-q300l"
+      "storage": "ssd-agi-ai198-512",
+      "psu": "psu-deepcool-pf500",
+      "case": "case-ardor-crystal-cm2"
     },
-    "price": 62730,
+    "price": 65480.0,
     "image": "cpu.svg"
   },
   {
@@ -79,14 +79,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 5 9600X с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r5-9600x",
-      "motherboard": "mb-b650-tomahawk",
-      "ram": "ram-ddr5-32-6000",
+      "motherboard": "mb-msi-b850gamingpluswifi",
+      "ram": "ram-ddr5-ardor-portal-32-6000",
       "gpu": "gpu-rtx4060",
-      "storage": "ssd-nvme-samsung-970evoplus-1tb",
-      "psu": "psu-550w",
-      "case": "case-matx-nzxt"
+      "storage": "ssd-kingston-nv2-1tb",
+      "psu": "psu-deepcool-pk650d",
+      "case": "case-lianli-lancool216"
     },
-    "price": 105430,
+    "price": 108080.0,
     "image": "cpu.svg"
   },
   {
@@ -97,14 +97,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 7 7700X с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r7-7700x",
-      "motherboard": "mb-b650-tomahawk",
-      "ram": "ram-ddr5-32-6000",
+      "motherboard": "mb-msi-b850gamingpluswifi",
+      "ram": "ram-ddr5-ardor-portal-32-6000",
       "gpu": "gpu-rtx4060",
-      "storage": "ssd-nvme-samsung-970evoplus-1tb",
-      "psu": "psu-550w",
-      "case": "case-matx-nzxt"
+      "storage": "ssd-kingston-nv2-1tb",
+      "psu": "psu-deepcool-pk650d",
+      "case": "case-lianli-lancool216"
     },
-    "price": 110430,
+    "price": 113080.0,
     "image": "cpu.svg"
   },
   {
@@ -115,14 +115,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 7 9700X с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r7-9700x",
-      "motherboard": "mb-b650-tomahawk",
-      "ram": "ram-ddr5-32-6000",
+      "motherboard": "mb-msi-b850gamingpluswifi",
+      "ram": "ram-ddr5-ardor-portal-32-6000",
       "gpu": "gpu-rtx4060",
-      "storage": "ssd-nvme-samsung-970evoplus-1tb",
-      "psu": "psu-550w",
-      "case": "case-matx-nzxt"
+      "storage": "ssd-kingston-nv2-1tb",
+      "psu": "psu-deepcool-pk650d",
+      "case": "case-lianli-lancool216"
     },
-    "price": 112430,
+    "price": 115080.0,
     "image": "cpu.svg"
   },
   {
@@ -133,14 +133,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 9 9900X с видеокартой Radeon RX 9060 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r9-9900x",
-      "motherboard": "mb-x670e-taichi",
-      "ram": "ram-ddr5-32-5600",
+      "motherboard": "mb-asus-rogstrixx870a",
+      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
       "gpu": "gpu-rx9060xt",
-      "storage": "ssd-nvme-wd-sn580-1tb",
-      "psu": "psu-evga-600bq",
-      "case": "case-atx-fractal"
+      "storage": "ssd-adata-legend960max-1tb",
+      "psu": "psu-deepcool-pk650d",
+      "case": "case-lianli-o11dynamicevo"
     },
-    "price": 153730,
+    "price": 173180.0,
     "image": "cpu.svg"
   },
   {
@@ -151,14 +151,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 7 9800X3D с видеокартой Radeon RX 9060 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r7-9800x3d",
-      "motherboard": "mb-x670e-taichi",
-      "ram": "ram-ddr5-32-5600",
+      "motherboard": "mb-asus-rogstrixx870a",
+      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
       "gpu": "gpu-rx9060xt",
-      "storage": "ssd-nvme-wd-sn580-1tb",
-      "psu": "psu-evga-600bq",
-      "case": "case-atx-fractal"
+      "storage": "ssd-adata-legend960max-1tb",
+      "psu": "psu-deepcool-pk650d",
+      "case": "case-lianli-o11dynamicevo"
     },
-    "price": 155730,
+    "price": 175180.0,
     "image": "cpu.svg"
   },
   {
@@ -169,14 +169,14 @@
     "description": "Готовая сборка на процессоре AMD Ryzen 9 9950X3D с видеокартой Radeon RX 9070 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-r9-9950x3d",
-      "motherboard": "mb-x670e-taichi",
-      "ram": "ram-ddr5-32-5600",
+      "motherboard": "mb-asus-rogstrixx870a",
+      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
       "gpu": "gpu-rx9070xt",
-      "storage": "ssd-nvme-wd-sn580-1tb",
-      "psu": "psu-corsair-rm750x",
-      "case": "case-atx-fractal"
+      "storage": "ssd-adata-legend960max-1tb",
+      "psu": "psu-1stplayer-ngdp750",
+      "case": "case-lianli-o11dynamicevo"
     },
-    "price": 202230,
+    "price": 219880.0,
     "image": "cpu.svg"
   },
   {
@@ -187,14 +187,14 @@
     "description": "Готовая сборка на процессоре Intel Core i3-12100F с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-i3-12100f",
-      "motherboard": "mb-h610m",
-      "ram": "ram-ddr4-8-2666",
+      "motherboard": "mb-msi-h610me-ddr4",
+      "ram": "ram-ddr4-teamgroup-vulcanz-16",
       "gpu": "gpu-gtx1660super",
-      "storage": "ssd-nvme-500",
-      "psu": "psu-bequiet-purepower11-500",
-      "case": "case-coolermaster-q300l"
+      "storage": "ssd-agi-ai198-512",
+      "psu": "psu-deepcool-pf500",
+      "case": "case-powercase-mistral-micro-z3w"
     },
-    "price": 45230,
+    "price": 44580.0,
     "image": "cpu.svg"
   },
   {
@@ -205,14 +205,14 @@
     "description": "Готовая сборка на процессоре Intel Core i5-12400F с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-i5-12400f",
-      "motherboard": "mb-h610m",
-      "ram": "ram-ddr4-8-2666",
+      "motherboard": "mb-msi-h610me-ddr4",
+      "ram": "ram-ddr4-teamgroup-vulcanz-16",
       "gpu": "gpu-gtx1660super",
-      "storage": "ssd-nvme-500",
-      "psu": "psu-bequiet-purepower11-500",
-      "case": "case-coolermaster-q300l"
+      "storage": "ssd-agi-ai198-512",
+      "psu": "psu-deepcool-pf500",
+      "case": "case-powercase-mistral-micro-z3w"
     },
-    "price": 49230,
+    "price": 48580.0,
     "image": "cpu.svg"
   },
   {
@@ -223,140 +223,86 @@
     "description": "Готовая сборка на процессоре Intel Core i5-13400F с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-i5-13400f",
-      "motherboard": "mb-h610m",
-      "ram": "ram-ddr4-8-2666",
+      "motherboard": "mb-msi-h610me-ddr4",
+      "ram": "ram-ddr4-teamgroup-vulcanz-16",
       "gpu": "gpu-gtx1660super",
-      "storage": "ssd-nvme-500",
-      "psu": "psu-bequiet-purepower11-500",
-      "case": "case-coolermaster-q300l"
+      "storage": "ssd-agi-ai198-512",
+      "psu": "psu-deepcool-pf500",
+      "case": "case-powercase-mistral-micro-z3w"
     },
-    "price": 51730,
+    "price": 51080.0,
     "image": "cpu.svg"
   },
   {
     "id": "build-intel-4",
     "brand": "intel",
-    "tier": "budget",
-    "name": "Стартовая сборка на Intel Core Ultra 5 250K Plus",
-    "description": "Готовая сборка на процессоре Intel Core Ultra 5 250K Plus с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
+    "tier": "mid",
+    "name": "Оптимальная сборка на Intel Core i5-14400F",
+    "description": "Готовая сборка на процессоре Intel Core i5-14400F с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
-      "cpu": "cpu-ultra5-250kplus",
-      "motherboard": "mb-b860-pro",
-      "ram": "ram-ddr5-16-5600",
-      "gpu": "gpu-gtx1660super",
-      "storage": "ssd-nvme-500",
-      "psu": "psu-bequiet-purepower11-500",
-      "case": "case-deepcool-ch560"
+      "cpu": "cpu-i5-14400f",
+      "motherboard": "mb-msi-b760tomahawkwifi",
+      "ram": "ram-ddr5-ardor-portal-32-6000",
+      "gpu": "gpu-rtx4060",
+      "storage": "ssd-kingston-nv2-1tb",
+      "psu": "psu-deepcool-pk650d",
+      "case": "case-lianli-lancool216"
     },
-    "price": 74930,
+    "price": 98830.0,
     "image": "cpu.svg"
   },
   {
     "id": "build-intel-5",
     "brand": "intel",
     "tier": "mid",
-    "name": "Оптимальная сборка на Intel Core Ultra 5 245K",
-    "description": "Готовая сборка на процессоре Intel Core Ultra 5 245K с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
+    "name": "Оптимальная сборка на Intel Core i7-12700K",
+    "description": "Готовая сборка на процессоре Intel Core i7-12700K с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
-      "cpu": "cpu-ultra5-245k",
-      "motherboard": "mb-b860-tuf",
-      "ram": "ram-ddr5-32-6000",
+      "cpu": "cpu-i7-12700k",
+      "motherboard": "mb-msi-b760tomahawkwifi",
+      "ram": "ram-ddr5-ardor-portal-32-6000",
       "gpu": "gpu-rtx4060",
-      "storage": "ssd-nvme-samsung-970evoplus-1tb",
-      "psu": "psu-550w",
-      "case": "case-matx-nzxt"
+      "storage": "ssd-kingston-nv2-1tb",
+      "psu": "psu-deepcool-pk650d",
+      "case": "case-lianli-lancool216"
     },
-    "price": 108430,
+    "price": 107830.0,
     "image": "cpu.svg"
   },
   {
     "id": "build-intel-6",
     "brand": "intel",
-    "tier": "mid",
-    "name": "Оптимальная сборка на Intel Core i7-12700K",
-    "description": "Готовая сборка на процессоре Intel Core i7-12700K с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
+    "tier": "high",
+    "name": "Производительная сборка на Intel Core i7-14700KF",
+    "description": "Готовая сборка на процессоре Intel Core i7-14700KF с видеокартой Radeon RX 9060 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
-      "cpu": "cpu-i7-12700k",
-      "motherboard": "mb-b760m-msi-ddr4",
-      "ram": "ram-ddr4-16-3200",
-      "gpu": "gpu-rtx4060",
-      "storage": "ssd-nvme-samsung-970evoplus-1tb",
-      "psu": "psu-550w",
-      "case": "case-corsair-4000d"
+      "cpu": "cpu-i7-14700kf",
+      "motherboard": "mb-gigabyte-z790aoruselite",
+      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
+      "gpu": "gpu-rx9060xt",
+      "storage": "ssd-adata-legend960max-1tb",
+      "psu": "psu-deepcool-pk650d",
+      "case": "case-lianli-o11dynamicevo"
     },
-    "price": 93430,
+    "price": 159180.0,
     "image": "cpu.svg"
   },
   {
     "id": "build-intel-7",
     "brand": "intel",
-    "tier": "mid",
-    "name": "Оптимальная сборка на Intel Core Ultra 7 270K Plus",
-    "description": "Готовая сборка на процессоре Intel Core Ultra 7 270K Plus с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-ultra7-270kplus",
-      "motherboard": "mb-b860-tuf",
-      "ram": "ram-ddr5-32-6000",
-      "gpu": "gpu-rtx4060",
-      "storage": "ssd-nvme-samsung-970evoplus-1tb",
-      "psu": "psu-550w",
-      "case": "case-matx-nzxt"
-    },
-    "price": 115430,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-intel-8",
-    "brand": "intel",
-    "tier": "high",
-    "name": "Производительная сборка на Intel Core Ultra 7 265K",
-    "description": "Готовая сборка на процессоре Intel Core Ultra 7 265K с видеокартой Radeon RX 9060 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-ultra7-265k",
-      "motherboard": "mb-z890-tomahawk",
-      "ram": "ram-ddr5-32-5600",
-      "gpu": "gpu-rx9060xt",
-      "storage": "ssd-nvme-wd-sn580-1tb",
-      "psu": "psu-evga-600bq",
-      "case": "case-atx-fractal"
-    },
-    "price": 144730,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-intel-9",
-    "brand": "intel",
-    "tier": "high",
-    "name": "Производительная сборка на Intel Core i9-14900KF",
-    "description": "Готовая сборка на процессоре Intel Core i9-14900KF с видеокартой Radeon RX 9060 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
+    "tier": "flagship",
+    "name": "Флагманская сборка на Intel Core i9-14900KF",
+    "description": "Готовая сборка на процессоре Intel Core i9-14900KF с видеокартой Radeon RX 9070 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
     "components": {
       "cpu": "cpu-i9-14900kf",
-      "motherboard": "mb-z790-strix",
-      "ram": "ram-ddr5-32-5600",
-      "gpu": "gpu-rx9060xt",
-      "storage": "ssd-nvme-wd-sn580-1tb",
-      "psu": "psu-evga-600bq",
-      "case": "case-atx-fractal"
-    },
-    "price": 165730,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-intel-10",
-    "brand": "intel",
-    "tier": "flagship",
-    "name": "Флагманская сборка на Intel Core Ultra 9 285K",
-    "description": "Готовая сборка на процессоре Intel Core Ultra 9 285K с видеокартой Radeon RX 9070 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-ultra9-285k",
-      "motherboard": "mb-z890-tomahawk",
-      "ram": "ram-ddr5-32-5600",
+      "motherboard": "mb-gigabyte-z790aoruselite",
+      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
       "gpu": "gpu-rx9070xt",
-      "storage": "ssd-nvme-wd-sn580-1tb",
-      "psu": "psu-corsair-rm750x",
-      "case": "case-atx-fractal"
+      "storage": "ssd-adata-legend960max-1tb",
+      "psu": "psu-1stplayer-ngdp750",
+      "case": "case-lianli-o11dynamicevo"
     },
-    "price": 196230,
+    "price": 200880.0,
     "image": "cpu.svg"
   }
 ]
