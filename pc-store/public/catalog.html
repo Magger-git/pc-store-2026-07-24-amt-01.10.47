@@ -52,6 +52,7 @@
     </div>
     <div class="chips" id="chips"></div>
     <div class="grid" id="grid"></div>
+    <div id="load-more-wrap" style="text-align:center;margin-top:24px"></div>
   </div>
 </section>
 
@@ -72,6 +73,8 @@ const CATEGORY_LABELS = {
 let allProducts = [];
 let activeCategory = "all";
 let searchQuery = "";
+const PAGE_SIZE = 24;
+let visibleCount = PAGE_SIZE;
 
 function renderChips() {
   const chips = document.getElementById("chips");
@@ -84,6 +87,7 @@ function renderChips() {
   chips.querySelectorAll(".chip").forEach((btn) => {
     btn.addEventListener("click", () => {
       activeCategory = btn.dataset.cat;
+      visibleCount = PAGE_SIZE;
       renderChips();
       renderGrid();
     });
@@ -100,14 +104,18 @@ function renderGrid() {
   const grid = document.getElementById("grid");
   let list = activeCategory === "all" ? allProducts : allProducts.filter((p) => p.category === activeCategory);
   list = list.filter((p) => matchesSearch(p, searchQuery));
-  document.getElementById("result-count").textContent = `${list.length} позиций`;
+
+  const shown = list.slice(0, visibleCount);
+  document.getElementById("result-count").textContent =
+    list.length > shown.length ? `Показано ${shown.length} из ${list.length}` : `${list.length} позиций`;
 
   if (!list.length) {
     grid.innerHTML = `<p style="color:var(--text-dim);grid-column:1/-1">Ничего не найдено. Попробуйте другой запрос.</p>`;
+    document.getElementById("load-more-wrap").innerHTML = "";
     return;
   }
 
-  grid.innerHTML = list.map((p) => `
+  grid.innerHTML = shown.map((p) => `
     <div class="card">
       <a href="product.html?id=${p.id}" style="display:contents;color:inherit">
         <div class="thumb"><img src="img/${p.image}" alt="${p.name}" width="72" height="72"></div>
@@ -131,10 +139,22 @@ function renderGrid() {
       setTimeout(() => (btn.textContent = "В корзину"), 1200);
     });
   });
+
+  const loadMoreWrap = document.getElementById("load-more-wrap");
+  if (list.length > shown.length) {
+    loadMoreWrap.innerHTML = `<button class="btn btn-ghost" id="load-more-btn">Показать ещё (${list.length - shown.length})</button>`;
+    document.getElementById("load-more-btn").addEventListener("click", () => {
+      visibleCount += PAGE_SIZE;
+      renderGrid();
+    });
+  } else {
+    loadMoreWrap.innerHTML = "";
+  }
 }
 
 document.getElementById("search-input").addEventListener("input", (e) => {
   searchQuery = e.target.value.trim();
+  visibleCount = PAGE_SIZE;
   renderGrid();
 });
 
