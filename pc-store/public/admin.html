@@ -100,6 +100,7 @@
           <option value="motherboard">Материнская плата</option>
           <option value="ram">Оперативная память</option>
           <option value="gpu">Видеокарта</option>
+          <option value="cooler">Охлаждение</option>
           <option value="storage">Накопитель</option>
           <option value="psu">Блок питания</option>
           <option value="case">Корпус</option>
@@ -132,7 +133,7 @@
 <script>
 const CATEGORY_LABELS = {
   cpu: "Процессор", motherboard: "Мат. плата", ram: "Память",
-  gpu: "Видеокарта", storage: "Накопитель", psu: "БП", case: "Корпус",
+  gpu: "Видеокарта", cooler: "Охлаждение", storage: "Накопитель", psu: "БП", case: "Корпус",
 };
 
 async function adminFetch(url, options = {}) {
