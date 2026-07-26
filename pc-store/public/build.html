@@ -219,9 +219,11 @@ async function init() {
     const btn = document.getElementById("add-build-btn");
     btn.disabled = true;
     btn.textContent = "Добавляем…";
+    const groupId = "build-" + build.id + "-" + Date.now().toString(36);
+    const groupLabel = "Сборка: " + build.name;
     for (const key of SLOT_ORDER) {
       const p = build.components[key];
-      if (p) await API.addToCart(p.id, 1);
+      if (p) await API.addToCart(p.id, 1, groupId, groupLabel);
     }
     await refreshCartBadge();
     btn.textContent = "Добавлено ✓ — перейти в корзину";
