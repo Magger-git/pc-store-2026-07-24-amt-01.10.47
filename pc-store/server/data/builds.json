@@ -1,308 +1,192 @@
 [
   {
-    "id": "build-amd-1",
+    "id": "build-amd-budget-r5-3600",
     "brand": "amd",
     "tier": "budget",
-    "name": "Стартовая сборка на AMD Ryzen 5 5500",
-    "description": "Готовая сборка на процессоре AMD Ryzen 5 5500 с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
+    "name": "Народная база на Ryzen 5 3600",
+    "description": "6-ядерная народная сборка для FullHD-гейминга без переплат.",
     "components": {
-      "cpu": "cpu-r5-5500",
+      "cpu": "cpu-r5-3600",
+      "cooler": "cooler-deepcool-iceedgemini-v2",
       "motherboard": "mb-asus-primeb450mk2",
+      "gpu": "gpu-rx6500xt",
       "ram": "ram-ddr4-teamgroup-vulcanz-16",
-      "gpu": "gpu-gtx1660super",
-      "storage": "ssd-agi-ai198-512",
+      "storage": "ssd-netac-n930e-512",
       "psu": "psu-deepcool-pf500",
       "case": "case-powercase-mistral-micro-z3w"
     },
-    "price": 43580.0,
-    "image": "cpu.svg"
+    "price": 43700.0,
+    "image": "case.svg"
   },
   {
-    "id": "build-amd-2",
+    "id": "build-amd-5600-rtx4060",
     "brand": "amd",
-    "tier": "budget",
-    "name": "Стартовая сборка на AMD Ryzen 5 5600",
-    "description": "Готовая сборка на процессоре AMD Ryzen 5 5600 с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
+    "tier": "mid",
+    "name": "Ryzen 5 5600 + RTX 4060",
+    "description": "Уверенный FullHD гейминг на ультра-настройках с трассировкой лучей и DLSS.",
     "components": {
       "cpu": "cpu-r5-5600",
-      "motherboard": "mb-asus-primeb450mk2",
-      "ram": "ram-ddr4-teamgroup-vulcanz-16",
-      "gpu": "gpu-gtx1660super",
-      "storage": "ssd-agi-ai198-512",
-      "psu": "psu-deepcool-pf500",
-      "case": "case-powercase-mistral-micro-z3w"
-    },
-    "price": 46080.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-amd-3",
-    "brand": "amd",
-    "tier": "budget",
-    "name": "Стартовая сборка на AMD Ryzen 5 5600X",
-    "description": "Готовая сборка на процессоре AMD Ryzen 5 5600X с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-r5-5600x",
-      "motherboard": "mb-asus-primeb450mk2",
-      "ram": "ram-ddr4-teamgroup-vulcanz-16",
-      "gpu": "gpu-gtx1660super",
-      "storage": "ssd-agi-ai198-512",
-      "psu": "psu-deepcool-pf500",
-      "case": "case-powercase-mistral-micro-z3w"
-    },
-    "price": 48080.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-amd-4",
-    "brand": "amd",
-    "tier": "budget",
-    "name": "Стартовая сборка на AMD Ryzen 5 7600",
-    "description": "Готовая сборка на процессоре AMD Ryzen 5 7600 с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-r5-7600",
-      "motherboard": "mb-gigabyte-b650eagleax",
-      "ram": "ram-ddr5-crucial-16-4800",
-      "gpu": "gpu-gtx1660super",
-      "storage": "ssd-agi-ai198-512",
-      "psu": "psu-deepcool-pf500",
-      "case": "case-ardor-crystal-cm2"
-    },
-    "price": 65480.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-amd-5",
-    "brand": "amd",
-    "tier": "mid",
-    "name": "Оптимальная сборка на AMD Ryzen 5 9600X",
-    "description": "Готовая сборка на процессоре AMD Ryzen 5 9600X с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-r5-9600x",
-      "motherboard": "mb-msi-b850gamingpluswifi",
-      "ram": "ram-ddr5-ardor-portal-32-6000",
-      "gpu": "gpu-rtx4060",
-      "storage": "ssd-kingston-nv2-1tb",
+      "cooler": "cooler-idcooling-se214xt",
+      "motherboard": "mb-maxsun-msterminator-b550m-wifi",
+      "gpu": "gpu-rtx4060-palit-stormx",
+      "ram": "ram-ddr4-ardor-reaper-16",
+      "storage": "ssd-teamgroup-mp33-512",
       "psu": "psu-deepcool-pk650d",
-      "case": "case-lianli-lancool216"
+      "case": "case-aerocool-trinity-mini"
     },
-    "price": 108080.0,
-    "image": "cpu.svg"
+    "price": 72900.0,
+    "image": "case.svg"
   },
   {
-    "id": "build-amd-6",
-    "brand": "amd",
-    "tier": "mid",
-    "name": "Оптимальная сборка на AMD Ryzen 7 7700X",
-    "description": "Готовая сборка на процессоре AMD Ryzen 7 7700X с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-r7-7700x",
-      "motherboard": "mb-msi-b850gamingpluswifi",
-      "ram": "ram-ddr5-ardor-portal-32-6000",
-      "gpu": "gpu-rtx4060",
-      "storage": "ssd-kingston-nv2-1tb",
-      "psu": "psu-deepcool-pk650d",
-      "case": "case-lianli-lancool216"
-    },
-    "price": 113080.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-amd-7",
-    "brand": "amd",
-    "tier": "mid",
-    "name": "Оптимальная сборка на AMD Ryzen 7 9700X",
-    "description": "Готовая сборка на процессоре AMD Ryzen 7 9700X с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-r7-9700x",
-      "motherboard": "mb-msi-b850gamingpluswifi",
-      "ram": "ram-ddr5-ardor-portal-32-6000",
-      "gpu": "gpu-rtx4060",
-      "storage": "ssd-kingston-nv2-1tb",
-      "psu": "psu-deepcool-pk650d",
-      "case": "case-lianli-lancool216"
-    },
-    "price": 115080.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-amd-8",
-    "brand": "amd",
-    "tier": "high",
-    "name": "Производительная сборка на AMD Ryzen 9 9900X",
-    "description": "Готовая сборка на процессоре AMD Ryzen 9 9900X с видеокартой Radeon RX 9060 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-r9-9900x",
-      "motherboard": "mb-asus-rogstrixx870a",
-      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
-      "gpu": "gpu-rx9060xt",
-      "storage": "ssd-adata-legend960max-1tb",
-      "psu": "psu-deepcool-pk650d",
-      "case": "case-lianli-o11dynamicevo"
-    },
-    "price": 173180.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-amd-9",
-    "brand": "amd",
-    "tier": "high",
-    "name": "Производительная сборка на AMD Ryzen 7 9800X3D",
-    "description": "Готовая сборка на процессоре AMD Ryzen 7 9800X3D с видеокартой Radeon RX 9060 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-r7-9800x3d",
-      "motherboard": "mb-asus-rogstrixx870a",
-      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
-      "gpu": "gpu-rx9060xt",
-      "storage": "ssd-adata-legend960max-1tb",
-      "psu": "psu-deepcool-pk650d",
-      "case": "case-lianli-o11dynamicevo"
-    },
-    "price": 175180.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-amd-10",
+    "id": "build-amd-am5-7500f-4070super",
     "brand": "amd",
     "tier": "flagship",
-    "name": "Флагманская сборка на AMD Ryzen 9 9950X3D",
-    "description": "Готовая сборка на процессоре AMD Ryzen 9 9950X3D с видеокартой Radeon RX 9070 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
+    "name": "AM5: Ryzen 5 7500F + RTX 4070 SUPER",
+    "description": "Идеальный компьютер для 2K (1440p) на максимальных настройках. Платформа AM5 готова к будущим апгрейдам.",
     "components": {
-      "cpu": "cpu-r9-9950x3d",
-      "motherboard": "mb-asus-rogstrixx870a",
-      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
-      "gpu": "gpu-rx9070xt",
-      "storage": "ssd-adata-legend960max-1tb",
+      "cpu": "cpu-r5-7500f",
+      "cooler": "cooler-pccooler-paladinex400",
+      "motherboard": "mb-gigabyte-b650eagleax",
+      "gpu": "gpu-rtx4070super-palit",
+      "ram": "ram-ddr5-teamgroup-vulcan-32-6000",
+      "storage": "ssd-teamgroup-mp33-1tb",
       "psu": "psu-1stplayer-ngdp750",
-      "case": "case-lianli-o11dynamicevo"
+      "case": "case-montech-air100-argb"
     },
-    "price": 219880.0,
-    "image": "cpu.svg"
+    "price": 128800.0,
+    "image": "case.svg"
   },
   {
-    "id": "build-intel-1",
+    "id": "build-amd-advanced-7500f-4060ti",
+    "brand": "amd",
+    "tier": "high",
+    "name": "Продвинутый стандарт: Ryzen 5 7500F + RTX 4060 Ti 16GB",
+    "description": "Платформа AM5 и видеокарта с увеличенным объёмом видеопамяти (16 ГБ) — без проблем с текстурами в будущих играх.",
+    "components": {
+      "cpu": "cpu-r5-7500f",
+      "cooler": "cooler-pccooler-paladinex400",
+      "motherboard": "mb-gigabyte-b650eagleax",
+      "gpu": "gpu-rtx4060ti-palit-jetstream-16g",
+      "ram": "ram-ddr5-teamgroup-vulcan-32-6000",
+      "storage": "ssd-teamgroup-mp33-1tb",
+      "psu": "psu-deepcool-pk650d",
+      "case": "case-cougar-fv150rgb"
+    },
+    "price": 107100.0,
+    "image": "case.svg"
+  },
+  {
+    "id": "build-amd-dominator-7800x3d",
+    "brand": "amd",
+    "tier": "flagship",
+    "name": "Игровой Доминатор: Ryzen 7 7800X3D + RTX 4070 Ti SUPER",
+    "description": "Лучший в мире игровой процессор с 3D V-Cache и предфлагманская видеокарта на 16 ГБ.",
+    "components": {
+      "cpu": "cpu-r7-7800x3d",
+      "cooler": "cooler-thermalright-pa120se",
+      "motherboard": "mb-msi-b650gamingpluswifi",
+      "gpu": "gpu-rtx4070tisuper-msi-gamingx",
+      "ram": "ram-ddr5-ardor-portal-32-6000",
+      "storage": "ssd-kingston-kc3000-1024",
+      "psu": "psu-1stplayer-ngdp750",
+      "case": "case-lianli-lancool216"
+    },
+    "price": 201700.0,
+    "image": "case.svg"
+  },
+  {
+    "id": "build-intel-budget-i3-12100f",
     "brand": "intel",
     "tier": "budget",
-    "name": "Стартовая сборка на Intel Core i3-12100F",
-    "description": "Готовая сборка на процессоре Intel Core i3-12100F с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
+    "name": "Эконом: Core i3-12100F",
+    "description": "Народный процессор для эконом-ПК. Холодный, быстрый, поддерживает PCIe 4.0.",
     "components": {
       "cpu": "cpu-i3-12100f",
+      "cooler": "cooler-deepcool-iceedgemini-v2",
       "motherboard": "mb-msi-h610me-ddr4",
+      "gpu": "gpu-rx6500xt",
       "ram": "ram-ddr4-teamgroup-vulcanz-16",
-      "gpu": "gpu-gtx1660super",
-      "storage": "ssd-agi-ai198-512",
+      "storage": "ssd-netac-n930e-512",
       "psu": "psu-deepcool-pf500",
       "case": "case-powercase-mistral-micro-z3w"
     },
-    "price": 44580.0,
-    "image": "cpu.svg"
+    "price": 44800.0,
+    "image": "case.svg"
   },
   {
-    "id": "build-intel-2",
+    "id": "build-intel-optimal-i5-12400f-4060",
     "brand": "intel",
-    "tier": "budget",
-    "name": "Стартовая сборка на Intel Core i5-12400F",
-    "description": "Готовая сборка на процессоре Intel Core i5-12400F с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
+    "tier": "mid",
+    "name": "Оптимальный Intel: Core i5-12400F + RTX 4060",
+    "description": "Ультимативный FullHD и уверенный 2K-гейминг на ультра-настройках, стриминг.",
     "components": {
       "cpu": "cpu-i5-12400f",
-      "motherboard": "mb-msi-h610me-ddr4",
-      "ram": "ram-ddr4-teamgroup-vulcanz-16",
-      "gpu": "gpu-gtx1660super",
-      "storage": "ssd-agi-ai198-512",
-      "psu": "psu-deepcool-pf500",
-      "case": "case-powercase-mistral-micro-z3w"
-    },
-    "price": 48580.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-intel-3",
-    "brand": "intel",
-    "tier": "budget",
-    "name": "Стартовая сборка на Intel Core i5-13400F",
-    "description": "Готовая сборка на процессоре Intel Core i5-13400F с видеокартой GeForce GTX 1660 Super 6GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-i5-13400f",
-      "motherboard": "mb-msi-h610me-ddr4",
-      "ram": "ram-ddr4-teamgroup-vulcanz-16",
-      "gpu": "gpu-gtx1660super",
-      "storage": "ssd-agi-ai198-512",
-      "psu": "psu-deepcool-pf500",
-      "case": "case-powercase-mistral-micro-z3w"
-    },
-    "price": 51080.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-intel-4",
-    "brand": "intel",
-    "tier": "mid",
-    "name": "Оптимальная сборка на Intel Core i5-14400F",
-    "description": "Готовая сборка на процессоре Intel Core i5-14400F с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-i5-14400f",
-      "motherboard": "mb-msi-b760tomahawkwifi",
-      "ram": "ram-ddr5-ardor-portal-32-6000",
-      "gpu": "gpu-rtx4060",
-      "storage": "ssd-kingston-nv2-1tb",
+      "cooler": "cooler-idcooling-se214xt",
+      "motherboard": "mb-gigabyte-b760m-ds3h-ax",
+      "gpu": "gpu-rtx4060-palit-stormx",
+      "ram": "ram-ddr5-adata-lancerblade-32-6000",
+      "storage": "ssd-teamgroup-mp33-1tb",
       "psu": "psu-deepcool-pk650d",
-      "case": "case-lianli-lancool216"
+      "case": "case-montech-air100-argb"
     },
-    "price": 98830.0,
-    "image": "cpu.svg"
+    "price": 89600.0,
+    "image": "case.svg"
   },
   {
-    "id": "build-intel-5",
-    "brand": "intel",
-    "tier": "mid",
-    "name": "Оптимальная сборка на Intel Core i7-12700K",
-    "description": "Готовая сборка на процессоре Intel Core i7-12700K с видеокартой GeForce RTX 4060 8GB. Комплектующие проверены на совместимость в конструкторе.",
-    "components": {
-      "cpu": "cpu-i7-12700k",
-      "motherboard": "mb-msi-b760tomahawkwifi",
-      "ram": "ram-ddr5-ardor-portal-32-6000",
-      "gpu": "gpu-rtx4060",
-      "storage": "ssd-kingston-nv2-1tb",
-      "psu": "psu-deepcool-pk650d",
-      "case": "case-lianli-lancool216"
-    },
-    "price": 107830.0,
-    "image": "cpu.svg"
-  },
-  {
-    "id": "build-intel-6",
+    "id": "build-intel-i5-13400f-4070",
     "brand": "intel",
     "tier": "high",
-    "name": "Производительная сборка на Intel Core i7-14700KF",
-    "description": "Готовая сборка на процессоре Intel Core i7-14700KF с видеокартой Radeon RX 9060 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
+    "name": "Core i5-13400F + RTX 4070",
+    "description": "Баланс производительности для 1440p с современной платформой LGA1700 и DDR5.",
     "components": {
-      "cpu": "cpu-i7-14700kf",
-      "motherboard": "mb-gigabyte-z790aoruselite",
-      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
-      "gpu": "gpu-rx9060xt",
-      "storage": "ssd-adata-legend960max-1tb",
-      "psu": "psu-deepcool-pk650d",
-      "case": "case-lianli-o11dynamicevo"
+      "cpu": "cpu-i5-13400f",
+      "cooler": "cooler-idcooling-se214xt",
+      "motherboard": "mb-gigabyte-b760m-ds3h-ax",
+      "gpu": "gpu-rtx4070-palit-dual",
+      "ram": "ram-ddr5-adata-lancerblade-32-6000",
+      "storage": "ssd-teamgroup-mp33-1tb",
+      "psu": "psu-montech-centuryg5-750",
+      "case": "case-montech-air100-argb"
     },
-    "price": 159180.0,
-    "image": "cpu.svg"
+    "price": 126400.0,
+    "image": "case.svg"
   },
   {
-    "id": "build-intel-7",
+    "id": "build-intel-charged-i5-13600kf-4070super",
     "brand": "intel",
     "tier": "flagship",
-    "name": "Флагманская сборка на Intel Core i9-14900KF",
-    "description": "Готовая сборка на процессоре Intel Core i9-14900KF с видеокартой Radeon RX 9070 XT 16GB. Комплектующие проверены на совместимость в конструкторе.",
+    "name": "Заряженный Intel: Core i5-13600KF + RTX 4070 SUPER",
+    "description": "Бескомпромиссный 2K и 4K гейминг, профессиональная работа с графикой, видеомонтаж 4K/8K.",
     "components": {
-      "cpu": "cpu-i9-14900kf",
-      "motherboard": "mb-gigabyte-z790aoruselite",
+      "cpu": "cpu-i5-13600kf",
+      "cooler": "cooler-thermalright-pa120se",
+      "motherboard": "mb-msi-b760tomahawkwifi",
+      "gpu": "gpu-rtx4070super-gigabyte",
       "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
-      "gpu": "gpu-rx9070xt",
-      "storage": "ssd-adata-legend960max-1tb",
-      "psu": "psu-1stplayer-ngdp750",
-      "case": "case-lianli-o11dynamicevo"
+      "storage": "ssd-kingston-kc3000-1024",
+      "psu": "psu-montech-centuryg5-750",
+      "case": "case-lianli-lancool216"
     },
-    "price": 200880.0,
-    "image": "cpu.svg"
+    "price": 166800.0,
+    "image": "case.svg"
+  },
+  {
+    "id": "build-intel-ultimate-ultra7-265k",
+    "brand": "intel",
+    "tier": "flagship",
+    "name": "Ультимативная станция: Core Ultra 7 265K",
+    "description": "Новейшая платформа LGA1851 и 20-ядерный процессор. Для игр и профессиональной работы: 3D-графика, нейросети, видеомонтаж.",
+    "components": {
+      "cpu": "cpu-ultra7-265k",
+      "cooler": "cooler-ardor-liquid360",
+      "motherboard": "mb-asrock-z890prors",
+      "gpu": "gpu-rtx4070tisuper-palit-gamingpro",
+      "ram": "ram-ddr5-kingston-furyrenegade-32-6400",
+      "storage": "ssd-teamgroup-mp44-1tb",
+      "psu": "psu-bequiet-purepower12m-850",
+      "case": "case-montech-air1000-premium"
+    },
+    "price": 214500.0,
+    "image": "case.svg"
   }
 ]
