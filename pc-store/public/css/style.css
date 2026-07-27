@@ -545,3 +545,47 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
   .tabs { flex-wrap: wrap; }
   .section-head { flex-wrap: wrap; gap: 10px; }
 }
+
+/* ==========================================================================
+   ПРИНУДИТЕЛЬНОЕ ОТОБРАЖЕНИЕ И СТИЛИЗАЦИЯ КАРТИНОК ИЗ ДНС (.WEBP)
+   ========================================================================== */
+
+/* Находим контейнер (бокс) в котором лежит картинка товара */
+.prod-img-box, 
+.product-image-container, 
+[class*="img-box"], 
+[class*="-image"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #ffffff !important; /* Белая премиум-подложка под фото из ДНС */
+    border-radius: 8px !important;
+    padding: 12px !important;
+    height: 180px !important; /* Фиксированная высота бокса */
+    width: 100% !important;
+    margin-bottom: 15px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* Принудительно заставляем саму картинку проявиться и встать ровно */
+.prod-img-box img, 
+.product-card img, 
+.component-row img,
+main img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important; /* Картинка сжимается пропорционально, без искажений */
+    transition: transform 0.3s ease !important;
+}
+
+/* Красивый микро-эффект: при наведении мышки на карточку, картинка внутри слегка увеличивается */
+.product-card:hover img, 
+.glass-panel:hover img {
+    transform: scale(1.05) !important;
+}
