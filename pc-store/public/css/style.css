@@ -547,33 +547,38 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
 }
 
 /* ==========================================================================
-   АДАПТИВНЫЙ ПРЕМИУМ-СТИЛЬ ДЛЯ ТОВАРНЫХ КАРТИНОК (DNS)
+   АДАПТИВНЫЙ ПРЕМИУМ-СТИЛЬ ДЛЯ ТОВАРНЫХ КАРТИНОК (DNS) — FIX
    ========================================================================== */
 
-/* Настройка контейнеров картинок в каталоге и конструкторе */
+/* Настройка контейнеров картинок в каталоге, конструкторе и СТРАНИЦЕ ТОВАРА */
 .thumb,
 .prod-img-box,
 .product-image-container,
 .picker-row .p-thumb,
-.cart-row .thumb-sm {
+.cart-row .thumb-sm,
+#product-root .thumb {
     background: var(--thumb-bg) !important; /* Используем мягкий светлый фон из токенов */
     border: 1px solid var(--thumb-border) !important;
     border-radius: var(--radius-sm) !important;
-    padding: 12px !important; /* Внутренний отступ, чтобы края процессоров/коробок не липли к рамке */
+    padding: 12px !important; /* Жёстко перебиваем инлайн-отступ 40px на аккуратные 12px */
     overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05) !important;
     transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    width: 100% !important;
+    max-width: 380px !important; /* Ограничиваем ширину контейнера на странице товара */
+    aspect-ratio: 4/3 !important; /* Делаем красивую пропорцию */
 }
 
-/* Эффект легкого неонового свечения вокруг подложки картинки при наведении на карточку */
+/* Эффект легкого неонового свечения вокруг подложки картинки при наведении */
 .card:hover .thumb,
 .slot:hover .slot-head .thumb,
-.picker-row:hover .p-thumb {
-    background: var(--thumb-bg-hover) !important; /* Чистый белый фон при наведении */
-    border-color: rgba(0, 229, 255, 0.4) !important; /* Бирюзовая техническая рамка */
+.picker-row:hover .p-thumb,
+#product-root .thumb:hover {
+    background: var(--thumb-bg-hover) !important; 
+    border-color: rgba(0, 229, 255, 0.4) !important; 
     box-shadow: 0 0 12px rgba(0, 229, 255, 0.15), inset 0 1px 3px rgba(0, 0, 0, 0.02) !important;
 }
 
@@ -583,19 +588,21 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
 .product-image-container img,
 .product-card img,
 .picker-row .p-thumb img,
-.cart-row .thumb-sm img {
+.cart-row .thumb-sm img,
+#product-root .thumb img {
     display: block !important;
     width: auto !important;
     height: auto !important;
-    max-width: 100% !important; /* Картинка никогда не вылезет за пределы */
-    max-height: 100% !important;
+    max-width: 90% !important; /* Картинка займет максимум места, оставив аккуратные поля */
+    max-height: 90% !important;
     object-fit: contain !important; /* Умное вписывание: сохраняет пропорции DNS */
-    filter: drop-shadow(0 6px 12px rgba(9, 10, 15, 0.12)) !important; /* Красивая мягкая тень самого железа */
+    filter: drop-shadow(0 6px 12px rgba(9, 10, 15, 0.12)) !important; /* Тень самого железа */
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
-/* Плавный интерактивный зум детали при наведении на карточку */
+/* Плавный интерактивный зум детали при наведении */
 .card:hover .thumb img,
-.picker-row:hover .p-thumb img {
-    transform: scale(1.05) !important; /* Легкое элегантное увеличение */
+.picker-row:hover .p-thumb img,
+#product-root .thumb:hover img {
+    transform: scale(1.05) !important; 
 }
