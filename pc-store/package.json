@@ -8,7 +8,6 @@
     "dev": "node --watch server/index.js"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "pg": "^8.12.0",
     "stripe": "^16.2.0"
@@ -16,5 +15,9 @@
   "engines": {
     "node": ">=18"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "axios": "^1.18.1",
+    "dotenv": "^17.4.2"
+  }
 }
