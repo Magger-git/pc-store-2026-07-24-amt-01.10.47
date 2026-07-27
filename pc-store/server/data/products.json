@@ -14,7 +14,7 @@
     },
     "description": "Легендарный бюджетный CPU поколения Zen 2 — до сих пор отличный выбор для 1080p.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r5-3600.jpg"
   },
   {
     "id": "cpu-r5-5600",
@@ -31,7 +31,7 @@
     },
     "description": "Один из самых популярных CPU для сборок на AM4 — Zen 3 по доступной цене.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r5-5600.jpg"
   },
   {
     "id": "cpu-r5-5600x",
@@ -48,7 +48,7 @@
     },
     "description": "Более высокие частоты, чем у 5600 — хорошо подходит для разгона памяти.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r5-5600x.jpg"
   },
   {
     "id": "cpu-r7-5700x",
@@ -65,7 +65,7 @@
     },
     "description": "8 ядер Zen 3 на платформе AM4 — доступный апгрейд для многопоточных задач.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r7-5700x.jpg"
   },
   {
     "id": "cpu-r5-7600",
@@ -82,7 +82,7 @@
     },
     "description": "Шесть ядер Zen 4 — отличный баланс цены и производительности для игр 1080p/1440p.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r5-7600.jpg"
   },
   {
     "id": "cpu-r5-9600x",
@@ -99,7 +99,7 @@
     },
     "description": "Свежий Zen 5 в бюджетном сегменте: выше однопоточная производительность, чем у 7600.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r5-9600x.jpg"
   },
   {
     "id": "cpu-r7-7700x",
@@ -116,7 +116,7 @@
     },
     "description": "8 ядер Zen 4 для игр и многопоточных задач одновременно.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r7-7700x.jpg"
   },
   {
     "id": "cpu-r7-9700x",
@@ -133,7 +133,7 @@
     },
     "description": "Zen 5 с улучшенным IPC при более скромном энергопотреблении, чем у предшественника.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r7-9700x.jpg"
   },
   {
     "id": "cpu-r7-7800x3d",
@@ -150,7 +150,7 @@
     },
     "description": "3D V-Cache делает этот процессор одним из лучших игровых CPU на рынке.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r7-7800x3d.jpg"
   },
   {
     "id": "cpu-r7-9800x3d",
@@ -167,7 +167,7 @@
     },
     "description": "Актуальный игровой флагман AMD — прирост FPS почти во всех современных играх.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r7-9800x3d.jpg"
   },
   {
     "id": "cpu-r9-9900x",
@@ -184,7 +184,7 @@
     },
     "description": "12 ядер Zen 5 для рендера, стриминга и тяжёлых игровых сборок.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r9-9900x.jpg"
   },
   {
     "id": "cpu-r9-9950x",
@@ -201,7 +201,7 @@
     },
     "description": "Топовый производительный CPU для рендера, монтажа и многозадачности.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r9-9950x.jpg"
   },
   {
     "id": "cpu-r9-9950x3d",
@@ -218,7 +218,7 @@
     },
     "description": "16 ядер и 3D V-Cache — максимум и для игр, и для тяжёлого рендера.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r9-9950x3d.jpg"
   },
   {
     "id": "cpu-i5-14400f",
@@ -235,7 +235,7 @@
     },
     "description": "10 ядер за разумные деньги, встроенной графики нет — нужна дискретная видеокарта.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-i5-14400f.jpg"
   },
   {
     "id": "cpu-i7-14700kf",
@@ -252,7 +252,7 @@
     },
     "description": "20 ядер для стриминга, рендера и требовательных игр одновременно.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-i7-14700kf.jpg"
   },
   {
     "id": "cpu-i9-14900kf",
@@ -269,7 +269,7 @@
     },
     "description": "Флагман прошлого поколения Intel — всё ещё один из самых быстрых CPU для игр.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-i9-14900kf.jpg"
   },
   {
     "id": "gpu-rtx2060",
@@ -285,7 +285,7 @@
     "description": "Легендарная бюджетная карта с трассировкой лучей первого поколения.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx2060.jpg"
   },
   {
     "id": "gpu-rtx3060",
@@ -301,7 +301,7 @@
     "description": "Один из самых популярных выборов для 1080p благодаря большому объёму памяти.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx3060.jpg"
   },
   {
     "id": "gpu-rtx3060ti",
@@ -317,7 +317,7 @@
     "description": "Заметно быстрее обычной 3060, отличный вариант 1080p/1440p.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx3060ti.jpg"
   },
   {
     "id": "gpu-rtx3070",
@@ -333,7 +333,7 @@
     "description": "Уверенное 1440p с высокими настройками графики.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx3070.jpg"
   },
   {
     "id": "gpu-rtx3070ti",
@@ -349,7 +349,7 @@
     "description": "Прирост производительности над RTX 3070 ценой более высокого TDP.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx3070ti.jpg"
   },
   {
     "id": "gpu-rtx3080",
@@ -365,7 +365,7 @@
     "description": "Бывший флагман поколения Ampere — всё ещё мощная карта для 1440p/4K.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx3080.jpg"
   },
   {
     "id": "gpu-rtx4060",
@@ -381,7 +381,7 @@
     "description": "Уверенная работа в 1080p/1440p с DLSS 3, низкое энергопотребление.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4060.jpg"
   },
   {
     "id": "gpu-rtx4060ti",
@@ -397,7 +397,7 @@
     "description": "Более быстрая версия 4060 с заделом для 1440p-игр.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4060ti.jpg"
   },
   {
     "id": "gpu-rtx4070",
@@ -413,7 +413,7 @@
     "description": "Хороший баланс цены и производительности для 1440p с трассировкой лучей.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4070.jpg"
   },
   {
     "id": "gpu-rtx4070super",
@@ -429,7 +429,7 @@
     "description": "Обновлённая версия 4070 с заметным приростом ядер CUDA.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4070super.jpg"
   },
   {
     "id": "gpu-rtx4070tisuper",
@@ -445,7 +445,7 @@
     "description": "16 ГБ памяти и производительность для 1440p/4K с запасом на будущее.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4070tisuper.jpg"
   },
   {
     "id": "gpu-rtx4080super",
@@ -461,7 +461,7 @@
     "description": "Флагманская производительность прошлого поколения по сниженной цене.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4080super.jpg"
   },
   {
     "id": "gpu-rtx4090",
@@ -477,7 +477,7 @@
     "description": "Экс-флагман NVIDIA — 24 ГБ памяти для 4K, рендера и AI-задач.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4090.jpg"
   },
   {
     "id": "gpu-rtx5050",
@@ -493,7 +493,7 @@
     "description": "Самая доступная карта на архитектуре Blackwell с поддержкой DLSS 4.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx5050.jpg"
   },
   {
     "id": "gpu-rtx5060",
@@ -509,7 +509,7 @@
     "description": "Актуальная бюджетная карта нового поколения с DLSS 4 Multi-Frame Generation.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx5060.jpg"
   },
   {
     "id": "gpu-rtx5060ti",
@@ -525,7 +525,7 @@
     "description": "16 ГБ GDDR7 — отличный запас памяти для 1440p на годы вперёд.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx5060ti.jpg"
   },
   {
     "id": "gpu-rtx5070",
@@ -541,7 +541,7 @@
     "description": "Флагманская производительность для 1440p и 4K с DLSS 4.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx5070.jpg"
   },
   {
     "id": "gpu-rtx5070ti",
@@ -557,7 +557,7 @@
     "description": "16 ГБ GDDR7 и мощь для уверенного 4K-гейминга.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx5070ti.jpg"
   },
   {
     "id": "gpu-rtx5080",
@@ -573,7 +573,7 @@
     "description": "Один из топовых игровых ускорителей поколения Blackwell.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx5080.jpg"
   },
   {
     "id": "gpu-rtx5090",
@@ -589,7 +589,7 @@
     "description": "Абсолютный флагман NVIDIA: 32 ГБ GDDR7 для 4K/8K, рендера и AI.",
     "category": "gpu",
     "brand": "NVIDIA",
-    "image": "gpu.svg"
+    "image": "gpu-rtx5090.jpg"
   },
   {
     "id": "gpu-rx6600",
@@ -605,7 +605,7 @@
     "description": "Проверенная бюджетная карта для комфортного 1080p.",
     "category": "gpu",
     "brand": "AMD",
-    "image": "gpu.svg"
+    "image": "gpu-rx6600.jpg"
   },
   {
     "id": "gpu-rx6750xt",
@@ -621,7 +621,7 @@
     "description": "Мощная карта прошлого поколения с большим объёмом памяти за свою цену.",
     "category": "gpu",
     "brand": "AMD",
-    "image": "gpu.svg"
+    "image": "gpu-rx6750xt.jpg"
   },
   {
     "id": "gpu-rx7600",
@@ -637,7 +637,7 @@
     "description": "Доступная видеокарта нового поколения для комфортного 1080p.",
     "category": "gpu",
     "brand": "AMD",
-    "image": "gpu.svg"
+    "image": "gpu-rx7600.jpg"
   },
   {
     "id": "gpu-rx7700xt",
@@ -653,7 +653,7 @@
     "description": "Хороший вариант для 1440p с большим запасом видеопамяти.",
     "category": "gpu",
     "brand": "AMD",
-    "image": "gpu.svg"
+    "image": "gpu-rx7700xt.jpg"
   },
   {
     "id": "gpu-rx7800xt",
@@ -669,7 +669,7 @@
     "description": "16 ГБ памяти и уверенная производительность в 1440p с высокими настройками.",
     "category": "gpu",
     "brand": "AMD",
-    "image": "gpu.svg"
+    "image": "gpu-rx7800xt.jpg"
   },
   {
     "id": "gpu-rx7900xtx",
@@ -685,7 +685,7 @@
     "description": "Флагман AMD прошлого поколения — 24 ГБ памяти для 4K-гейминга.",
     "category": "gpu",
     "brand": "AMD",
-    "image": "gpu.svg"
+    "image": "gpu-rx7900xtx.jpg"
   },
   {
     "id": "gpu-rx9060xt",
@@ -701,7 +701,7 @@
     "description": "Новая архитектура RDNA 4 с поддержкой FSR 4 в доступном сегменте.",
     "category": "gpu",
     "brand": "AMD",
-    "image": "gpu.svg"
+    "image": "gpu-rx9060xt.jpg"
   },
   {
     "id": "gpu-rx9070",
@@ -717,7 +717,7 @@
     "description": "16 ГБ памяти и хорошая трассировка лучей для RDNA 4.",
     "category": "gpu",
     "brand": "AMD",
-    "image": "gpu.svg"
+    "image": "gpu-rx9070.jpg"
   },
   {
     "id": "gpu-rx9070xt",
@@ -733,7 +733,7 @@
     "description": "Топовая карта RDNA 4 — конкурент RTX 5070 Ti по цене заметно ниже.",
     "category": "gpu",
     "brand": "AMD",
-    "image": "gpu.svg"
+    "image": "gpu-rx9070xt.jpg"
   },
   {
     "id": "cpu-r5-5500",
@@ -750,7 +750,7 @@
     },
     "description": "Один из самых массовых бюджетных CPU для платформы AM4 — оптимален для недорогих сборок.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r5-5500.jpg"
   },
   {
     "id": "cpu-r7-5800x3d",
@@ -767,7 +767,7 @@
     },
     "description": "Культовый игровой процессор с 3D V-Cache — топ выбор для апгрейда AM4 без смены платформы.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r7-5800x3d.jpg"
   },
   {
     "id": "cpu-i3-12100f",
@@ -784,7 +784,7 @@
     },
     "description": "Самый популярный бюджетный процессор для офисных и лёгких игровых сборок на LGA1700.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-i3-12100f.jpg"
   },
   {
     "id": "cpu-i5-12400f",
@@ -801,7 +801,7 @@
     },
     "description": "Один из самых продаваемых игровых CPU последних лет — оптимальная цена и производительность.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-i5-12400f.jpg"
   },
   {
     "id": "cpu-i5-13400f",
@@ -818,7 +818,7 @@
     },
     "description": "Гибридная архитектура P+E ядер — отличный баланс для игр и многозадачности.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-i5-13400f.jpg"
   },
   {
     "id": "cpu-i7-12700k",
@@ -835,7 +835,7 @@
     },
     "description": "Мощный процессор для игр и рабочих задач, разгоняемая версия.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-i7-12700k.jpg"
   },
   {
     "id": "gpu-gtx1660super",
@@ -851,7 +851,7 @@
     },
     "description": "Один из самых популярных бюджетных вариантов без трассировки лучей — до сих пор массово продаётся.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-gtx1660super.jpg"
   },
   {
     "id": "gpu-rtx3050",
@@ -867,7 +867,7 @@
     },
     "description": "Массовая начальная видеокарта с поддержкой DLSS и трассировки лучей.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rtx3050.jpg"
   },
   {
     "id": "gpu-rx6600xt",
@@ -883,7 +883,7 @@
     },
     "description": "Ходовая карта для 1080p/1440p игр с хорошим соотношением цена/производительность.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rx6600xt.jpg"
   },
   {
     "id": "cooler-deepcool-le500",
@@ -904,7 +904,7 @@
     },
     "description": "Доступная и популярная СЖО начального уровня, подходит почти под любой сокет.",
     "category": "cooler",
-    "image": "cooler.svg"
+    "image": "cooler-deepcool-le500.jpg"
   },
   {
     "id": "cooler-coolermaster-ml240l",
@@ -925,7 +925,7 @@
     },
     "description": "Один из самых массовых 240-мм комплектов жидкостного охлаждения.",
     "category": "cooler",
-    "image": "cooler.svg"
+    "image": "cooler-coolermaster-ml240l.jpg"
   },
   {
     "id": "cooler-arctic-lf2-280",
@@ -946,7 +946,7 @@
     },
     "description": "Отличное соотношение цены и эффективности охлаждения, popular выбор для игровых сборок.",
     "category": "cooler",
-    "image": "cooler.svg"
+    "image": "cooler-arctic-lf2-280.jpg"
   },
   {
     "id": "cooler-nzxt-kraken-x63",
@@ -967,7 +967,7 @@
     },
     "description": "Популярная СЖО с кастомизируемым логотипом на помпе для сборок среднего и высокого уровня.",
     "category": "cooler",
-    "image": "cooler.svg"
+    "image": "cooler-nzxt-kraken-x63.jpg"
   },
   {
     "id": "cooler-bequiet-pureloop2-280",
@@ -988,7 +988,7 @@
     },
     "description": "Тихая и надёжная СЖО — частый выбор для сборок без лишнего шума.",
     "category": "cooler",
-    "image": "cooler.svg"
+    "image": "cooler-bequiet-pureloop2-280.jpg"
   },
   {
     "id": "cooler-corsair-h150i",
@@ -1009,7 +1009,7 @@
     },
     "description": "Топовая 360-мм СЖО для флагманских процессоров с большим TDP.",
     "category": "cooler",
-    "image": "cooler.svg"
+    "image": "cooler-corsair-h150i.jpg"
   },
   {
     "id": "cooler-lianli-galahad2-360",
@@ -1030,7 +1030,7 @@
     },
     "description": "Мощная 360-мм СЖО для топовых сборок с эффектной подсветкой.",
     "category": "cooler",
-    "image": "cooler.svg"
+    "image": "cooler-lianli-galahad2-360.jpg"
   },
   {
     "id": "case-powercase-mistral-micro-z3w",
@@ -1049,7 +1049,7 @@
     },
     "description": "Самый продаваемый белый бюджетник. 4 сетчатых кулера в комплекте, закалённое стекло.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-powercase-mistral-micro-z3w.jpg"
   },
   {
     "id": "case-ardor-crystal-cm2",
@@ -1069,7 +1069,7 @@
     },
     "description": "Фирменный хит DNS. Отличный металл за эти деньги, яркая ARGB-подсветка с контроллером.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-ardor-crystal-cm2.jpg"
   },
   {
     "id": "case-deepcool-cc560v2",
@@ -1089,7 +1089,7 @@
     },
     "description": "Базовый полноразмерный ATX-корпус, «рабочая лошадка» для стандартных игровых ПК.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-deepcool-cc560v2.jpg"
   },
   {
     "id": "case-cougar-fv150rgb",
@@ -1109,7 +1109,7 @@
     },
     "description": "Главный хит продаж в категории панорамных корпусов без передней стойки.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-cougar-fv150rgb.jpg"
   },
   {
     "id": "case-ardor-crystal-flow",
@@ -1129,7 +1129,7 @@
     },
     "description": "Конкурент Lian Li, но в два раза дешевле. Стеклянный «аквариум» с шикарным кабель-менеджментом.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-ardor-crystal-flow.jpg"
   },
   {
     "id": "case-nzxt-h5-flow",
@@ -1149,7 +1149,7 @@
     },
     "description": "Эталон стиля. Фирменный скрытый нижний вентилятор, который дует прямо на видеокарту.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-nzxt-h5-flow.jpg"
   },
   {
     "id": "case-lianli-lancool216",
@@ -1169,7 +1169,7 @@
     },
     "description": "Бескомпромиссное охлаждение благодаря двум огромным 160-мм вентиляторам спереди.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-lianli-lancool216.jpg"
   },
   {
     "id": "case-phanteks-xtproultra",
@@ -1189,7 +1189,7 @@
     },
     "description": "Поддерживает материнские платы со скрытыми разъёмами на обороте (Project Stealth / BTF).",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-phanteks-xtproultra.jpg"
   },
   {
     "id": "case-bequiet-purebase500dx",
@@ -1209,7 +1209,7 @@
     },
     "description": "Толстая сталь, плотные пылевые фильтры, идеальный баланс между тишиной и продуваемостью.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-bequiet-purebase500dx.jpg"
   },
   {
     "id": "case-fractal-north",
@@ -1229,7 +1229,7 @@
     },
     "description": "Дизайнерский корпус с фронтальной панелью из натурального дерева (орех/дуб).",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-fractal-north.jpg"
   },
   {
     "id": "case-lianli-o11dynamicevo",
@@ -1250,7 +1250,7 @@
     },
     "description": "Двухкамерный модульный эталон корпусостроения для сложных сборок с водяным охлаждением.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-lianli-o11dynamicevo.jpg"
   },
   {
     "id": "psu-deepcool-pf500",
@@ -1265,7 +1265,7 @@
     },
     "description": "Главный хит для бюджетных ПК. Надёжнее аналогов, провода полностью плоские и чёрные.",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-deepcool-pf500.jpg"
   },
   {
     "id": "psu-deepcool-pk650d",
@@ -1280,7 +1280,7 @@
     },
     "description": "Самый частый выбор в сборки до 70-80 тысяч рублей. Надёжная платформа, тихий вентилятор.",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-deepcool-pk650d.jpg"
   },
   {
     "id": "psu-1stplayer-ngdp750",
@@ -1295,7 +1295,7 @@
     },
     "description": "Взорвал рынок. Самый дешёвый качественный «золотой» блок с родным кабелем для новых видеокарт (ATX 3.0).",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-1stplayer-ngdp750.jpg"
   },
   {
     "id": "psu-ardor-origin850",
@@ -1310,7 +1310,7 @@
     },
     "description": "Фирменный блок DNS. Отличная схемотехника, японские компоненты, ATX 3.0.",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-ardor-origin850.jpg"
   },
   {
     "id": "psu-montech-centuryg5-750",
@@ -1325,7 +1325,7 @@
     },
     "description": "Полноценная японская платформа внутри. Очень тихий, высокая энергоэффективность, ATX 3.0.",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-montech-centuryg5-750.jpg"
   },
   {
     "id": "psu-deepcool-pn750m",
@@ -1340,7 +1340,7 @@
     },
     "description": "Новое поколение БП. Поддерживает свежий и безопасный разъём питания видеокарт 12V-2x6 (ATX 3.1).",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-deepcool-pn750m.jpg"
   },
   {
     "id": "psu-msi-maga850gl",
@@ -1355,7 +1355,7 @@
     },
     "description": "Бестселлер от именитого бренда. Компактный корпус, двухцветный кабель 12VHPWR, ATX 3.0.",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-msi-maga850gl.jpg"
   },
   {
     "id": "psu-chieftec-powerup850",
@@ -1370,7 +1370,7 @@
     },
     "description": "Классика для тех, кто не доверяет «новичкам». Проверенная временем рабочая лошадка.",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-chieftec-powerup850.jpg"
   },
   {
     "id": "psu-bequiet-purepower12m-850",
@@ -1385,7 +1385,7 @@
     },
     "description": "Выбор тех, кто собирает бесшумный ПК. Фирменный вентилятор Silent Wings, 10 лет гарантии, ATX 3.0.",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-bequiet-purepower12m-850.jpg"
   },
   {
     "id": "psu-superflower-leadex7-1000",
@@ -1400,7 +1400,7 @@
     },
     "description": "Легендарный бренд (платформы для EVGA). Идеальный ток, выдерживает любые скачки нагрузки.",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-superflower-leadex7-1000.jpg"
   },
   {
     "id": "psu-asus-rogthor-1000platinum",
@@ -1415,7 +1415,7 @@
     },
     "description": "Флагманский блок питания с OLED-дисплеем мощности для топовых игровых сборок.",
     "category": "psu",
-    "image": "psu.svg"
+    "image": "psu-asus-rogthor-1000platinum.jpg"
   },
   {
     "id": "mb-msi-h610me-ddr4",
@@ -1433,7 +1433,7 @@
     },
     "description": "База для офисных ПК и недорогих игровых станций на Core i3-12100F / i5-12400F.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-msi-h610me-ddr4.jpg"
   },
   {
     "id": "mb-msi-b760-gamingpluswifi",
@@ -1451,7 +1451,7 @@
     },
     "description": "Главный бестселлер для процессоров Core i5-13400F / 14400F. Современная память DDR5 за адекватный ценник.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-msi-b760-gamingpluswifi.jpg"
   },
   {
     "id": "mb-msi-b760tomahawkwifi",
@@ -1469,7 +1469,7 @@
     },
     "description": "Легендарная серия «Томагавк». Мощные 14 фаз питания, которые легко вывозят горячие камни вроде Core i5-14600K.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-msi-b760tomahawkwifi.jpg"
   },
   {
     "id": "mb-gigabyte-z790aoruselite",
@@ -1487,7 +1487,7 @@
     },
     "description": "Полноценный разгон процессоров с индексом «K». Толстый текстолит, продвинутый разгон оперативной памяти.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-gigabyte-z790aoruselite.jpg"
   },
   {
     "id": "mb-asrock-z890prors",
@@ -1505,7 +1505,7 @@
     },
     "description": "Плата нового поколения под процессоры Intel Core Ultra (серия Arrow Lake). Передовой сокет LGA1851.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-asrock-z890prors.jpg"
   },
   {
     "id": "mb-asus-rogmaximusz890hero",
@@ -1523,7 +1523,7 @@
     },
     "description": "Вершина инженерной мысли под новые флагманы Intel Ultra 9. Бескомпромиссный VRM, Thunderbolt 4.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-asus-rogmaximusz890hero.jpg"
   },
   {
     "id": "mb-asus-primeb450mk2",
@@ -1541,7 +1541,7 @@
     },
     "description": "Абсолютный король ультрабюджетных сборок (под Ryzen 5 3600 / 5500). Кнопка прошивки BIOS без процессора.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-asus-primeb450mk2.jpg"
   },
   {
     "id": "mb-gigabyte-b550maoruselite",
@@ -1559,7 +1559,7 @@
     },
     "description": "Лучшая плата для легендарного процессора Ryzen 5 5600. Полноценный PCIe 4.0 и отличный радиатор VRM.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-gigabyte-b550maoruselite.jpg"
   },
   {
     "id": "mb-gigabyte-b650eagleax",
@@ -1577,7 +1577,7 @@
     },
     "description": "Самый доступный способ перейти на новый сокет под Ryzen 5 7500F. Встроенный Wi-Fi и массивные радиаторы.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-gigabyte-b650eagleax.jpg"
   },
   {
     "id": "mb-msi-b650gamingpluswifi",
@@ -1595,7 +1595,7 @@
     },
     "description": "Стандарт де-факто для мощных игровых ПК на AM5. Держит любые процессоры вплоть до Ryzen 7 7800X3D.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-msi-b650gamingpluswifi.jpg"
   },
   {
     "id": "mb-msi-b850gamingpluswifi",
@@ -1613,7 +1613,7 @@
     },
     "description": "Свежий чипсет 800-й серии. Идеальна для процессоров Ryzen 9000-й серии и видеокарт нового поколения.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-msi-b850gamingpluswifi.jpg"
   },
   {
     "id": "mb-asus-rogstrixx870a",
@@ -1631,7 +1631,7 @@
     },
     "description": "Премиальная плата для оверклокеров. Поддержка PCIe 5.0, порты USB4 и мощнейшая система питания.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-asus-rogstrixx870a.jpg"
   },
   {
     "id": "ssd-agi-ai198-512",
@@ -1646,7 +1646,7 @@
     },
     "description": "Самый дешёвый вариант «оживить» систему.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-agi-ai198-512.jpg"
   },
   {
     "id": "ssd-teamgroup-mp33-512",
@@ -1661,7 +1661,7 @@
     },
     "description": "Король ультрабюджета. Невероятно живучий чип, один из самых низких процентов брака.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-teamgroup-mp33-512.jpg"
   },
   {
     "id": "ssd-teamgroup-mp33-1tb",
@@ -1676,7 +1676,7 @@
     },
     "description": "Король ультрабюджета. Невероятно живучий чип, один из самых низких процентов брака.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-teamgroup-mp33-1tb.jpg"
   },
   {
     "id": "ssd-kingston-nv2-1tb",
@@ -1691,7 +1691,7 @@
     },
     "description": "Стандартный базовый терабайтник.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-kingston-nv2-1tb.jpg"
   },
   {
     "id": "ssd-ardor-ally-1tb",
@@ -1706,7 +1706,7 @@
     },
     "description": "Хорошая скорость за вменяемый ценник.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-ardor-ally-1tb.jpg"
   },
   {
     "id": "ssd-adata-sx8200pro-1tb",
@@ -1721,7 +1721,7 @@
     },
     "description": "Модель со встроенным DRAM-буфером.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-adata-sx8200pro-1tb.jpg"
   },
   {
     "id": "ssd-teamgroup-mp44-1tb",
@@ -1736,7 +1736,7 @@
     },
     "description": "Убийца дорогих брендов. Флагманская скорость до 7400 МБ/с.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-teamgroup-mp44-1tb.jpg"
   },
   {
     "id": "ssd-adata-legend960max-1tb",
@@ -1751,7 +1751,7 @@
     },
     "description": "Отличный накопитель с радиатором, в том числе для PS5.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-adata-legend960max-1tb.jpg"
   },
   {
     "id": "ssd-teamgroup-tcreateclassic-1tb",
@@ -1766,7 +1766,7 @@
     },
     "description": "Специальная серия для рабочих станций (монтаж, 3D, рендеринг).",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-teamgroup-tcreateclassic-1tb.jpg"
   },
   {
     "id": "ssd-kingston-kc3000-1024",
@@ -1781,7 +1781,7 @@
     },
     "description": "Максимальная стабильность под нагрузками.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-kingston-kc3000-1024.jpg"
   },
   {
     "id": "ssd-samsung-990pro-1tb",
@@ -1796,7 +1796,7 @@
     },
     "description": "Самый престижный и быстрый бренд, до 7450 МБ/с.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-samsung-990pro-1tb.jpg"
   },
   {
     "id": "ram-ddr4-teamgroup-vulcanz-16",
@@ -1812,7 +1812,7 @@
     },
     "description": "Отличные металлические радиаторы, низкий профиль, встаёт под любые башенные кулеры.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr4-teamgroup-vulcanz-16.jpg"
   },
   {
     "id": "ram-ddr4-ardor-reaper-16",
@@ -1828,7 +1828,7 @@
     },
     "description": "Собственный бренд DNS. Лучшая цена за чипы с чёрными радиаторами, XMP в один клик.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr4-ardor-reaper-16.jpg"
   },
   {
     "id": "ram-ddr4-adata-gammixd35-16",
@@ -1844,7 +1844,7 @@
     },
     "description": "Мировой бестселлер. Минималистичный дизайн, высокая надёжность.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr4-adata-gammixd35-16.jpg"
   },
   {
     "id": "ram-ddr4-adata-spectrixd35g-16",
@@ -1860,7 +1860,7 @@
     },
     "description": "Вариант для красивых сборок. Яркая, сочная и полностью настраиваемая подсветка.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr4-adata-spectrixd35g-16.jpg"
   },
   {
     "id": "ram-ddr4-kingston-furybeastblack-16",
@@ -1876,7 +1876,7 @@
     },
     "description": "Легендарная серия. Повышенная частота 3600 МГц даёт приятный буст для процессоров Ryzen.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr4-kingston-furybeastblack-16.jpg"
   },
   {
     "id": "ram-ddr4-teamgroup-create-32",
@@ -1892,7 +1892,7 @@
     },
     "description": "Лучший доступный комплект на 32 ГБ для «тяжёлых» современных игр и рабочих задач.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr4-teamgroup-create-32.jpg"
   },
   {
     "id": "ram-ddr5-crucial-16-4800",
@@ -1908,7 +1908,7 @@
     },
     "description": "Самая простая базовая DDR5 без радиаторов. Подходит для офисных ПК или эконом-сборок на Intel.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr5-crucial-16-4800.jpg"
   },
   {
     "id": "ram-ddr5-teamgroup-vulcan-32-6000",
@@ -1924,7 +1924,7 @@
     },
     "description": "Король среднего сегмента. Оптимальная частота 6000 МГц, стильные радиаторы.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr5-teamgroup-vulcan-32-6000.jpg"
   },
   {
     "id": "ram-ddr5-ardor-portal-32-6000",
@@ -1940,7 +1940,7 @@
     },
     "description": "Хит продаж за счёт низких таймингов (CL30). Минимальная задержка памяти в играх.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr5-ardor-portal-32-6000.jpg"
   },
   {
     "id": "ram-ddr5-adata-lancerblade-32-6000",
@@ -1956,7 +1956,7 @@
     },
     "description": "Самый покупаемый комплект для процессоров Ryzen 7000/9000. Чипы Hynix A-die.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr5-adata-lancerblade-32-6000.jpg"
   },
   {
     "id": "ram-ddr5-kingston-furyrenegade-32-6400",
@@ -1972,7 +1972,7 @@
     },
     "description": "Премиальный дизайн, агрессивные радиаторы, шикарная RGB-лента. Хорош для платформ Intel.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr5-kingston-furyrenegade-32-6400.jpg"
   },
   {
     "id": "ram-ddr5-gskill-tridentz5-32-7200",
@@ -1988,7 +1988,7 @@
     },
     "description": "Отборные чипы для оверклокеров. Покупается под топовые платы Z790/Z890 для максимального FPS.",
     "category": "ram",
-    "image": "ram.svg"
+    "image": "ram-ddr5-gskill-tridentz5-32-7200.jpg"
   },
   {
     "id": "cooler-deepcool-iceedgemini-v2",
@@ -2008,7 +2008,7 @@
     },
     "description": "Самая дешёвая «башня». Компактная, встанет в любой узкий старый корпус.",
     "category": "cooler",
-    "image": "cooler-air.svg"
+    "image": "cooler-deepcool-iceedgemini-v2.jpg"
   },
   {
     "id": "cooler-idcooling-se214xt",
@@ -2029,7 +2029,7 @@
     },
     "description": "Абсолютный король бюджетных сборок. Идеальный прижим, есть версии с подсветкой и в белом цвете.",
     "category": "cooler",
-    "image": "cooler-air.svg"
+    "image": "cooler-idcooling-se214xt.jpg"
   },
   {
     "id": "cooler-pccooler-paladinex400",
@@ -2050,7 +2050,7 @@
     },
     "description": "Главный конкурент SE-214-XT. Более широкая площадь пластин радиатора и тихая вертушка.",
     "category": "cooler",
-    "image": "cooler-air.svg"
+    "image": "cooler-pccooler-paladinex400.jpg"
   },
   {
     "id": "cooler-deepcool-ak400",
@@ -2069,7 +2069,7 @@
     },
     "description": "Очень красивый строгий дизайн с декоративной накладкой сверху. Отличный гидродинамический подшипник.",
     "category": "cooler",
-    "image": "cooler-air.svg"
+    "image": "cooler-deepcool-ak400.jpg"
   },
   {
     "id": "cooler-idcooling-se226xt",
@@ -2090,7 +2090,7 @@
     },
     "description": "Тяжёлая одиночная башня с медным основанием. Конструкция смещена назад, чтобы не перекрывать оперативную память.",
     "category": "cooler",
-    "image": "cooler-air.svg"
+    "image": "cooler-idcooling-se226xt.jpg"
   },
   {
     "id": "cooler-thermalright-pa120se",
@@ -2109,7 +2109,7 @@
     },
     "description": "Двухбашенный монстр. Уничтожил сегмент дорогих кулеров, предлагая флагманскую эффективность за копейки.",
     "category": "cooler",
-    "image": "cooler-air.svg"
+    "image": "cooler-thermalright-pa120se.jpg"
   },
   {
     "id": "cooler-deepcool-ak620",
@@ -2130,7 +2130,7 @@
     },
     "description": "Двухбашенная классика в строгом стиле. Выглядит монолитно, собран из премиальных материалов.",
     "category": "cooler",
-    "image": "cooler-air.svg"
+    "image": "cooler-deepcool-ak620.jpg"
   },
   {
     "id": "cooler-noctua-nhd15-chromax",
@@ -2151,7 +2151,7 @@
     },
     "description": "Ультра-премиум двухбашенный кулер, тянет любые флагманские процессоры.",
     "category": "cooler",
-    "image": "cooler-air.svg"
+    "image": "cooler-noctua-nhd15-chromax.jpg"
   },
   {
     "id": "mb-maxsun-msterminator-b550m-wifi",
@@ -2170,7 +2170,7 @@
     },
     "description": "Самая доступная плата на чипсете B550 с радиаторами VRM и встроенным Wi-Fi 5.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-maxsun-msterminator-b550m-wifi.jpg"
   },
   {
     "id": "mb-msi-b550mprovdh-wifi",
@@ -2189,7 +2189,7 @@
     },
     "description": "«Золотой стандарт» для AM4: удобный BIOS, надёжное охлаждение VRM и Wi-Fi/Bluetooth на борту.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-msi-b550mprovdh-wifi.jpg"
   },
   {
     "id": "mb-msi-b550tomahawkmaxwifi",
@@ -2208,7 +2208,7 @@
     },
     "description": "Вершина платформы AM4. Спокойно держит Ryzen 9 5900X/5950X и Ryzen 7 5800X3D. Wi-Fi 6E.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-msi-b550tomahawkmaxwifi.jpg"
   },
   {
     "id": "cooler-deepcool-iceedge-minifs",
@@ -2227,7 +2227,7 @@
     },
     "description": "Самая дешёвая «башня» на 2 трубках. Компактная, встанет в любой узкий старый корпус.",
     "category": "cooler",
-    "image": "cooler-air.svg"
+    "image": "cooler-deepcool-iceedge-minifs.jpg"
   },
   {
     "id": "gpu-rx6500xt",
@@ -2243,7 +2243,7 @@
     },
     "description": "Самая доступная карта для полноценного FullHD-гейминга.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rx6500xt.jpg"
   },
   {
     "id": "ssd-netac-n930e-512",
@@ -2258,7 +2258,7 @@
     },
     "description": "Базовый быстрый M.2-накопитель под систему и 2-3 любимые игры.",
     "category": "storage",
-    "image": "ssd.svg"
+    "image": "ssd-netac-n930e-512.jpg"
   },
   {
     "id": "gpu-rtx4060-palit-stormx",
@@ -2274,7 +2274,7 @@
     },
     "description": "Самая доступная RTX 4060, тихая, поддерживает генерацию кадров DLSS 3.0.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4060-palit-stormx.jpg"
   },
   {
     "id": "case-aerocool-trinity-mini",
@@ -2294,7 +2294,7 @@
     },
     "description": "Компактный, стильный, с отличной сетчатой панелью для охлаждения.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-aerocool-trinity-mini.jpg"
   },
   {
     "id": "cpu-r5-7500f",
@@ -2311,7 +2311,7 @@
     },
     "description": "Главный процессор последних лет для AM5. Обходит многие старые i7.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-r5-7500f.jpg"
   },
   {
     "id": "gpu-rtx4070super-palit",
@@ -2327,7 +2327,7 @@
     },
     "description": "Идеальная карта для 2K. 12 ГБ видеопамяти хватит на годы вперёд.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4070super-palit.jpg"
   },
   {
     "id": "case-montech-air100-argb",
@@ -2347,7 +2347,7 @@
     },
     "description": "Просторный корпус, отличный металл, 4 ARGB-вентилятора в комплекте.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-montech-air100-argb.jpg"
   },
   {
     "id": "mb-gigabyte-b760m-ds3h-ax",
@@ -2366,7 +2366,7 @@
     },
     "description": "Полноценный чипсет B760, радиаторы на VRM и встроенный Wi-Fi + Bluetooth.",
     "category": "motherboard",
-    "image": "mb.svg"
+    "image": "mb-gigabyte-b760m-ds3h-ax.jpg"
   },
   {
     "id": "cpu-i5-13600kf",
@@ -2383,7 +2383,7 @@
     },
     "description": "Процессор-монстр. В играх и рабочих задачах за счёт частоты дышит в спину i7.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-i5-13600kf.jpg"
   },
   {
     "id": "gpu-rtx4070super-gigabyte",
@@ -2399,7 +2399,7 @@
     },
     "description": "Идеальный баланс для игр в разрешении 2K/4K на ультра-настройках.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4070super-gigabyte.jpg"
   },
   {
     "id": "gpu-rtx4060ti-palit-jetstream-16g",
@@ -2415,7 +2415,7 @@
     },
     "description": "Увеличенный объём видеопамяти (16 ГБ) — без проблем с текстурами в будущих играх.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4060ti-palit-jetstream-16g.jpg"
   },
   {
     "id": "gpu-rtx4070-palit-dual",
@@ -2431,7 +2431,7 @@
     },
     "description": "Сбалансированная карта для игр в 1440p с хорошим запасом видеопамяти.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4070-palit-dual.jpg"
   },
   {
     "id": "gpu-rtx4070tisuper-msi-gamingx",
@@ -2447,7 +2447,7 @@
     },
     "description": "16 ГБ памяти, идеальное охлаждение, тихие кулеры.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4070tisuper-msi-gamingx.jpg"
   },
   {
     "id": "cpu-ultra7-265k",
@@ -2464,7 +2464,7 @@
     },
     "description": "Свежая архитектура Arrow Lake. Холоднее и стабильнее прошлых поколений.",
     "category": "cpu",
-    "image": "cpu.svg"
+    "image": "cpu-ultra7-265k.jpg"
   },
   {
     "id": "cooler-ardor-liquid360",
@@ -2485,7 +2485,7 @@
     },
     "description": "3-секционная СЖО, необходимая для удержания процессора в бусте.",
     "category": "cooler",
-    "image": "cooler-liquid.svg"
+    "image": "cooler-ardor-liquid360.jpg"
   },
   {
     "id": "gpu-rtx4070tisuper-palit-gamingpro",
@@ -2501,7 +2501,7 @@
     },
     "description": "Флагманский чип с отличным металлическим бэкплейтом.",
     "category": "gpu",
-    "image": "gpu.svg"
+    "image": "gpu-rtx4070tisuper-palit-gamingpro.jpg"
   },
   {
     "id": "case-montech-air1000-premium",
@@ -2522,6 +2522,6 @@
     },
     "description": "Стеклянная и сетчатая панели в комплекте на выбор пользователя.",
     "category": "case",
-    "image": "case.svg"
+    "image": "case-montech-air1000-premium.jpg"
   }
 ]
