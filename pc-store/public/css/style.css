@@ -547,62 +547,54 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
 }
 
 /* ==========================================================================
-   АДАПТИВНЫЙ ПРЕМИУМ-СТИЛЬ ДЛЯ ТОВАРНЫХ КАРТИНОК (DNS) — FIX
+   АККУРАТНЫЙ СТИЛЬ: МАСШТАБИРОВАНИЕ КАРТИНКИ НА ВЕСЬ КВАДРАТНЫЙ ФОН
    ========================================================================== */
 
-/* Настройка контейнеров картинок в каталоге, конструкторе и СТРАНИЦЕ ТОВАРА */
+/* Возвращаем стандартные аккуратные контейнеры-квадраты */
 .thumb,
 .prod-img-box,
 .product-image-container,
 .picker-row .p-thumb,
 .cart-row .thumb-sm,
+.card .thumb,
 #product-root .thumb {
-    background: var(--thumb-bg) !important; /* Используем мягкий светлый фон из токенов */
-    border: 1px solid var(--thumb-border) !important;
+    background: #ffffff !important; /* Белый фон сливается с фото из DNS */
+    border: 1px solid var(--border) !important;
     border-radius: var(--radius-sm) !important;
-    padding: 12px !important; /* Жёстко перебиваем инлайн-отступ 40px на аккуратные 12px */
+    padding: 0 !important; /* Убираем отступы, чтобы картинка заняла всё пространство */
     overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05) !important;
-    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
-    width: 100% !important;
-    max-width: 380px !important; /* Ограничиваем ширину контейнера на странице товара */
-    aspect-ratio: 4/3 !important; /* Делаем красивую пропорцию */
+    box-sizing: border-box !important;
 }
 
-/* Эффект легкого неонового свечения вокруг подложки картинки при наведении */
-.card:hover .thumb,
-.slot:hover .slot-head .thumb,
-.picker-row:hover .p-thumb,
-#product-root .thumb:hover {
-    background: var(--thumb-bg-hover) !important; 
-    border-color: rgba(0, 229, 255, 0.4) !important; 
-    box-shadow: 0 0 12px rgba(0, 229, 255, 0.15), inset 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+/* Возвращаем оригинальный компактный размер квадрата в конструкторе (52px на 52px) */
+.picker-row .p-thumb {
+    width: 52px !important;
+    height: 52px !important;
+    flex: none !important;
 }
 
-/* Сама картинка: идеальное сохранение пропорций без каши и растягивания */
+/* РАСТЯГИВАЕМ САМУ КАРТИНКУ НА ВЕСЬ КВАДРАТ (убираем пустые поля вокруг процессора) */
 .thumb img,
 .prod-img-box img,
 .product-image-container img,
 .product-card img,
 .picker-row .p-thumb img,
 .cart-row .thumb-sm img,
+.card img,
 #product-root .thumb img {
     display: block !important;
-    width: auto !important;
-    height: auto !important;
-    max-width: 90% !important; /* Картинка займет максимум места, оставив аккуратные поля */
-    max-height: 90% !important;
-    object-fit: contain !important; /* Умное вписывание: сохраняет пропорции DNS */
-    filter: drop-shadow(0 6px 12px rgba(9, 10, 15, 0.12)) !important; /* Тень самого железа */
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important; /* Картинка полностью заполняет квадрат, масштабируя деталь */
 }
 
-/* Плавный интерактивный зум детали при наведении */
-.card:hover .thumb img,
-.picker-row:hover .p-thumb img,
-#product-root .thumb:hover img {
-    transform: scale(1.05) !important; 
+/* Аккуратная подсветка рамки при наведении */
+.card:hover .thumb,
+.picker-row:hover .p-thumb {
+    border-color: var(--accent) !important;
 }
