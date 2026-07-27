@@ -547,47 +547,55 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
 }
 
 /* ==========================================================================
-   ФУЛЛ-СКРИН СТИЛЬ ДЛЯ КАРТИНОК ИЗ ДНС (БЕЗ РАМОК, НА ВЕСЬ ЭКРАН)
+   АДАПТИВНЫЙ ПРЕМИУМ-СТИЛЬ ДЛЯ ТОВАРНЫХ КАРТИНОК (DNS)
    ========================================================================== */
 
-/* Контейнер картинки: убираем рамки, тени и красим в белый, чтобы он слился с фото */
-.prod-img-box, 
-.product-image-container, 
-[class*="img-box"], 
-[class*="-image"] {
+/* Настройка контейнеров картинок в каталоге и конструкторе */
+.thumb,
+.prod-img-box,
+.product-image-container,
+.picker-row .p-thumb,
+.cart-row .thumb-sm {
+    background: var(--thumb-bg) !important; /* Используем мягкий светлый фон из токенов */
+    border: 1px solid var(--thumb-border) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 12px !important; /* Внутренний отступ, чтобы края процессоров/коробок не липли к рамке */
+    overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background: #ffffff !important; /* Белый фон, чтобы слиться с краями фото из ДНС */
-    border: none !important; /* ПОЛНОСТЬЮ УБРАЛИ РАМКУ */
-    border-radius: 12px !important; /* Оставляем только скругление углов самой карточки */
-    padding: 0 !important; /* УБРАЛИ ОТСТУПЫ, чтобы картинка прижалась к краям */
-    height: 180px !important;
-    width: 100% !important;
-    margin-bottom: 20px !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
-    box-shadow: none !important; /* ПОЛНОСТЬЮ УБРАЛИ ТЕНИ ВОКРУГ РАМКИ */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-/* Сама картинка: растягиваем её на фулл */
-.prod-img-box img, 
-.product-card img, 
-.component-row img,
-main img {
+/* Эффект легкого неонового свечения вокруг подложки картинки при наведении на карточку */
+.card:hover .thumb,
+.slot:hover .slot-head .thumb,
+.picker-row:hover .p-thumb {
+    background: var(--thumb-bg-hover) !important; /* Чистый белый фон при наведении */
+    border-color: rgba(0, 229, 255, 0.4) !important; /* Бирюзовая техническая рамка */
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.15), inset 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Сама картинка: идеальное сохранение пропорций без каши и растягивания */
+.thumb img,
+.prod-img-box img,
+.product-image-container img,
+.product-card img,
+.picker-row .p-thumb img,
+.cart-row .thumb-sm img {
     display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important; /* Растягиваем по ширине на 100% */
-    height: 100% !important; /* Растягиваем по высоте на 100% */
-    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important; /* Картинка никогда не вылезет за пределы */
     max-height: 100% !important;
-    object-fit: cover !important; /* МАКСИМАЛЬНОЕ РАСТЯГИВАНИЕ на весь объем без искажения пропорций */
-    background: #ffffff !important;
-    transition: transform 0.4s ease !important;
+    object-fit: contain !important; /* Умное вписывание: сохраняет пропорции DNS */
+    filter: drop-shadow(0 6px 12px rgba(9, 10, 15, 0.12)) !important; /* Красивая мягкая тень самого железа */
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
-/* Эффект при наведении: картинка красиво и плавно увеличивается прямо внутри своих границ */
-.product-card:hover img {
-    transform: scale(1.08) !important;
+/* Плавный интерактивный зум детали при наведении на карточку */
+.card:hover .thumb img,
+.picker-row:hover .p-thumb img {
+    transform: scale(1.05) !important; /* Легкое элегантное увеличение */
 }
