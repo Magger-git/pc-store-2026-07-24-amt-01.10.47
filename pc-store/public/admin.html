@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Админка — NODE.PC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
   .admin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
@@ -13,9 +13,9 @@
   .admin-table td { padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
   .admin-table tr:hover { background: var(--bg-elevated); }
   .admin-actions { display: flex; gap: 6px; }
-  .modal-backdrop { position: fixed; inset: 0; background: rgba(43,36,28,0.5); display: none; align-items: center; justify-content: center; z-index: 100; padding: 20px; }
+  .modal-backdrop { position: fixed; inset: 0; background: rgba(4,5,8,0.72); backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center; z-index: 100; padding: 20px; }
   .modal-backdrop.open { display: flex; }
-  .modal { background: var(--bg-card); border-radius: var(--radius); padding: 28px; max-width: 520px; width: 100%; max-height: 90vh; overflow-y: auto; }
+  .modal { background: rgba(12,13,20,0.9); backdrop-filter: blur(12px); border: 1px solid var(--border-strong); border-radius: var(--radius); padding: 28px; max-width: 520px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: var(--shadow-lg); }
   .modal h3 { font-family: var(--display); margin: 0 0 18px; font-size: 19px; }
   .field { margin-bottom: 12px; }
   .field label { font-size: 12px; color: var(--text-dim); display: block; margin-bottom: 4px; }
