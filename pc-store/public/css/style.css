@@ -584,7 +584,7 @@ main img {
     max-height: 90% !important;
     object-fit: contain !important;
     /* mix-blend-mode: color-dodge заставляет белый фон фотографии ДНС раствориться в черном подиуме */
-    mix-blend-mode: color-dodge !important; 
+    mix-blend-mode: color-dodge ! important; 
     filter: brightness(1.1) contrast(1.1) !important; /* Делаем саму деталь чуть сочнее */
     transition: all 0.4s ease !important;
 }
