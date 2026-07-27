@@ -546,3 +546,53 @@ a:focus-visible, button:focus-visible, .chip:focus-visible, .option-row:focus-vi
   .section-head { flex-wrap: wrap; gap: 10px; }
 }
 
+/* ==========================================================================
+   СТАНДАРТНЫЙ ОПРЯТНЫЙ СТИЛЬ ДЛЯ ТОВАРНЫХ КАРТИНОК
+   ========================================================================== */
+
+/* Настраиваем аккуратные белые подложки-квадраты вокруг картинок */
+.thumb,
+.prod-img-box,
+.product-image-container,
+.picker-row .p-thumb,
+.cart-row .thumb-sm,
+#product-root .thumb {
+    background: #ffffff !important; /* Белый фон сливается с краями фото */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Тонкая аккуратная рамка */
+    border-radius: var(--radius-sm) !important; /* Скругление углов */
+    padding: 6px !important; /* Небольшой внутренний отступ */
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+}
+
+/* Фиксируем стандартный размер для иконок в конструкторе сборок (52px на 52px) */
+.picker-row .p-thumb {
+    width: 52px !important;
+    height: 52px !important;
+    flex: none !important;
+}
+
+/* Картинки внутри подложек: идеальное вписывание без искажения пропорций */
+.thumb img,
+.prod-img-box img,
+.product-image-container img,
+.product-card img,
+.picker-row .p-thumb img,
+.cart-row .thumb-sm img,
+#product-root .thumb img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important; /* Картинка никогда не вылезет за края белого квадрата */
+    max-height: 100% !important;
+    object-fit: contain !important; /* Умное пропорциональное вписывание */
+}
+
+/* Элегантная бирюзовая подсветка рамки при наведении на карточку */
+.card:hover .thumb,
+.picker-row:hover .p-thumb {
+    border-color: var(--accent) !important;
+}
