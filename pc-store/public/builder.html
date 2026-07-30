@@ -208,10 +208,34 @@ async function updateSummary() {
     `).join("");
   }
 
-  document.getElementById("total").textContent = money(result.total || 0);
+  animateTotal(result.total || 0);
 
   const requiredFilled = SLOTS.filter((s) => s.required).every((s) => state[s.key]);
   document.getElementById("add-build-to-cart").disabled = !(requiredFilled && result.ok);
+}
+
+// Плавная анимация пересчёта итоговой суммы в конструкторе.
+let totalAnimFrame = null;
+let totalCurrent = 0;
+function animateTotal(target) {
+  const el = document.getElementById("total");
+  if (totalAnimFrame) cancelAnimationFrame(totalAnimFrame);
+  const start = totalCurrent;
+  const diff = target - start;
+  if (diff === 0) { el.textContent = money(target); return; }
+  const duration = 450;
+  const t0 = performance.now();
+  el.classList.add("pulse");
+  setTimeout(() => el.classList.remove("pulse"), 450);
+  function step(now) {
+    const p = Math.min((now - t0) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    totalCurrent = Math.round(start + diff * eased);
+    el.textContent = money(totalCurrent);
+    if (p < 1) totalAnimFrame = requestAnimationFrame(step);
+    else { totalCurrent = target; el.textContent = money(target); }
+  }
+  totalAnimFrame = requestAnimationFrame(step);
 }
 
 function buildGroupLabel() {

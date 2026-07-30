@@ -186,7 +186,7 @@ async function init() {
   root.innerHTML = `
     <div style="display:grid;grid-template-columns:380px 1fr;gap:40px;align-items:start">
       <div class="thumb" style="border-radius:var(--radius);padding:40px">
-        <img src="img/${build.image}" alt="${build.name}" width="180" height="180">
+        <img src="${imgSrc(build.image)}" alt="${build.name}">
       </div>
       <div>
         <div class="brand" style="font-size:13px">${TIER_LABELS[build.tier] || ""}</div>

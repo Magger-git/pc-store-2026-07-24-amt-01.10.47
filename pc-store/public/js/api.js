@@ -89,6 +89,8 @@ const API = {
 
 const money = (n) => n.toLocaleString("ru-RU") + " ₽";
 
+const imgSrc = (image) => (image && image.startsWith("http") ? image : `img/${image}`);
+
 async function refreshCartBadge() {
   const badge = document.getElementById("cart-count");
   if (!badge) return;

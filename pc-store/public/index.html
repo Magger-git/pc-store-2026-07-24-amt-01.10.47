@@ -68,7 +68,7 @@ const TIER_LABELS = { budget: "Стартовая", mid: "Оптимальная
 function buildCard(b) {
   return `
     <a href="build.html?id=${b.id}" class="card" style="cursor:pointer">
-      <div class="thumb"><img src="img/${b.image}" alt="${b.name}" width="72" height="72"></div>
+      <div class="thumb"><img src="${imgSrc(b.image)}" alt="${b.name}" loading="lazy"></div>
       <div class="brand">${TIER_LABELS[b.tier] || ""}</div>
       <div class="name">${b.name}</div>
       <div class="desc">${b.description}</div>

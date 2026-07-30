@@ -16,7 +16,7 @@
       "case": "case-powercase-mistral-micro-z3w"
     },
     "price": 43700.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/32653081/pexels-photo-32653081.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   {
     "id": "build-amd-5600-rtx4060",
@@ -35,7 +35,7 @@
       "case": "case-aerocool-trinity-mini"
     },
     "price": 72900.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/6913135/pexels-photo-6913135.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   {
     "id": "build-amd-am5-7500f-4070super",
@@ -54,7 +54,7 @@
       "case": "case-montech-air100-argb"
     },
     "price": 128800.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/34301930/pexels-photo-34301930.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   {
     "id": "build-amd-advanced-7500f-4060ti",
@@ -73,7 +73,7 @@
       "case": "case-cougar-fv150rgb"
     },
     "price": 107100.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/10684919/pexels-photo-10684919.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   {
     "id": "build-amd-dominator-7800x3d",
@@ -92,7 +92,7 @@
       "case": "case-lianli-lancool216"
     },
     "price": 201700.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/15109454/pexels-photo-15109454.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   {
     "id": "build-intel-budget-i3-12100f",
@@ -111,7 +111,7 @@
       "case": "case-powercase-mistral-micro-z3w"
     },
     "price": 44800.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/32239563/pexels-photo-32239563.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   {
     "id": "build-intel-optimal-i5-12400f-4060",
@@ -130,7 +130,7 @@
       "case": "case-montech-air100-argb"
     },
     "price": 89600.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/34301926/pexels-photo-34301926.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   {
     "id": "build-intel-i5-13400f-4070",
@@ -149,7 +149,7 @@
       "case": "case-montech-air100-argb"
     },
     "price": 126400.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/33693626/pexels-photo-33693626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   {
     "id": "build-intel-charged-i5-13600kf-4070super",
@@ -168,7 +168,7 @@
       "case": "case-lianli-lancool216"
     },
     "price": 166800.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/30830246/pexels-photo-30830246.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   {
     "id": "build-intel-ultimate-ultra7-265k",
@@ -187,6 +187,6 @@
       "case": "case-montech-air1000-premium"
     },
     "price": 214500.0,
-    "image": "case.svg"
+    "image": "https://images.pexels.com/photos/424436/pexels-photo-424436.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   }
 ]
